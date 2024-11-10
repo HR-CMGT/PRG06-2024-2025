@@ -2,10 +2,10 @@
 
 ## REST
 
-*REST* (REpresentational State Transfer) is een architectuur stijl voor het ontwerpen van netwerkapplicaties, die zich
-zich vooral op eenvoud, schaalbaarheid, en herbruikbaarheid richt.
+*REST* (REpresentational State Transfer) is een architectuur stijl voor het ontwerpen van webapplicaties, die zich
+zich vooral op eenvoud richt.
 Het idee achter REST is dat systemen via stateless communicatie communiceren, waarbij de server geen informatie over de
-client bewaart tussen verzoeken. In een RESTful applicatie wordt het HTTP protocol volledig gebruikt.
+client bewaart tussen verzoeken. In een RESTful applicatie wordt het HTTP protocol volledig benut.
 
 ## HTTP
 
@@ -47,11 +47,11 @@ Content-Type: text/html
 
 ## REST principes
 
-- **Client en server gescheiden**: De client en de server kunnen onafhankelijk van elkaar worden ontwikkeld en
-  geüpdatet. Ook is er geen kennis over de implementatie noodzakelijk om te kunnen communiceren.
-- **Stateless**: Elke request staat op zichzelf; de server houdt geen informatie bij over het request bij voor de
-  client.
-- **Cacheable**: Als gevolg van stateless kunnen veel responses gecacht worden.
+- **Client en server gescheiden**: De client en de server kunnen onafhankelijk van elkaar worden ontwikkeld. Er is
+  geen kennis over de implementatie noodzakelijk om te kunnen communiceren.
+- **Stateless**: Elke request staat op zichzelf; de server houdt geen informatie bij over het request (voor de
+  client).
+- **Cacheable**: Als gevolg van de stateless architectuur kunnen veel responses gecacht worden.
 - **Uniforme interface**: De communicatie tussen de client en se server gaat via HTTP, en is daardoor gestandariseerd.
 
 ## HTTP Methods

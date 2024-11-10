@@ -72,6 +72,43 @@ Screen, rechten, mongo
 
 ## Postman vervolg?
 
-## URI (kan ook in les 4)
+## URI
+
+*URI* staat voor **Uniform Resource Identifier** en verwijst naar een resource (identifier). In veel gevallen gebruiken
+we de term *URI* in de context van webservices, omdat het
+om het identificeren van een resource gaat. Omdat de identifier ook de locatie aangeeft is de URI ook een **URL** (
+Uniform
+Resource Locator).
+
+### Opbouw
+
+```
+scheme://host/path?query#fragment
+```
+
+- **scheme**: Het protocol waarmee de resource benaderd kan worden (bijvoorbeeld `http`, `https`, `ftp`).
+- **host**: Het domein of IP-adres van de server waar de resource zich bevindt (bijvoorbeeld `www.example.com`).
+- **port** (optioneel): De poortnummer op de server waarmee de client verbinding maakt (standaard is dit 80 voor HTTP en
+  443 voor HTTPS).
+- **path**: Het pad naar de specifieke resource op de server (bijvoorbeeld `/products/1`).
+- **query** (optioneel): Een reeks parameters voor de resource (
+  bijvoorbeeld `?category=books`).
+- **fragment** (optioneel): Een verwijzing naar een specifiek deel van de resource (bijvoorbeeld `#section2`).
+
+**Voorbeeld**
+
+```
+https://www.example.com/products/1?category=books#section2
+```
+
+<!--
+In dit geval:
+
+- Het **scheme** is `https`,
+- De **host** is `www.example.com`,
+- Het **path** is `/products/1`,
+- De **query** is `?category=books`,
+- Het **fragment** is `#section2`.
+-->
 
 ## Meer over headers
