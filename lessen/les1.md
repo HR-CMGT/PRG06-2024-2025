@@ -102,11 +102,27 @@ State toch hier al doen? Is wel makkelijker voor uitleggen reactive principe
 
 Hergebruik, overzicht, losse bestanden
 
+TODO: Vergelijk Laravel (zowel componenten als props).
+
 ### Props
 
-Vergelijk Laravel.
+<!-- Destructuring of `props.value`? => destructuring, omdat React docs dit doen. Uitleg hierover doen we bij PRG7 -->
 
-Destructuring of `props.value`?
+```javascript
+function List({items}) {
+    const list = items.map(product =>
+        <li key={product.id}>
+            {product.title}
+        </li>
+    );
+
+    return (
+        <ul>
+            {list}
+        </ul>
+    );
+}
+```
 
 Opdracht: array met objecten maken en tonen mbv component, stylen met tailwind
 

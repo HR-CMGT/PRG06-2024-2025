@@ -2,8 +2,8 @@
 
 ## REST
 
-*REST* (REpresentational State Transfer) is een architectuur stijl voor het ontwerpen van webapplicaties, die zich
-zich vooral op eenvoud richt.
+*REST* (REpresentational State Transfer) is een architectuur stijl voor het ontwerpen van webapplicaties, waarbij
+gemaakt wordt van reguliere webtechnieken.
 Het idee achter REST is dat systemen via stateless communicatie communiceren, waarbij de server geen informatie over de
 client bewaart tussen verzoeken. In een RESTful applicatie wordt het HTTP protocol volledig benut.
 
