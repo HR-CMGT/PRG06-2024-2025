@@ -1,5 +1,9 @@
 # Les 4
 
+## Volledige plaatje
+
+// TODO: idem les 1, maar nu back-end focus
+
 ## REST
 
 *REST* (REpresentational State Transfer) is een architectuur stijl voor het ontwerpen van webapplicaties, waarbij
@@ -91,8 +95,6 @@ De webserver:
 
 Voorbeelden van webservers zijn *Apache* en *Nginx*. Maar de node module *Express* die we gebruiken bij deze cursus is
 een webserver.
-
-## Volledige plaatje
 
 ## Node
 

@@ -41,6 +41,15 @@ Tijdens deze cursus ligt de focus op:
 * Communicatie (HTTP)
 * Installatie op de server
 
+## Volledige plaatje
+
+// TODO: letterlijk een plaatje maken met alles erin, front-end focus
+
+- Onderdelen: Front-end, Back-end, Server, Webserver, MongoDB
+- Tools: PHPStorm, node, npm, vite, ssh
+- Modules: Express, Mongoose, React, Fetch, Tailwind(?)
+- Communicatie: HTTP
+
 ## Reactive frameworks
 
 * React maakt gebruik van een virtuele DOM, of pseudo-DOM, om efficiënt te renderen.
