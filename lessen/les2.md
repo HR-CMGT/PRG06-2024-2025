@@ -64,6 +64,22 @@ fetch('https://api.example.com/products', {
     });
 ```
 
+// TODO: collectie en detail resource uitleggen
+
+## Methods
+
+In HTTP forulieren kan je alleen GET en POST gebruiken, maar er zijn er meer (zoals we bij Laravel al gezien hebben).
+De Fetch API ondersteunt alle methoden, en daar maken we gebruik van als we communiceren met een RESTful webservice.
+
+// TODO: Woord RESTful hier al noemen?
+
+| Methode | Doel                                                          | CRUD   | 
+|---------|---------------------------------------------------------------|--------|
+| GET     | Iets ophalen van de webservice (collectie of detail resource) | Read   |
+| PUT     | Een detail resource aanpassen                                 | Update |
+| DELETE  | Een detail resource verwijderen                               | Delete |
+| POST    | Een nieuwe resource toevoegen aan een colletie                | Create |
+
 ## API
 
 ### Chess

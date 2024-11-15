@@ -41,4 +41,8 @@ Voorbeeld van een gepagineerde response:
 }
 ```
 
-## Controller toevoegen
+## Structuur
+
+### Mappen
+
+### Controller

@@ -48,6 +48,11 @@ Authorization: Bearer <token>
 
 401 (no or invalid) vs 403 (no priviledges, nvt)
 
+### HTTPS
+
+Uitleg, maar vooral boodschap dat wat we nu doen alleen tijdens oefenen kan, en je authenticatie altijd in combinatie
+met https moet gebruiken
+
 * [JWT](https://jwt.io)
 * [Base64](https://www.base64encode.org)
 * [http auth](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication)

@@ -41,6 +41,10 @@ moet zijn is de link naar `self`. Andere links zijn context-afhankelijk.
 
 ## Virtuals
 
+## Checker
+
+// TODO: opdracht, check je webservice
+
 ## CORS
 
 **Cross-Origin Resource Sharing** (CORS) is een mechanisme voor *access control* waarmee je kunt beheren welke domeinen

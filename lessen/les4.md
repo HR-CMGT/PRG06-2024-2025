@@ -72,6 +72,8 @@ Content-Type: text/html
 
 *is afhankelijk van de implementatie
 
+## POST Overloading
+
 ## Postman
 
 Tool waarmee je een request volledig zelf kunt configureren
@@ -105,9 +107,14 @@ Gebruiken om server geschreven in javascript te draaien
 Webserver die de requests afhandelt. Het routeert een request op basis van de URI naar de javascript functie van de
 webservice, zodat deze de gevraagde actie uit kan voeren en bijbehordende response kan sturen.
 
-routering
+// TODO technieken:
 
-// TODO: headers (accept, content-type?) en middleware
+* import en Express appserver maken
+* app laten luisteren
+* method + routering (met parameter)
+
+Hier nog even in 1 bestand? En in les 5 netjes verdelen?
+
 // TODO: eventueel al OPTIONS
 
 Opdracht: Collection en details zonder DB

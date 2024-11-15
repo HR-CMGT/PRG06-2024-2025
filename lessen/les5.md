@@ -11,16 +11,15 @@ De module *Mongoose* is een object-document mapper (ODM) voor *MongoDB*. Hiermee
 communiceren met de database.
 Ook kunnen we in Mongoose modellen (schema's) maken voor objecten in de ongestructureerde database.
 
-// TODO: opdracht seeder
+// TODO: opdracht seeder (POST overload)
+
+// TODO: GET op collectie en detail
 
 ## POST en PUT
 
 json / www-urlencoded
-(nog extra uitleg over json?)
 
-### POST overloading
-
-## Checker
+// TODO: extra uitleg over json (structuur en datatypes)
 
 // TODO: Opdracht POST, PUT, DELETE
 
@@ -112,3 +111,17 @@ In dit geval:
 -->
 
 ## Meer over headers
+
+// TODO:
+
+* versiebeheer in URI toevoegen?
+* verdeling van de lessen nalopen (lijkt wel erg veel in deze les, misschien kan mongo naar 4? Of anders PUT naar 6?)
+
+// TODO technieken:
+
+* mongoose schema
+* find
+* try/catch (zit ook al bij fetch)
+* headers
+* statuscodes
+* middleware
