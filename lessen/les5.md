@@ -85,7 +85,7 @@ Resource Locator).
 scheme://host/path?query#fragment
 ```
 
-- **scheme**: Het protocol waarmee de resource benaderd kan worden (bijvoorbeeld `http`, `https`, `ftp`).
+- **scheme**: Het protocol waarmee de resource benaderd kan worden (bijvoorbeeld `http`, `https`).
 - **host**: Het domein of IP-adres van de server waar de resource zich bevindt (bijvoorbeeld `www.example.com`).
 - **port** (optioneel): De poortnummer op de server waarmee de client verbinding maakt (standaard is dit 80 voor HTTP en
   443 voor HTTPS).
@@ -124,4 +124,5 @@ In dit geval:
 * try/catch (zit ook al bij fetch)
 * headers
 * statuscodes
-* middleware
+* middleware (ook gebruiken om item aan request toe te voegen?)
+* save en ValidationError of beter gewoon checken van lege velden?

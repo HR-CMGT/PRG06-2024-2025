@@ -112,6 +112,7 @@ webservice, zodat deze de gevraagde actie uit kan voeren en bijbehordende respon
 * import en Express appserver maken
 * app laten luisteren
 * method + routering (met parameter)
+* index of app?
 
 Hier nog even in 1 bestand? En in les 5 netjes verdelen?
 
