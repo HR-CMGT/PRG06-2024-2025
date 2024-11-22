@@ -43,8 +43,8 @@ Tijdens deze cursus ligt de focus op:
 
 ## Volledige plaatje
 
-<a href="images/fullpicture.png" target="_blank">
-  <img src="images/fullpicture.png" alt="De volledige stack" width="60%">
+<a href="images/fullpicture.svg" target="_blank">
+  <img src="images/fullpicture.svg" alt="De volledige stack" width="70%">
 </a>
 
 | Tools     | Doel                                                                     |
@@ -56,7 +56,8 @@ Tijdens deze cursus ligt de focus op:
 | ssh       | Remote terminal verbinding met de Ubunto server waar de back-end draait. |
 | FileZilla | FTP-client om bestanden over te zetten naar de back-end.                 |
 
-// TODO: check of volledig met Antwan / Blur REST backend? / Samenvattend plaatje reactive <-> restful websevice?
+// TODO: check of volledig met Antwan / Blur REST backend? / Samenvattend plaatje reactive <-> restful websevice? node
+ook bij tools?
 
 - Onderdelen: Front-end, Back-end, Client, Server, Webserver, db/MongoDB
 - Tools: PHPStorm, node, npm, vite, ssh, filezilla
