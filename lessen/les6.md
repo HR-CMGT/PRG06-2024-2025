@@ -83,6 +83,9 @@ Een preflight is niet nodig als het request aan de volgende voorwaarden voldoet:
     - `multipart/form-data`
     - `text/plain`
 
+**Let op** Omdat OPTIONS gebruikt wordt door preflights mogen er geen eisen aan het request gesteld worden. Dus
+bijvoorbeeld geen Authorization of Accept header.
+
 ### Implementatie
 
 Bij het opzetten van CORS in een RESTful webservice moet je met de volgende zaken rekening houden:

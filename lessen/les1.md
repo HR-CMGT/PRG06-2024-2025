@@ -51,9 +51,9 @@ Tijdens deze cursus ligt de focus op:
 |-----------|--------------------------------------------------------------------------|
 | PHPStorm  | Voor ontwikkeling van zowel de front- als de backend                     |
 | node      | JavaScript runtime op de backend.                                        |
-| npm       | Packetmanager voor zowel front- als backend om modules te installeren.   |
+| npm       | Packetmanager voor zowel front- als backend, om modules te installeren.  |
 | vite      | Build-tool voor de front-end.                                            |
-| ssh       | Remote terminal verbinding met de Ubunto server waar de back-end draait. |
+| ssh       | Remote terminal verbinding met de Ubuntu server waar de back-end draait. |
 | FileZilla | FTP-client om bestanden over te zetten naar de back-end.                 |
 
 // TODO: check of volledig met Antwan / Blur REST backend? / Samenvattend plaatje reactive <-> restful websevice? node

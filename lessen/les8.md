@@ -53,6 +53,8 @@ Authorization: Bearer <token>
 Uitleg, maar vooral boodschap dat wat we nu doen alleen tijdens oefenen kan, en je authenticatie altijd in combinatie
 met https moet gebruiken
 
+btoa atob
+
 * [JWT](https://jwt.io)
 * [Base64](https://www.base64encode.org)
 * [http auth](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication)

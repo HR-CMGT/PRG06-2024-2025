@@ -30,6 +30,8 @@ Je hebt hierbij ook volledige controle over het request om te kunnen communicere
 
 // TODO: async
 
+// TODO: omzetten naar await! + try catch uitleggen?
+
 #### Voorbeeld GET
 
 ```javascript
