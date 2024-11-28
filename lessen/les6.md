@@ -45,6 +45,11 @@ moet zijn is de link naar `self`. Andere links zijn context-afhankelijk.
 
 // TODO: opdracht, check je webservice
 
+## Opdracht
+
+structuur en links toevoegen
+// TODO: Check of checker ook zonder pagination werkt
+
 ## CORS
 
 **Cross-Origin Resource Sharing** (CORS) is een mechanisme voor *access control* waarmee je kunt beheren welke domeinen
@@ -96,7 +101,7 @@ Bij het opzetten van CORS in een RESTful webservice moet je met de volgende zake
   header
   bevatten.
 
-Opdracht: Links toevoegen
 Opdracht: CORS toevoegen
+Opdracht: Checker afmaken
 
 Huiswerk: nadenken over eigen full stack project (onderwerp)

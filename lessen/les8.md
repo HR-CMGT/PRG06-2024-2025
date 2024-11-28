@@ -55,6 +55,13 @@ met https moet gebruiken
 
 btoa atob
 
+## Opdracht
+
+Ga naar: https://www.base64decode.org/
+Decodeer ‘SGVsbG8sIHdvcmxk’
+
+Werken aan eindopdracht
+
 * [JWT](https://jwt.io)
 * [Base64](https://www.base64encode.org)
 * [http auth](https://developer.mozilla.org/en-US/docs/Web/HTTP/Authentication)

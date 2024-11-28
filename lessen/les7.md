@@ -103,8 +103,10 @@ Etag, Age en Expires worden ook gebruikt, maar zijn niet verplicht https://devel
 Alleen Last-Modified is de meest basic manier, maar vind ik ook de meest inituitieve manier en het beste bij REST passen, omdat hier de client zelf niet hoeft te rekenen of hashes te bewaren, enkel de datum wanneer het request gedaan is
 -->
 
-## Structuur
-
-### Mappen
+### Mappenstructuur
 
 ### Controller
+
+## Opdracht
+
+Werken aan eindopdracht

@@ -82,6 +82,20 @@ Ideaal voor testen/debuggen van een webservice
 
 Opdracht: Oefenen met Postman (op chess/notes, of 'hacken' van een site)
 
+## Opdrachten
+
+// TODO: Kan ook met Chess API
+
+* Installeer een REST Client (bijv. Postman)
+* Tip: als je een account maakt bij Postman kan je je requests opslaan om later her te gebruiken. Dat is heel handig als
+  je straks je eigen service moet debuggen
+* Haal met GET de collectie https://docent.cmi.hro.nl/bootb/demo/notes/ op
+* Haal een detail resource op om de indeling te zien
+* Maak nu een nieuwe note aan (als JSON)
+* Maak nog een nieuwe note aan (nu als x-www-form-urlencoded)
+* Pas je note aan (PUT)
+* Verwijder je note weer (DELETE)
+
 ## Webserver
 
 Een *webserver* is een programma dat luistert naar requests op een specifieke poort (meestal poort 80 voor HTTP of poort
@@ -114,12 +128,27 @@ webservice, zodat deze de gevraagde actie uit kan voeren en bijbehordende respon
 * method + routering (met parameter)
 * index of app?
 
+## Opdrachten
+
+Installatie
+Hello world
+
 Hier nog even in 1 bestand? En in les 5 netjes verdelen?
 
 // TODO: eventueel al OPTIONS
+
+## Opdrachten
 
 Opdracht: Collection en details zonder DB
 
 ## Server
 
+Uitleg VPS
 Inloggen, installeren node, sudo, ftp, npm / package.json
+
+## Opdrachten
+
+Op server draaien hello world collectie en details zonder db
+
+
+

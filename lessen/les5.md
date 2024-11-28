@@ -126,3 +126,8 @@ In dit geval:
 * statuscodes
 * middleware (ook gebruiken om item aan request toe te voegen?)
 * save en ValidationError of beter gewoon checken van lege velden?
+
+## Opdrachten
+
+Statuscodes en OPTIONS (als nog niet in 4)
+Naar de server

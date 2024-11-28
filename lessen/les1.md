@@ -147,10 +147,9 @@ function List({items}) {
 }
 ```
 
+Opdracht: installatie
 Opdracht: array met objecten maken en tonen mbv component, stylen met tailwind
 
-## VPS aanvragen
+## VPS check
 
-Nodig vanaf week 2
-
-Standaard aanvragen voor alle reguliere tweedejaars
+Heeft iedereen een server gekregen?
