@@ -93,8 +93,9 @@ packages) installeren en verwijderen.
 
 ### Vite
 
-*Vite* is een ontwikkeltool waarmee je de React-app efficiënt kunt ontwikkelen en later kunt bouwen (of 'bundelen') voor
-productie. Het biedt hot-reloading en project builds.
+*Vite* is een ontwikkeltool waarmee je de React-app met live updates (hot-reloading) kunt ontwikkelen en later kunt
+builden (of 'bundelen') voor
+productie.
 
 ### Tailwind
 
@@ -107,7 +108,8 @@ En natuurlijk hebben we *React* zelf nodig om de gebruikersinterface te bouwen. 
 
 ## React
 
-Single page. Opgebouwd uit componenten. Data binding van variabelen. Verandering in variabele zorgt voor automatische
+Een react app is een single page web applicatie. Opgebouwd uit componenten. Data binding van variabelen. Verandering in
+variabele zorgt voor automatische
 rendering van (delen van) de pagina -> Reactive.
 
 ### Hello world

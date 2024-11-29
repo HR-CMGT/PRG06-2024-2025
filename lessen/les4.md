@@ -84,7 +84,7 @@ Opdracht: Oefenen met Postman (op chess/notes, of 'hacken' van een site)
 
 ## Opdrachten
 
-// TODO: Kan ook met Chess API
+// TODO: Kan ook met Chess
 
 * Installeer een REST Client (bijv. Postman)
 * Tip: als je een account maakt bij Postman kan je je requests opslaan om later her te gebruiken. Dat is heel handig als

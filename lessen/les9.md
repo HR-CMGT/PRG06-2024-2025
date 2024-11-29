@@ -16,3 +16,9 @@ Handig als je dezelfde data met veel componenten wilt delen, of wilt delen met c
 
 - server state centraal?
 - loginstatus / jwt
+
+## Foutafhandeling
+
+Is denk ik leuk om toe te voegen, en zou misschien zelfs een alternatief extra onderdeel kunnen zijn.
+
+### 404
