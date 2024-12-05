@@ -2,32 +2,55 @@
 
 ## Front-end routing
 
-*Front-end routing* is het proces waarbij de navigatie in een webapplicatie volledig op de client (in de browser) wordt
-beheerd, Inhoud wordt dynamisch geladen/getoond door de client op basis van de gebruikte URL.
-
-**Doel:**
+Omdat je in React een *single page application* bouwt, draait de hele app op één url. Er zijn echter voordelen om
+meerdere url's te hebben voor verschillende onderdelen van een web applicatie door *front-end routing* toe te voegen.
 
 - **Usability**: Gebruikers kunnen tussen verschillende delen van de applicatie navigeren via de URL, of terugkeren naar
   een 'plek' in je webapplicatie (bookmarks).
 - **SEO**: Front-end routing helpt zoekmachines de verschillende pagina's van een app te indexeren.
 
-**Werking:**
-In een *Single Page Application* zoals een React-app, wordt de navigatie volledig beheerd door de client. Er is slechts
-één html pagina (`index.html`) die de server naar de client stuurt (de server routeert elk request naar `index.html`,
-dit is vergelijkbaar met de backend routing in Laravel waar elk request naar `index.php` gaat).
+Bij front-end routing wordt de navigatie volledig beheerd door de client, toch is daarnaast ook back-end routing nodig
+om te zorgen dat alle url's naar je single page application gestuurd worden. De server routeert dus elk request naar
+`index.html`.
 
-Op basis van de URL wordt het juiste component geladen. Wanneer de gebruiker bijvoorbeeld naar `/home` navigeert, zorgt
-`react-router` ervoor dat het juiste
-component (bijv. `HomeComponent`) wordt weergegeven.
+// TODO: vergelijken met Laravel index.php?
+
+De React applicatie leest de URL en kiest op basis daarvan welk component geladen moet worden. Wanneer de gebruiker
+bijvoorbeeld naar `/home` navigeert, zorgt `react-router` ervoor dat het juiste component (bijv. `HomeComponent`) wordt
+weergegeven.
+
+### react-router
+
+Verschillende manieren om routing toe te passen binnen React. Wij gebruiken `createBrowserRouter` omdat we dit de beste
+manier vinden. Helaas is deze niet het best gedocumenteerd.
+
+`createBrowserRouter` buiten project aanmaken
+Hierin routes (`paths`) mappen naar components (`element`)
+Nesten kan (`children`)
+Variabelen uit URL in `params`
+
+`<Outlet />` bepaalt waar component komt
+
+#### Opdracht
+
+Voeg routing toe
 
 ## PUT en DELETE
 
-Fetch API
+PUT zelfde als POST, DELETE eenvoudigste method
 
-Opdracht: Maak de delete
+#### Opdracht
 
-Opdracht: Maak de edit
+Maak de delete
 
-Opdracht: pagination op overzicht
+#### Opdracht
 
-Opdracht: filtering op overzicht
+Maak de edit
+
+#### Opdracht (extra)
+
+pagination op overzicht
+
+#### Opdracht (extra)
+
+filtering op overzicht

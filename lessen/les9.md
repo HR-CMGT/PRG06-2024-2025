@@ -1,4 +1,4 @@
-# Les 8
+# Les 9
 
 ## Context API
 
@@ -18,6 +18,60 @@ Handig als je dezelfde data met veel componenten wilt delen, of wilt delen met c
 - loginstatus / jwt
 
 ## Foutafhandeling
+
+```javascript
+async function fetchProduct() {
+    try {
+        const response = await fetch('https://api.example.com/products/1', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        // create exception
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Er is een fout opgetreden:', error);
+    }
+}
+
+fetchProduct();
+
+```
+
+```javascript
+async function fetchProduct() {
+    let response;
+    try {
+        response = await fetch('https://api.example.com/products/1', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Er is een fout opgetreden:', error);
+    }
+
+    // check response code (eg 403)
+    if (response?.ok) {
+        console.log('Use the response here!');
+    } else {
+        console.log(`HTTP Response Code: ${response?.status}`)
+    }
+}
+
+fetchProduct();
+```
 
 Is denk ik leuk om toe te voegen, en zou misschien zelfs een alternatief extra onderdeel kunnen zijn.
 

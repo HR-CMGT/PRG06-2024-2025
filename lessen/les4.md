@@ -74,6 +74,11 @@ Content-Type: text/html
 
 ## POST Overloading
 
+POST gebruiken, en 'echte' method meesturen in de body onder `method`.
+
+* Gebruikt om andere methods dan GET en POST te gebruiken in html (Laravel)
+* Of om custom methods te maken die standaard niet bestaan, bijv `method=UNDELETE`.
+
 ## Postman
 
 Tool waarmee je een request volledig zelf kunt configureren

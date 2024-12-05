@@ -8,7 +8,7 @@ webpagina).
 
 Een webbrowser is de bekendste versie van een client, maar bij deze cursus gebruiken we ook twee andere clients.
 
-### REST client
+## REST client
 
 Een *REST client* is een tool die het mogelijk maakt om verzoeken naar een server te sturen en de respons te ontvangen,
 zonder dat hier een webbrowser voor nodig is.
@@ -20,53 +20,117 @@ Voordelen hiervan zijn:
   methoden;
 * je volledige controle en inzicht hebt in de headers van het request en de response.
 
-// TODO: Postman nu al gebruiken of pas in les 4?
+// TODO: dit wordt herhaald in les 4, zou eventueel hier korter kunnen
 
-### Fetch API
+## Fetch API
 
 De *Fetch API* is ook een client. Hiermee kan je HTTP-verzoeken te doen vanuit JavaScript om data op te halen
 en versturen naar een server.
 Je hebt hierbij ook volledige controle over het request om te kunnen communiceren met een webservice.
 
-// TODO: async
+### async ... await
 
-// TODO: omzetten naar await! + try catch uitleggen?
-
-#### Voorbeeld GET
+Om te zorgen dat een UI altijd *responsive* blijft, mag JavaScript nooit geblokkeerd worden. Functie die dit zouden
+kunnen doen doordat ze lang kunnen duren, zoals `fetch`, zijn daarom *asynchroon*. Dit betekent dat de applicatie niet
+wacht tot de functie klaar is, maar door gaat met de rest van het programma. Dit geeft echter een probleem als (een deel
+van) je programma afhankelijk is van het resultaat van de asynchrone functie. De oplossing hiervoor is het keyword
+`await`. Als je dit voor de asynchrone functie zet wacht het programma tot de functie klaar is. Om te voorkomen dat de
+uitvoering van JavaScript hierdoor geblokkeerd wordt, mag je `await` alleen gebruiken in een functie die je met het
+keyword `async` zelf asynchroon wordt: binnen de functie wordt er dus gewacht, maar de rest van je programma wacht niet
+meer op deze functie!
 
 ```javascript
-fetch('https://api.example.com/products/1', {
-    method: 'GET',
-    headers: {
-        'Accept': 'application/json'
+async function getData() {
+    await fetch
+...
+    // dit wordt pas uitgevoerd nadat fetch klaar is
+    // doe iets met het resultaat
+}
+
+getData();
+// dit wordt uitgevoerd voor getData klaar is
+```
+
+### try ... catch
+
+Naast dat er functies die een programma kunnen blokkeren, zijn er ook functies die kunnen crashen omdat er tijdens de
+uitvoering iets mis gaat. Het gaat hier niet om fouten in het programma zelf, maar problemen die op kunnen treden
+tijdens uitvoering, zoals het ontbreken van een internetverbinding of het uitlezen van een corrupt JSON bestand. We
+noemen dit soort fouten *runtime errors* of *exceptions*. Als je hier niks tegen doet crasht je programma, maar je kunt
+dit voorkomen door de code die dit kan veroorzaken in een `try`, `catch` blok te zetten. In de `catch` kan je dan
+bepalen wat je
+programma doet als de fout optreedt.
+
+```javascript
+try {
+    // hier zet je code waarin een runtime error kan optreden
+} catch (error) {
+    // hier zet je code die uitgevoerd moet worden in geval dat iets mis gaat. 
+    // de parameter eroor bevat nu de error die opgetreden is, wat handig is als er meerdere dingen in de try 
+    // staan die fout kunnen gaan
+    console.log(error.message);
+}
+```
+
+// TODO: omzetten naar await, try, catch!
+
+### Voorbeeld GET
+
+```javascript
+async function fetchProduct() {
+    try {
+        const response = await fetch('https://api.example.com/products/1', {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.error('Er is een fout opgetreden:', error);
     }
-})
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-    });
+}
+
+fetchProduct();
 ```
 
-#### Voorbeeld POST
+### Voorbeeld POST
 
 ```javascript
-fetch('https://api.example.com/products', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-        name: 'Voorbeeldproduct',
-        description: 'Dit is een voorbeeld productbeschrijving'
-    })
-})
-    .then(response => response.json())
-    .then(data => {
+async function createProduct() {
+    try {
+        const response = await fetch('https://api.example.com/products', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                name: 'Voorbeeldproduct',
+                description: 'Dit is een voorbeeld productbeschrijving'
+            })
+        });
+
+        const data = await response.json();
         console.log(data);
-    });
+    } catch (error) {
+        console.error('Er is een fout opgetreden:', error);
+    }
+}
+
+createProduct();
 ```
 
-// TODO: collectie en detail resource uitleggen
+## Collection
+
+De collection is het belangrijkste *endpoint* van de webservice die we gaan gebruiken. Je kunt hier een lijst ophalen
+van de beschikbare items. Ook kan je hier nieuwe items toevoegen aan de webservice.
+
+## Detail
+
+In de collectie vind je links naar de details van een item. Via die link kan je niet alleen de details ophalen, maar ook
+aanpassen en het item verwijderen.
 
 ## Methods
 
@@ -82,7 +146,7 @@ De Fetch API ondersteunt alle methoden, en daar maken we gebruik van als we comm
 | DELETE  | Een detail resource verwijderen                               | Delete |
 | POST    | Een nieuwe resource toevoegen aan een colletie                | Create |
 
-## API
+## Voorbeeld webservices
 
 ### Chess
 
@@ -97,15 +161,26 @@ React maakt gebruik van een *pseudo-DOM*, of virtuele DOM, om updates efficiënt
 geheugen. Daarna vergelijkt React de virtuele DOM met de echte DOM en past alleen de verschillen toe. Hierdoor
 worden onnodige updates voorkomen, wat zorgt voor betere prestaties.
 
+### Hooks
+
+React heeft verschillende *hooks* waarmee je kunt verbinden ('aan kunt haken') bij het framework. Een voorbeeld van een
+hook, is `useState`. Je herkent hooks aan het voorvoegsel `use`.
+
+// TODO: dit staat ook al in week 1, nalopen
+
 ### useState (herhaling)
 
 Met de `useState`-hook kan je een reactive variabele aanmaken. Aanpassingen van de state-variabele via de setter zorgen
 ervoor dat React het component opnieuw rendert.
 
+// TODO: syntax zelf uitleggen of linken naar React documentatie.
+
 ### useEffect
 
 `useEffect` is een andere hook in React waarmee je functies kunt uitvoeren als een component voor het eerst laadt
 of wanneer data verandert. Dit is handig voor bijvoorbeeld het ophalen van de content vanuit een webservice.
+
+// TODO: tweede parameter van useEffect
 
 ```javascript
 import React, {useState, useEffect} from 'react';
@@ -114,9 +189,17 @@ function ProductComponent() {
     const [product, setProduct] = useState(null);
 
     useEffect(() => {
-        fetch('https://api.example.com/products/1')
-            .then(response => response.json())
-            .then(data => setProduct(data));
+        async function fetchProduct() {
+            try {
+                const response = await fetch('https://api.example.com/products/1');
+                const data = await response.json();
+                setProduct(data);
+            } catch (error) {
+                console.error('Fout bij het ophalen van het product:', error);
+            }
+        }
+
+        fetchProduct();
     }, []); // Lege array zorgt ervoor dat useEffect alleen bij de eerste render wordt uitgevoerd.
 
     return (
@@ -136,12 +219,16 @@ function ProductComponent() {
 export default ProductComponent;
 ```
 
-// TODO: tweede parameter van useEffect
+#### Opdracht
 
-Allemaal in dezelfde API,... let op: dit wordt rommelig ;-)
+lijst tonen
 
-Opdracht: lijst tonen
+#### Opdracht
 
-Opdracht: detail tonen
+detail tonen
 
-Opdracht: nieuwe resource aanmaken
+#### Opdracht
+
+nieuwe resource aanmaken
+
+// Allemaal in dezelfde API,... let op: dit wordt rommelig ;-)**
