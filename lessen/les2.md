@@ -30,13 +30,13 @@ Je hebt hierbij ook volledige controle over het request om te kunnen communicere
 
 ### async ... await
 
-Om te zorgen dat een UI altijd *responsive* blijft, mag JavaScript nooit geblokkeerd worden. Functie die dit zouden
+Om te zorgen dat een UI altijd *responsive* blijft, mag JavaScript nooit geblokkeerd worden. Functies die dit zouden
 kunnen doen doordat ze lang kunnen duren, zoals `fetch`, zijn daarom *asynchroon*. Dit betekent dat de applicatie niet
 wacht tot de functie klaar is, maar door gaat met de rest van het programma. Dit geeft echter een probleem als (een deel
 van) je programma afhankelijk is van het resultaat van de asynchrone functie. De oplossing hiervoor is het keyword
 `await`. Als je dit voor de asynchrone functie zet wacht het programma tot de functie klaar is. Om te voorkomen dat de
 uitvoering van JavaScript hierdoor geblokkeerd wordt, mag je `await` alleen gebruiken in een functie die je met het
-keyword `async` zelf asynchroon wordt: binnen de functie wordt er dus gewacht, maar de rest van je programma wacht niet
+keyword `async` zelf asynchroon wordt: binnen de functie wordt er dan gewacht, maar de rest van je programma wacht niet
 meer op deze functie!
 
 ```javascript
@@ -72,8 +72,6 @@ try {
 }
 ```
 
-// TODO: omzetten naar await, try, catch!
-
 ### Voorbeeld GET
 
 ```javascript
@@ -104,6 +102,7 @@ async function createProduct() {
         const response = await fetch('https://api.example.com/products', {
             method: 'POST',
             headers: {
+                'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
@@ -167,6 +166,7 @@ React heeft verschillende *hooks* waarmee je kunt verbinden ('aan kunt haken') b
 hook, is `useState`. Je herkent hooks aan het voorvoegsel `use`.
 
 // TODO: dit staat ook al in week 1, nalopen
+// TODO: toevoegen setter kan ook als prop doorgegeven worden 'lifting state up'
 
 ### useState (herhaling)
 

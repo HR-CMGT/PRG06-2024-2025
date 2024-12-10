@@ -21,6 +21,8 @@ weergegeven.
 
 ### react-router
 
+// TODO: React Router 7 is uit en werkt anders? Ziet er minder inzichtelijk uit => uitproberen
+
 Verschillende manieren om routing toe te passen binnen React. Wij gebruiken `createBrowserRouter` omdat we dit de beste
 manier vinden. Helaas is deze niet het best gedocumenteerd.
 

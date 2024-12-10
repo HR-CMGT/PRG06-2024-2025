@@ -23,7 +23,7 @@ RESTful back-end. De front-end en back-end zijn dus gescheiden applicaties. We m
 **R**eact voor de dynamische front-end en **N**ode.js, **E**xpress, en **M**ongoDB voor de back-end en dataopslag.
 
 Aan het einde van de cursus kun je zelfstandig een Full Stack webapplicatie
-opzetten<!--, beveiligen als het past dit toevoegen in week 3--> en hosten op een
+opzetten, beveiligen en hosten op een
 server.
 
 ## Overzicht cursus
