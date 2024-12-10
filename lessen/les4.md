@@ -29,7 +29,7 @@ Accept: text/html
 
 ```
 POST /products
-Content-Type: application/x-www-urlencoded
+Content-Type: application/x-www-form-urlencoded
 
 title=new&price=100
 ```
@@ -72,26 +72,29 @@ Content-Type: text/html
 
 *is afhankelijk van de implementatie
 
-## POST Overloading
+## REST client
 
-POST gebruiken, en 'echte' method meesturen in de body onder `method`.
+Een *REST client* is een tool die het mogelijk maakt om verzoeken naar een server te sturen en de respons te ontvangen,
+zonder dat hier een webbrowser voor nodig is.
 
-* Gebruikt om andere methods dan GET en POST te gebruiken in html (Laravel)
-* Of om custom methods te maken die standaard niet bestaan, bijv `method=UNDELETE`.
+* Een REST client communiceert rechtstreeks met een webservice;
+* Je kunt zelf kunt instellen welke HTTP-methode je gebruikt, en kunt naast `GET` of `POST`, ook alle andere methoden
+  gebruiken;
+* Ook heb je volledige controle over de headers van het request, en kun je de response headers uitlezen.
 
-## Postman
-
-Tool waarmee je een request volledig zelf kunt configureren
-
-Ideaal voor testen/debuggen van een webservice
+Een REST client is de ideale tool voor het testen en debuggen van een webservice.
 
 Opdracht: Oefenen met Postman (op chess/notes, of 'hacken' van een site)
+
+### Postman
+
+Tijdens deze cursus maken we gebruik van Postman, maar er zijn ook andere REST clients.
 
 ## Opdrachten
 
 // TODO: Kan ook met Chess
 
-* Installeer een REST Client (bijv. Postman)
+* Installeer Postman
 * Tip: als je een account maakt bij Postman kan je je requests opslaan om later her te gebruiken. Dat is heel handig als
   je straks je eigen service moet debuggen
 * Haal met GET de collectie https://docent.cmi.hro.nl/bootb/demo/notes/ op
@@ -115,7 +118,7 @@ De webserver:
 * Stuurt response naar de client
 
 Voorbeelden van webservers zijn *Apache* en *Nginx*. Maar de node module *Express* die we gebruiken bij deze cursus is
-een webserver.
+ook een webserver.
 
 ## Node
 

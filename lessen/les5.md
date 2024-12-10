@@ -3,7 +3,7 @@
 ## MongoDB
 
 *MongoDB* is een NoSQL-database die gegevens opslaat in documenten, in plaats van in tabellen zoals bij relationele
-databases. Gegevens worden opgeslagen als een soort JSON.
+databases. Gegevens worden opgeslagen als een soort JSON. De database zelf is ongestructureerd
 
 ## Mongoose
 
@@ -11,9 +11,17 @@ De module *Mongoose* is een object-document mapper (ODM) voor *MongoDB*. Hiermee
 communiceren met de database.
 Ook kunnen we in Mongoose modellen (schema's) maken voor objecten in de ongestructureerde database.
 
-// TODO: opdracht seeder (POST overload)
+#### Opdracht
 
-// TODO: GET op collectie en detail
+* Installeer Mongodb en Mongoose
+* Laat je app verbinden met de database
+* Maak een Schema voor een note of puzzel
+* Maak een endpoint /notes of /chesspuzzel
+* Return de lijst als JSON (nu uiteraard nog leeg)
+* Installeer fakerjs
+* Maak een endpoint `/seed`
+* Maak 10 fake items aan op dit endpoint en plaats ze in de database
+* Voeg /notes/:id toe
 
 ## POST en PUT
 
@@ -21,7 +29,10 @@ json / www-urlencoded
 
 // TODO: extra uitleg over json (structuur en datatypes)
 
-// TODO: Opdracht POST, PUT, DELETE
+#### Opdracht
+
+* Body parsen
+* POST
 
 ## Status Codes
 
@@ -129,5 +140,6 @@ In dit geval:
 
 ## Opdrachten
 
+PUT en DELETE
 Statuscodes en OPTIONS (als nog niet in 4)
 Naar de server

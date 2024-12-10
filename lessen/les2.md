@@ -11,16 +11,7 @@ Een webbrowser is de bekendste versie van een client, maar bij deze cursus gebru
 ## REST client
 
 Een *REST client* is een tool die het mogelijk maakt om verzoeken naar een server te sturen en de respons te ontvangen,
-zonder dat hier een webbrowser voor nodig is.
-
-Voordelen hiervan zijn:
-
-* dat een REST client rechtstreeks kan communiceren met een webservice;
-* je in een REST client zelf kunt instellen welke HTTP-methode je gebruikt, zoals `GET` of `POST`, maar ook alle andere
-  methoden;
-* je volledige controle en inzicht hebt in de headers van het request en de response.
-
-// TODO: dit wordt herhaald in les 4, zou eventueel hier korter kunnen
+zonder dat hier een webbrowser voor nodig is. We kijken hier verder naar in les 4.
 
 ## Fetch API
 
@@ -165,10 +156,10 @@ worden onnodige updates voorkomen, wat zorgt voor betere prestaties.
 React heeft verschillende *hooks* waarmee je kunt verbinden ('aan kunt haken') bij het framework. Een voorbeeld van een
 hook, is `useState`. Je herkent hooks aan het voorvoegsel `use`.
 
+### useState (herhaling)
+
 // TODO: dit staat ook al in week 1, nalopen
 // TODO: toevoegen setter kan ook als prop doorgegeven worden 'lifting state up'
-
-### useState (herhaling)
 
 Met de `useState`-hook kan je een reactive variabele aanmaken. Aanpassingen van de state-variabele via de setter zorgen
 ervoor dat React het component opnieuw rendert.
@@ -227,8 +218,12 @@ lijst tonen
 
 detail tonen
 
+## Forms
+
+State variabelen / generieke handler
+
 #### Opdracht
 
 nieuwe resource aanmaken
 
-// Allemaal in dezelfde API,... let op: dit wordt rommelig ;-)**
+// Allemaal in dezelfde API,... let op: dit wordt rommelig ;-)

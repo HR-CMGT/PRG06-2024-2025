@@ -1,5 +1,22 @@
 # Les 8
 
+## POST Overloading
+
+Het HTTP protocol heeft slechts een beperkte set aan methods (`GET`, `POST`, `PUT`, etc.). Soms wil je met resource
+dingen doen die hier niet in voorkomen. We gebruiken in dat geval altijd de method `POST`. Omdat dit de enige method is
+die niet safe, en niet indempotent hoeft te zijn weten we zeker dat een client hier altijd 'voorzichtig' mee zal zijn.
+Omdat het geen normale `POST` is sturen we in het request een variable `method` mee waarin we de echte method zetten,
+bijv `method=UNDELETE`.
+We noemen dit principe *POST overloading* omdat we een `POST` een andere betekenis geven.
+Het meesturen van de echte method in een aparte variabele is niet alleen voor de duidelijkheid, maar ook omdat het
+daardoor mogelijk is om een POST overload naast een normale `POST` te gebruiken, of meerdere overloads voor één endpoint
+te definieren.
+
+### Voorbeeld
+
+In les 5 hebben we een aparte route `seed` gemaakt om nieuwe items aan te maken. Met een POST overload kunnen we dit
+netter doen, door de seeder gewoon op de collectie te zetten met `method=SEED`.
+
 ## JWT
 
 Doel: authenticatie en authorisatie check, zonder steeds te moeten authenticeren (inloggen)
@@ -12,11 +29,11 @@ Doel: authenticatie en authorisatie check, zonder steeds te moeten authenticeren
 ### Proces
 
 - Gebruiker logt in op autheticatieserver
-- Autheticatieserver creert een JWT
+- Authenticatieserver creëert een JWT
 - Client stuurt token mee met elk request naar applicatieserver
 - Applicatieserver (zonder autheticatieserver) kan zelf dit token valideren dankzij shared secret
 
-### HTTP authetication
+### HTTP authentication
 
 ```
 WWW-Authenticate: <type> realm=<realm>
@@ -55,10 +72,12 @@ met https moet gebruiken
 
 btoa atob
 
-## Opdracht
+#### Opdracht
 
-Ga naar: https://www.base64decode.org/
-Decodeer ‘SGVsbG8sIHdvcmxk’
+* Ga naar: https://www.base64decode.org/
+* Decodeer ‘SGVsbG8sIHdvcmxk’
+
+#### Opdracht
 
 Werken aan eindopdracht
 

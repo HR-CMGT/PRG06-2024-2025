@@ -4,7 +4,7 @@
 
 *HATEOAS* staat voor **Hypermedia As The Engine Of Application State** en is niet alleen een hele lelijke term, maar ook
 een belangrijk concept binnen REST. Het
-houdt in dat een client niet alle endpoints hoeft te kennen maar door de server geholpen wordt, door middel van
+houdt in dat een client niet alle endpoints hoeft te kennen maar door de server geholpen wordt door middel van
 hypermedia (links). De client kan hierdoor op basis van de huidige toestand van de applicatie, ontdekken welke acties
 mogelijk zijn door de links te volgen die door de server worden aangeboden.
 
@@ -39,16 +39,49 @@ moet zijn is de link naar `self`. Andere links zijn context-afhankelijk.
 }
 ```
 
-## Virtuals
+## Links toevoegen
+
+Links zijn geen 'echt' onderdeel van je model omdat ze dynamisch gegenereerd (en mogelijk later veranderd) kunnen worden
+door de server. Je voegt links daarom zelf toe aan de resource.
+
+### Zelf toevoegen van de link aan de resource
+
+Collection object maken met items en _links
+Model omzetten naar JSON om bewerkbaar te maken
+
+### Virtuals
+
+Schema gebruiken om virtuals toe te voegen aan detail is nog netter
 
 ## Checker
 
-// TODO: opdracht, check je webservice
+Voor deze cursus hebben we een script dat op een aantal punten checkt of een webservice aan (onze) standaarden voldoet.
 
 ## Opdracht
 
-structuur en links toevoegen
-// TODO: Check of checker ook zonder pagination werkt
+* Collection structuur aanpassen, en links toevoegen
+
+```json
+{
+  "items": [
+    {},
+    {},
+    {}
+  ],
+  "_links": {
+    "self": {
+      "href": "http://..."
+    },
+    "collection": {
+      "href": "http://..."
+    }
+  }
+}
+```
+
+* Link naar self en collection toevoegen aan de details m.b.v. virtuals
+* Update je project op de server
+* Kijk wat de checker van je webservice vindt
 
 ## CORS
 
@@ -70,8 +103,12 @@ Hier zijn enkele van de meest gebruikte CORS-gerelateerde headers:
 - `Access-Control-Allow-Methods`: Geeft de HTTP-methoden aan die toegestaan zijn voor een resource (zoals `GET`, `POST`,
   `PUT`, enz.).
 - `Access-Control-Allow-Headers`: Specificeert welke headers de client mag gebruiken in het request.
-- `Access-Control-Allow-Credentials`: Geeft aan of de client credentials (waaronder ook cookies) mag verzenden met het
+
+<!--
+Dit lijkt niet nodig voor Authentication
+- `Access-Control-Allow-Credentials`: Geeft aan of de client credentials, waaronder cookies, mag verzenden met het
   request.
+-->
 
 ### Preflight
 
@@ -100,8 +137,12 @@ Bij het opzetten van CORS in een RESTful webservice moet je met de volgende zake
 - Een `OPTIONS` request moet, naast de standaard `Allow` header, ook de CORS-specifieke `Access-Control-Allow-Methods`
   header
   bevatten.
+  NB. Een preflight wordt altijd zonder headers gestuurd, dus let op dat je geen eisen aan het request stelt (zoals een
+  Accept-header).
 
-Opdracht: CORS toevoegen
-Opdracht: Checker afmaken
+#### Opdrachten
+
+* CORS toevoegen
+* Checker afmaken
 
 Huiswerk: nadenken over eigen full stack project (onderwerp)

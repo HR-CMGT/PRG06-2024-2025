@@ -1,21 +1,29 @@
-# Installatie week 1
+# Installatie Front-end
 
-// TODO windows vs mac os installaties van node/npm
+## Les 1
 
-* node en npm (en nvm?)
-  `node -v` versie 20
-  `npm -v` versie 10
+Check of node en npm de juiste versie hebben:
+
+`node -v` versie 20 of 22
+
+`npm -v` versie 10
+
+* Installeer node/npm indien nodig:
   https://nodejs.org/en/download/package-manager
-*
+
+<!--
 * vite project met react aanmaken
   https://vite.dev/guide/
   `npm create vite@latest`
   React - Javascript
-* npm install
-* tailwind
+* npm install -->
+
+Maak een nieuw React project aan:
+
+* React met Vite en Tailwind
   https://tailwindcss.com/docs/guides/vite
 
-disable prop types check in eslint
+Disable warnings over prop types in `eslint.config.js`:
 
 ```
 "rules": {
@@ -23,15 +31,16 @@ disable prop types check in eslint
   }
 ```
 
-CHECK: leeg template?
-Anders:
+## Les 3
 
-verwijder App.css (ook in main.jsx), verwijder assets, pas index.html aan (icon)
+React Router
 
-## Later toevoegen
+* Voeg React router toe aan je project:
+  `npm install react-router`
 
-npm install react-router
+## Les 8/9
 
-## laatste week
+JSON web tokens
 
-npm install jwt-decode
+* Voeg een JWT decoder toe aan je project:
+  `npm install jwt-decode`

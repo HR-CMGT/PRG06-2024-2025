@@ -72,16 +72,16 @@ Bijvoorbeeld: Een uur ```Cache-Control: max-age=3600```, of nooit ```Cache-Contr
 Een andere manier om de gebruiker te helpen is door een *conditional request* te implementeren in je service.
 Hiervoor kijk je naar de request header `If-Modified-Since`.
 
-Voorbeeld:
+### Voorbeeld
 
-Request
+**Request**
 
 ```
 GET /products/1
 If-Modified-Since: Mon, 6 Jan 2025 09:01:45 GMT
 ```
 
-Response
+**Response**
 
 ```
 HTTP/1.1 200 OK
@@ -91,7 +91,7 @@ Last-Modified: Mon, 7 Jan 2025 10:15:09 GMT
 [Hier de body met te resource]
 ```
 
-of
+of (als er geen wijzigingen waren)
 
 ```
 HTTP/1.1 304 Not Modified
@@ -109,4 +109,4 @@ Alleen Last-Modified is de meest basic manier, maar vind ik ook de meest inituit
 
 ## Opdracht
 
-Werken aan eindopdracht
+* Werken aan eindopdracht

@@ -226,11 +226,15 @@ function List({items}) {
 
 #### Opdracht
 
-Installatie
+* Installeer node (als je dat nog niet gedaan hebt)
+* Maak een eerste React project aan met Vite en Tailwind
 
 #### Opdracht
 
-Array met objecten maken en tonen mbv component, stylen met tailwind, subcomponenten
+* Maak een array aan in je project met JSON objecten (gebaseerd op notes of chesspuzzel of nog even niet?).
+* Gebruik map om de titels uit de array in App.jsx te tonen in een `<ul>` met `<li>`
+* Verplaats de `<li>` naar een apart component die een `prop`, `item` verwacht waarin je het object doorstuurt
+* Pas het component aan door het volledige object in een `<article>` te tonen, dat je stylt met Tailwind
 
 // TODO: VPS check. Uitleg VPS in les 4, hier wel een check of iedereen zijn/haar inloggegevens heeft.
 
