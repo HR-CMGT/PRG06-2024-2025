@@ -125,9 +125,7 @@ aanpassen en het item verwijderen.
 ## Methods
 
 In HTTP forulieren kan je alleen GET en POST gebruiken, maar er zijn er meer (zoals we bij Laravel al gezien hebben).
-De Fetch API ondersteunt alle methoden, en daar maken we gebruik van als we communiceren met een RESTful webservice.
-
-// TODO: Woord RESTful hier al noemen?
+De Fetch API ondersteunt alle methoden, en daar maken we gebruik van als we communiceren met een webservice.
 
 | Methode | Doel                                                          | CRUD   | 
 |---------|---------------------------------------------------------------|--------|
@@ -139,6 +137,8 @@ De Fetch API ondersteunt alle methoden, en daar maken we gebruik van als we comm
 ## Voorbeeld webservices
 
 ### Chess
+
+// TODO: links toevoegen
 
 ### Notes
 
@@ -158,11 +158,14 @@ hook, is `useState`. Je herkent hooks aan het voorvoegsel `use`.
 
 ### useState (herhaling)
 
-// TODO: dit staat ook al in week 1, nalopen
-// TODO: toevoegen setter kan ook als prop doorgegeven worden 'lifting state up'
-
 Met de `useState`-hook kan je een reactive variabele aanmaken. Aanpassingen van de state-variabele via de setter zorgen
 ervoor dat React het component opnieuw rendert.
+
+**Lifting up state**
+
+*Lifting up state* wordt gebruikt om data te delen tussen meerdere componenten. De state-variabele wordt hierbij
+beheerd naar een oudercomponent. Door de setter-functie van de state als prop door te geven aan child-components,
+kunnen ook deze de state aanpassen. Veranderingen in een child-component kunnen hierdoor ook een re-render triggeren.
 
 // TODO: syntax zelf uitleggen of linken naar React documentatie.
 
@@ -210,17 +213,87 @@ function ProductComponent() {
 export default ProductComponent;
 ```
 
-#### Opdracht
+### Opdracht: Lijst tonen
 
-lijst tonen
+Implementeer een React-component dat data ophaalt uit een webservice en een lijst toont. Gebruik `fetch` om de gegevens
+op te halen en toon de lijst in een `<ul>` of child components.
 
-#### Opdracht
+- Haal een collectie van items op.
+- Gebruik een `useEffect`-hook om de fetch te doen bij het laden van het component.
+- Gebruik een `useState`-hook om de opgehaalde data op te slaan.
+- Toon een loading-indicator terwijl de data wordt opgehaald (optioneel).
 
-detail tonen
+### Opdracht: Detail tonen
+
+Maak een React-component dat details van een specifiek item ophaalt en weergeeft.
+
+- Haal de details van een item.
+- Gebruik props om te bepalen welk item moet worden opgehaald.
+- Gebruik een `useEffect`-hook en `fetch` om de gegevens op te halen.
+- Sla de opgehaalde details op in een `useState`-variabele.
+- Toon een loading-indicator tijdens het ophalen van de gegevens (optioneel).
 
 ## Forms
 
-State variabelen / generieke handler
+In React worden formulieren vaak beheerd met behulp van een state-object, in plaats van aparte state variabelen. Dit
+object slaat de waarden van de
+invoervelden op en wordt bijgewerkt naarmate de gebruiker gegevens invoert. Hierdoor kan je een generieke *handler*
+maken voor
+de invoer van alle formuliervelden, in plaats van een aparte handler voor elk veld.
+
+```javascript
+import React, {useState} from 'react';
+
+function FormComponent() {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+    });
+
+    // Generieke handler voor het bijwerken van de state
+    const handleInputChange = (event) => {
+        const {name, value} = event.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        console.log('Formulier verzonden:', formData);
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <div>
+                <label htmlFor="name">Naam:</label>
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                />
+            </div>
+            <div>
+                <label htmlFor="email">E-mailadres:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                />
+            </div>
+            <button type="submit">Verzenden</button>
+        </form>
+    );
+}
+
+export default FormComponent;
+
+```
 
 #### Opdracht
 

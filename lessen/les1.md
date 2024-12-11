@@ -131,14 +131,21 @@ variabelen. Dit betekent dat een verandering van een variabele zorgt voor automa
 pagina.
 Dit is wat we bedoelen als we zeggen dat een applicatie *reactive* is.
 
-// TODO: Hello world https://tailwindcss.com/docs/guides/vite
+<!-- Tijdens les demo Hello world https://tailwindcss.com/docs/guides/vite -->
 
 ### Components
 
-Functie die html returnt
-Hergebruik, overzicht, losse bestanden
+Een component is een functie die als return-waarde HTML heeft. De naam van de functie is ook de naam van de tag waarmee
+je het component aanroept. Dus `function Product()` roep je in je code aan als `<Product />`.
 
-// TODO: Vergelijk Laravel (zowel componenten als props).
+Probeer de functionaliteit zoveel mogelijk te isoleren. Dat betekent dat de logica en
+weergave binnen het component losstaan van de rest van de applicatie. Dit maakt de code overzichtelijk en daarnaast
+maakt een het hergebruik van een component mogelijk.
+
+Tijdens deze cursus wordt elk component in een apart bestand geplaatst. Ook dit maakt hergebruik in andere projecten
+eenvoudiger.
+
+<!-- Tijdens de les // TODO: Vergelijk Laravel (zowel componenten als props). -->
 
 ### JSX
 
@@ -158,7 +165,8 @@ Er zijn wel een paar dingen waar je rekening mee moet houden:
 * Binnen de HTML kan je JavaScript gebruiken binnen accolades `{ javascript }`, het resultaat daarvan wordt gebruikt in
   de HTML.
 
-// TODO: Ook nog iets toevoegen over {"jhg"}?
+<!-- // TODO: Vreemde notatie door autocompletion van PHPStorm {"test"} in les laten
+zien. -->
 
 <!-- //TODO: camelcasing van css staat er nu niet ivm Tailwind -->
 
@@ -198,7 +206,8 @@ function App() {
 }
 ```
 
-// TODO: ik heb in de buttonfunctie de naam count expres niet gebruikt, maakt dit duidelijker of juist minder duidelijk
+// TODO: @Antwan, ik heb in de buttonfunctie de naam count expres niet gebruikt, maakt dit duidelijker of juist minder
+duidelijk
 wat er gebeurt?
 
 ### Props
@@ -236,6 +245,6 @@ function List({items}) {
 * Verplaats de `<li>` naar een apart component die een `prop`, `item` verwacht waarin je het object doorstuurt
 * Pas het component aan door het volledige object in een `<article>` te tonen, dat je stylt met Tailwind
 
-// TODO: VPS check. Uitleg VPS in les 4, hier wel een check of iedereen zijn/haar inloggegevens heeft.
+<!-- VPS check tijdens de les. Uitleg VPS in les 4, hier wel een check of iedereen zijn/haar inloggegevens heeft. -->
 
 https://react.dev/learn/writing-markup-with-jsx
