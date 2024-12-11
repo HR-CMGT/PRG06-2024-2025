@@ -74,8 +74,6 @@ Tijdens deze cursus ligt de focus op:
 | ssh       | Remote terminal verbinding met de Ubuntu server waar de back-end draait. |
 | FileZilla | FTP-client om bestanden over te zetten naar de back-end.                 |
 
-// TODO: Blur REST backend / weekindeling in plaatje?
-
 - Onderdelen: Front-end, Back-end, Client, Server, Webserver, db/MongoDB
 - Tools: PHPStorm, node, npm, vite, ssh, filezilla
 - Modules: Express, Mongoose, React, Fetch, Tailwind(?)
@@ -206,14 +204,16 @@ function App() {
 }
 ```
 
-// TODO: @Antwan, ik heb in de buttonfunctie de naam count expres niet gebruikt, maakt dit duidelijker of juist minder
+**// TODO: @Antwan, ik heb in de buttonfunctie de naam count expres niet gebruikt, maakt dit duidelijker of juist minder
 duidelijk
-wat er gebeurt?
+wat er gebeurt?**
 
 ### Props
 
-Waarden doorgeven aan component, als dit state variabelen zijn blijven die reactive en wordt component dus ook opnieuw
-gerenderd bij verandering
+Met *props* (properties) kan je waarden doorgeven aan een component. Dit maakt componenten dynamisch doordat er gegevens
+van een parent component naar een child component gestuurd kunnen worden. De props geef je door als attributen van het
+component in de HTML, en gebruik je in get component als parameters van de functie.
+
 
 <!-- Destructuring of `props.value`? => destructuring, omdat React docs dit doen. Uitleg hierover doen we bij PRG7 -->
 
@@ -231,6 +231,14 @@ function List({items}) {
         </ul>
     );
 }
+```
+
+```javascript
+(
+    <ul>
+        <List items={products}/>
+    </ul>
+)
 ```
 
 #### Opdracht

@@ -216,22 +216,16 @@ export default ProductComponent;
 ### Opdracht: Lijst tonen
 
 Implementeer een React-component dat data ophaalt uit een webservice en een lijst toont. Gebruik `fetch` om de gegevens
-op te halen en toon de lijst in een `<ul>` of child components.
+op te halen en toon de lijst in een `<ul>`.
 
 - Haal een collectie van items op.
 - Gebruik een `useEffect`-hook om de fetch te doen bij het laden van het component.
 - Gebruik een `useState`-hook om de opgehaalde data op te slaan.
 - Toon een loading-indicator terwijl de data wordt opgehaald (optioneel).
 
-### Opdracht: Detail tonen
+### Opdracht: Netter maken
 
-Maak een React-component dat details van een specifiek item ophaalt en weergeeft.
-
-- Haal de details van een item.
-- Gebruik props om te bepalen welk item moet worden opgehaald.
-- Gebruik een `useEffect`-hook en `fetch` om de gegevens op te halen.
-- Sla de opgehaalde details op in een `useState`-variabele.
-- Toon een loading-indicator tijdens het ophalen van de gegevens (optioneel).
+Vervang de `<ul>` door een `<article>` in een apart component. Geef via de props alleen het id door aan het component.
 
 ## Forms
 
@@ -295,8 +289,16 @@ export default FormComponent;
 
 ```
 
-#### Opdracht
+### Opdracht: Nieuwe resource
 
-nieuwe resource aanmaken
+Implementeer het toevoegen van een nieuwe resource via een formulier. Het formulier is
+een apart component dat je onder de bestaande collectie plaatst. Zorg ervoor dat de collectie opnieuw wordt
+gerenderd nadat de nieuwe resource is toegevoegd.
+
+- Maak een apart formuliercomponent waarin de gebruiker de gegevens van een nieuwe resource kan invoeren.
+- Gebruik `useState` in het formuliercomponent om de invoer van de gebruiker in een object bij te houden.
+- Gebruik `fetch` om een `POST`-verzoek te versturen naar een RESTful webservice om de nieuwe resource aan te maken.
+- Zorg ervoor dat de collectie opnieuw wordt opgehaald of bijgewerkt via *lifted state* nadat de `POST` is
+  uitgevoerd.
 
 // Allemaal in dezelfde API,... let op: dit wordt rommelig ;-)

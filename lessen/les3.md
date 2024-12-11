@@ -36,6 +36,7 @@ Variabelen uit URL in `params`
 #### Opdracht
 
 Voeg routing toe
+collectie / detail / create
 
 ## PUT en DELETE
 
