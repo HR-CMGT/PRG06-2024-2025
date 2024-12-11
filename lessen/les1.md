@@ -81,11 +81,9 @@ Tijdens deze cursus ligt de focus op:
 
 ## Reactive frameworks
 
-* React maakt gebruik van een virtuele DOM, of pseudo-DOM, om efficiënt te renderen. Hierdoor worden in de echte DOM
-  alleen updates gedaan op plekken waar in de pseudo-DOM vastgesteld is dat ze veranderd zijn.
-* Het framework is *event-driven*; componenten reageren op events en passen de interface aan.
-* Bij veranderingen in data wordt de rendering automatisch getriggerd, wat zorgt voor een *reactieve*
-  gebruikerservaring.
+React (en reactive framworks) zijn *event-driven*. Componenten reageren op events en passen de interface aan. Hierdoor
+zorgen veranderingen in data voor automatische re-rendering, wat zorgt voor een *reactieve*
+gebruikerservaring.
 
 ## React project
 
