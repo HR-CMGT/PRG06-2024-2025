@@ -81,7 +81,8 @@ Tijdens deze cursus ligt de focus op:
 
 ## Reactive frameworks
 
-React (en reactive framworks) zijn *event-driven*. Componenten reageren op events en passen de interface aan. Hierdoor
+React (en reactive framworks in het algemeen) zijn *event-driven*. Componenten reageren op events en passen de interface
+aan. Hierdoor
 zorgen veranderingen in data voor automatische re-rendering, wat zorgt voor een *reactieve*
 gebruikerservaring.
 
@@ -172,6 +173,8 @@ Met de functie `useState` maak je een state variabele en een bijbehorende *sette
 de state variabele aan te passen, triggert dit React om op alle plekken waar de variabele gebruikt wordt de app opnieuw
 te renderen.
 De setter kan je zowel met een vaste waarde aanroepen, als met een functie die de huidige waarde aanpast.
+
+https://react.dev/reference/react/useState
 
 ### Voorbeeld JSX en State
 

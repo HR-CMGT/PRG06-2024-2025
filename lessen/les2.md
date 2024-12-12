@@ -136,11 +136,16 @@ De Fetch API ondersteunt alle methoden, en daar maken we gebruik van als we comm
 
 ## Voorbeeld webservices
 
-### Chess
+**Let op:** Beide webservices verwachten dat je bij een request een Accept-header (`Accept: application/json`)
+meestuurt.
 
-// TODO: links toevoegen
+### Chess Spots
+
+https://prg06-node-express.antwan.eu/spots/
 
 ### Notes
+
+https://notes.basboot.nl/notes
 
 ## React Lifecycle
 
@@ -167,14 +172,23 @@ ervoor dat React het component opnieuw rendert.
 beheerd naar een oudercomponent. Door de setter-functie van de state als prop door te geven aan child-components,
 kunnen ook deze de state aanpassen. Veranderingen in een child-component kunnen hierdoor ook een re-render triggeren.
 
-// TODO: syntax zelf uitleggen of linken naar React documentatie.
+https://react.dev/reference/react/useState
 
 ### useEffect
 
 `useEffect` is een andere hook in React waarmee je functies kunt uitvoeren als een component voor het eerst laadt
 of wanneer data verandert. Dit is handig voor bijvoorbeeld het ophalen van de content vanuit een webservice.
 
-// TODO: tweede parameter van useEffect
+```javascript
+// functie f wordt bij elke render van het component uitgevoerd
+useEffect(f);
+// functie f wordt alleen bij de eerste render van het component uitgevoerd
+useEffect(f, [])
+// functie f wordt bij de eerste render van het component, en bij een verandering van variabele v
+useEffect(f, [v])
+```
+
+https://react.dev/reference/react/useEffect
 
 ```javascript
 import React, {useState, useEffect} from 'react';
@@ -301,4 +315,4 @@ gerenderd nadat de nieuwe resource is toegevoegd.
 - Zorg ervoor dat de collectie opnieuw wordt opgehaald of bijgewerkt via *lifted state* nadat de `POST` is
   uitgevoerd.
 
-// Allemaal in dezelfde API,... let op: dit wordt rommelig ;-)
+<!-- // Allemaal in dezelfde API,... let op: dit wordt rommelig ;-) -->

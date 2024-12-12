@@ -13,7 +13,7 @@ Bij front-end routing wordt de navigatie volledig beheerd door de client, toch i
 om te zorgen dat alle url's naar je single page application gestuurd worden. De server routeert dus elk request naar
 `index.html`.
 
-// TODO: vergelijken met Laravel index.php?
+<!-- // TODO: in les vergelijken met Laravel index.php? -->
 
 De React applicatie leest de URL en kiest op basis daarvan welk component geladen moet worden. Wanneer de gebruiker
 bijvoorbeeld naar `/home` navigeert, zorgt `react-router` ervoor dat het juiste component (bijv. `HomeComponent`) wordt
@@ -21,39 +21,52 @@ weergegeven.
 
 ### react-router
 
-// TODO: React Router 7 is uit en werkt anders? Ziet er minder inzichtelijk uit => uitproberen
-
 Verschillende manieren om routing toe te passen binnen React. Wij gebruiken `createBrowserRouter` omdat we dit de beste
 manier vinden. Helaas is deze niet het best gedocumenteerd.
 
-`createBrowserRouter` buiten project aanmaken
-Hierin routes (`paths`) mappen naar components (`element`)
-Nesten kan (`children`)
-Variabelen uit URL in `params`
+* Gebruik `createBrowserRouter` buiten je project (in main.jsx) om een router aan te maken
+* Definieer daarin de hoofd routes (`paths`) naar components (`element`)
+* Definieer eventueel geneste routes (`children`)
+* Als je variabelen in een URL gebruikt kan je die in het component ophalen met `useParams`
+* Met een `<Outlet />` bepaal je waar het component gerenderd wordt
 
-`<Outlet />` bepaalt waar component komt
+Op onderstaande blogs kan je voorbeelden vinden:
+
+* https://medium.com/@pavitramodi.it/getting-started-with-createbrowserrouter-in-react-router-dom-e3131820fef4
+* https://codeparrot.ai/blogs/createbrowserrouter-a-step-up-from-switch
 
 #### Opdracht
 
-Voeg routing toe
-collectie / detail / create
+Voeg routing aan je project toe om aparte pagina's te maken van:
+
+* de collectie
+* de detail weergave
+* het create formulier
 
 ## PUT en DELETE
 
-PUT zelfde als POST, DELETE eenvoudigste method
+PUT wordt gebruikt om een resource aan te passen en werkt vrijwel hetzelfde als POST. Je kunt net als bij POST in de
+body een resource naar de webservice sturen. Het verschil is dat je deze resource niet naar de collectie stuurt, maar
+naar de detail resource die overschreven wordt met deze nieuwe resource.
+
+Om een resource te verwijderen kan je de DELETE method gebruiken.
 
 #### Opdracht
 
-Maak de delete
+Voeg aan je applicatie toe dat je resources kunt verwijderen
 
 #### Opdracht
 
-Maak de edit
+Voeg aan je applicatie toe dat je resources kunt aanpassen
 
 #### Opdracht (extra)
 
-pagination op overzicht
+Voeg pagination toe aan je overzichtspagina.
+
+* Je kunt dit helemaal zelf implementeren door de resulaten zelf 'op te knippen',
+* Je kunt dit ook door de webservice laten doen, door gebruik te maken van de parameters `page` en `limit`. Als je deze
+  gebruikt kan je in het pagination object van de collectie links vinden om door de resultaten te bladeren.
 
 #### Opdracht (extra)
 
-filtering op overzicht
+Voeg een zoek en/of filter optie toe. 
