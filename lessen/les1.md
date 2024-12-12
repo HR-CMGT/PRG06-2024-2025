@@ -47,7 +47,7 @@ Zelfstandig afronden eindopdracht
 ## Web development cursussen tot nu toe
 
 | Cursus       | Kenmerken                                              |
-|--------------|--------------------------------------------------------|
+| ------------ | ------------------------------------------------------ |
 | FED          | Geen logica op de backend en front-end                 |
 | PRG2 en PRG5 | Alle logica op de backend, geen logica op de front-end |
 | PRG3 en PRG6 | Data-logica op de backend, UI-logica op de front-end   |
@@ -66,8 +66,8 @@ Tijdens deze cursus ligt de focus op:
 </a>
 
 | Tools     | Doel                                                                     |
-|-----------|--------------------------------------------------------------------------|
-| PHPStorm  | Voor ontwikkeling van zowel de front- als de backend                     |
+| --------- | ------------------------------------------------------------------------ |
+| PhpStorm  | Voor ontwikkeling van zowel de front- als de backend                     |
 | node      | JavaScript runtime op de backend.                                        |
 | npm       | Packetmanager voor zowel front- als backend, om modules te installeren.  |
 | vite      | Build-tool voor de front-end.                                            |
@@ -101,7 +101,7 @@ manager* te gebruiken. Het draaien van volledige serverfunctionaliteit in JavaSc
 packages) installeren en verwijderen.
 
 | Onderdeel    | Uitleg                                                                                                                |
-|--------------|-----------------------------------------------------------------------------------------------------------------------|
+| ------------ | --------------------------------------------------------------------------------------------------------------------- |
 | package.json | Bevat projectinformatie en een lijst van benodigde dependencies en scripts                                            |
 | run scripts  | Hiermee kun je npm-commando's definiëren in package.json voor het draaien van opdrachten zoals `npm start`            |
 | type=module  | Is een instelling van je project waardoor je de ES6 `import` syntax kunt gebruiken in plaats van het oudere `require` |
@@ -137,7 +137,7 @@ je het component aanroept. Dus `function Product()` roep je in je code aan als `
 
 Probeer de functionaliteit zoveel mogelijk te isoleren. Dat betekent dat de logica en
 weergave binnen het component losstaan van de rest van de applicatie. Dit maakt de code overzichtelijk en daarnaast
-maakt een het hergebruik van een component mogelijk.
+maakt het hergebruik van een component mogelijk.
 
 Tijdens deze cursus wordt elk component in een apart bestand geplaatst. Ook dit maakt hergebruik in andere projecten
 eenvoudiger.
@@ -146,7 +146,7 @@ eenvoudiger.
 
 ### JSX
 
-Omdat componenten bedoeld zijn om html terug te geven, wordt er geen gebruik gemaakt van gewoon JavaScript, maar van
+Omdat componenten bedoeld zijn om HTML terug te geven, wordt er geen gebruik gemaakt van gewoon JavaScript, maar van
 JSX. Dit is een mix van JavasScript en HTML. Je kunt gewoon JavaScript schrijven zoals je gewend bent, maar op plekken
 waar een string verwacht wordt kan je ook HTML schrijven zonder aanhalingstekens te gebruiken.
 
@@ -213,7 +213,7 @@ wat er gebeurt?**
 
 Met *props* (properties) kan je waarden doorgeven aan een component. Dit maakt componenten dynamisch doordat er gegevens
 van een parent component naar een child component gestuurd kunnen worden. De props geef je door als attributen van het
-component in de HTML, en gebruik je in get component als parameters van de functie.
+component in de HTML en gebruik je in het component als parameters van de functie.
 
 
 <!-- Destructuring of `props.value`? => destructuring, omdat React docs dit doen. Uitleg hierover doen we bij PRG7 -->
