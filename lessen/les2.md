@@ -15,8 +15,8 @@ zonder dat hier een webbrowser voor nodig is. We kijken hier verder naar in les 
 
 ## Fetch API
 
-De *Fetch API* is ook een client. Hiermee kan je HTTP-verzoeken te doen vanuit JavaScript om data op te halen
-en versturen naar een server.
+De *Fetch API* is ook een client. Hiermee kan je HTTP-verzoeken doen vanuit JavaScript om data op te halen
+en te versturen naar een server.
 Je hebt hierbij ook volledige controle over het request om te kunnen communiceren met een webservice.
 
 ### async ... await
@@ -44,20 +44,20 @@ getData();
 
 ### try ... catch
 
-Naast dat er functies die een programma kunnen blokkeren, zijn er ook functies die kunnen crashen omdat er tijdens de
+Naast dat er functies zijn die een programma kunnen blokkeren, zijn er ook functies die kunnen crashen omdat er tijdens de
 uitvoering iets mis gaat. Het gaat hier niet om fouten in het programma zelf, maar problemen die op kunnen treden
 tijdens uitvoering, zoals het ontbreken van een internetverbinding of het uitlezen van een corrupt JSON bestand. We
 noemen dit soort fouten *runtime errors* of *exceptions*. Als je hier niks tegen doet crasht je programma, maar je kunt
 dit voorkomen door de code die dit kan veroorzaken in een `try`, `catch` blok te zetten. In de `catch` kan je dan
 bepalen wat je
-programma doet als de fout optreedt.
+programma moet doen als de fout optreedt.
 
 ```javascript
 try {
     // hier zet je code waarin een runtime error kan optreden
 } catch (error) {
     // hier zet je code die uitgevoerd moet worden in geval dat iets mis gaat. 
-    // de parameter eroor bevat nu de error die opgetreden is, wat handig is als er meerdere dingen in de try 
+    // de parameter "error" bevat nu de error die opgetreden is, wat handig is als er meerdere dingen in de try 
     // staan die fout kunnen gaan
     console.log(error.message);
 }
@@ -124,15 +124,15 @@ aanpassen en het item verwijderen.
 
 ## Methods
 
-In HTTP forulieren kan je alleen GET en POST gebruiken, maar er zijn er meer (zoals we bij Laravel al gezien hebben).
-De Fetch API ondersteunt alle methoden, en daar maken we gebruik van als we communiceren met een webservice.
+In HTML-formulieren kan je als method alleen GET en POST gebruiken, maar er bestaan er meer (zoals we bij Laravel al gezien hebben).
+De Fetch API ondersteunt alle methoden en daar maken we gebruik van als we communiceren met een webservice.
 
-| Methode | Doel                                                          | CRUD   | 
-|---------|---------------------------------------------------------------|--------|
+| Methode | Doel                                                          | CRUD   |
+| ------- | ------------------------------------------------------------- | ------ |
 | GET     | Iets ophalen van de webservice (collectie of detail resource) | Read   |
 | PUT     | Een detail resource aanpassen                                 | Update |
 | DELETE  | Een detail resource verwijderen                               | Delete |
-| POST    | Een nieuwe resource toevoegen aan een colletie                | Create |
+| POST    | Een nieuwe resource toevoegen aan een collectie               | Create |
 
 ## Voorbeeld webservices
 
@@ -153,8 +153,8 @@ https://notes.basboot.nl/notes
 
 React maakt gebruik van een *pseudo-DOM*, of virtuele DOM, om updates efficiënt door te voeren. Als een component zijn
 `state` of `props` verandert, creëert React eerst een nieuwe versie van de DOM in het
-geheugen. Daarna vergelijkt React de virtuele DOM met de echte DOM en past alleen de verschillen toe. Hierdoor
-worden onnodige updates voorkomen, wat zorgt voor betere prestaties.
+geheugen. Daarna vergelijkt React de virtuele DOM met de echte DOM en past alleen de verschillen aan. Hierdoor
+worden onnodige updates aan de echte DOM voorkomen, wat zorgt voor betere prestaties.
 
 ### Hooks
 
@@ -166,13 +166,15 @@ hook, is `useState`. Je herkent hooks aan het voorvoegsel `use`.
 Met de `useState`-hook kan je een reactive variabele aanmaken. Aanpassingen van de state-variabele via de setter zorgen
 ervoor dat React het component opnieuw rendert.
 
-**Lifting up state**
+https://react.dev/reference/react/useState
 
-*Lifting up state* wordt gebruikt om data te delen tussen meerdere componenten. De state-variabele wordt hierbij
-beheerd naar een oudercomponent. Door de setter-functie van de state als prop door te geven aan child-components,
+**Lifting state up**
+
+*Lifting state up* wordt gebruikt om data te delen tussen meerdere componenten. Het beheer van de state-variabele wordt hierbij naar een oudercomponent verplaatst. Door de setter-functie van de state als prop door te geven aan child-components,
 kunnen ook deze de state aanpassen. Veranderingen in een child-component kunnen hierdoor ook een re-render triggeren.
 
-https://react.dev/reference/react/useState
+https://react.dev/learn/sharing-state-between-components
+
 
 ### useEffect
 
@@ -229,7 +231,7 @@ export default ProductComponent;
 
 ### Opdracht: Lijst tonen
 
-Implementeer een React-component dat data ophaalt uit een webservice en een lijst toont. Gebruik `fetch` om de gegevens
+Implementeer een React-component dat data ophaalt uit een webservice ([zie voorbeeld webservices](#voorbeeld-webservices)) en een lijst toont. Gebruik `fetch` om de gegevens
 op te halen en toon de lijst in een `<ul>`.
 
 - Haal een collectie van items op.
