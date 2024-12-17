@@ -166,12 +166,6 @@ hook, is `useState`. Je herkent hooks aan het voorvoegsel `use`.
 Met de `useState`-hook kan je een reactive variabele aanmaken. Aanpassingen van de state-variabele via de setter zorgen
 ervoor dat React het component opnieuw rendert.
 
-**Lifting up state**
-
-*Lifting up state* wordt gebruikt om data te delen tussen meerdere componenten. De state-variabele wordt hierbij
-beheerd naar een oudercomponent. Door de setter-functie van de state als prop door te geven aan child-components,
-kunnen ook deze de state aanpassen. Veranderingen in een child-component kunnen hierdoor ook een re-render triggeren.
-
 https://react.dev/reference/react/useState
 
 ### useEffect

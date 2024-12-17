@@ -174,6 +174,12 @@ de state variabele aan te passen, triggert dit React om op alle plekken waar de 
 te renderen.
 De setter kan je zowel met een vaste waarde aanroepen, als met een functie die de huidige waarde aanpast.
 
+**Lifting up state**
+
+*Lifting up state* wordt gebruikt om data te delen tussen meerdere componenten. De state-variabele wordt hierbij
+beheerd naar een oudercomponent. Door de setter-functie van de state als prop door te geven aan child-components,
+kunnen ook deze de state aanpassen. Veranderingen in een child-component kunnen hierdoor ook een re-render triggeren.
+
 https://react.dev/reference/react/useState
 
 ### Voorbeeld JSX en State
@@ -253,6 +259,11 @@ function List({items}) {
 * Gebruik map om de titels uit de array in App.jsx te tonen in een `<ul>` met `<li>`
 * Verplaats de `<li>` naar een apart component die een `prop`, `item` verwacht waarin je het object doorstuurt
 * Pas het component aan door het volledige object in een `<article>` te tonen, dat je stylt met Tailwind
+
+#### Opdracht
+
+Voeg een component toe dat je plaatst onder de articles. In dit component staat alleen een button, die als je erop klikt
+een random article aan de lijst toevoegt.
 
 <!-- VPS check tijdens de les. Uitleg VPS in les 4, hier wel een check of iedereen zijn/haar inloggegevens heeft. -->
 
