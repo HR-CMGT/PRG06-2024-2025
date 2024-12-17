@@ -47,7 +47,7 @@ Zelfstandig afronden eindopdracht
 ## Web development cursussen tot nu toe
 
 | Cursus       | Kenmerken                                              |
-| ------------ | ------------------------------------------------------ |
+|--------------|--------------------------------------------------------|
 | FED          | Geen logica op de backend en front-end                 |
 | PRG2 en PRG5 | Alle logica op de backend, geen logica op de front-end |
 | PRG3 en PRG6 | Data-logica op de backend, UI-logica op de front-end   |
@@ -66,7 +66,7 @@ Tijdens deze cursus ligt de focus op:
 </a>
 
 | Tools     | Doel                                                                     |
-| --------- | ------------------------------------------------------------------------ |
+|-----------|--------------------------------------------------------------------------|
 | PhpStorm  | Voor ontwikkeling van zowel de front- als de backend                     |
 | node      | JavaScript runtime op de backend.                                        |
 | npm       | Packetmanager voor zowel front- als backend, om modules te installeren.  |
@@ -101,7 +101,7 @@ manager* te gebruiken. Het draaien van volledige serverfunctionaliteit in JavaSc
 packages) installeren en verwijderen.
 
 | Onderdeel    | Uitleg                                                                                                                |
-| ------------ | --------------------------------------------------------------------------------------------------------------------- |
+|--------------|-----------------------------------------------------------------------------------------------------------------------|
 | package.json | Bevat projectinformatie en een lijst van benodigde dependencies en scripts                                            |
 | run scripts  | Hiermee kun je npm-commando's definiëren in package.json voor het draaien van opdrachten zoals `npm start`            |
 | type=module  | Is een instelling van je project waardoor je de ES6 `import` syntax kunt gebruiken in plaats van het oudere `require` |
@@ -174,13 +174,16 @@ de state variabele aan te passen, triggert dit React om op alle plekken waar de 
 te renderen.
 De setter kan je zowel met een vaste waarde aanroepen, als met een functie die de huidige waarde aanpast.
 
-**Lifting up state**
+https://react.dev/reference/react/useState
 
-*Lifting up state* wordt gebruikt om data te delen tussen meerdere componenten. De state-variabele wordt hierbij
-beheerd naar een oudercomponent. Door de setter-functie van de state als prop door te geven aan child-components,
+**Lifting state up**
+
+*Lifting state up* wordt gebruikt om data te delen tussen meerdere componenten. Het beheer van de state-variabele wordt
+hierbij naar een oudercomponent verplaatst. Door de setter-functie van de state als prop door te geven aan
+child-components,
 kunnen ook deze de state aanpassen. Veranderingen in een child-component kunnen hierdoor ook een re-render triggeren.
 
-https://react.dev/reference/react/useState
+https://react.dev/learn/sharing-state-between-components
 
 ### Voorbeeld JSX en State
 
