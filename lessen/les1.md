@@ -47,7 +47,7 @@ Zelfstandig afronden eindopdracht
 ## Web development cursussen tot nu toe
 
 | Cursus       | Kenmerken                                              |
-|--------------|--------------------------------------------------------|
+| ------------ | ------------------------------------------------------ |
 | FED          | Geen logica op de backend en front-end                 |
 | PRG2 en PRG5 | Alle logica op de backend, geen logica op de front-end |
 | PRG3 en PRG6 | Data-logica op de backend, UI-logica op de front-end   |
@@ -66,7 +66,7 @@ Tijdens deze cursus ligt de focus op:
 </a>
 
 | Tools     | Doel                                                                     |
-|-----------|--------------------------------------------------------------------------|
+| --------- | ------------------------------------------------------------------------ |
 | PhpStorm  | Voor ontwikkeling van zowel de front- als de backend                     |
 | node      | JavaScript runtime op de backend.                                        |
 | npm       | Packetmanager voor zowel front- als backend, om modules te installeren.  |
@@ -101,7 +101,7 @@ manager* te gebruiken. Het draaien van volledige serverfunctionaliteit in JavaSc
 packages) installeren en verwijderen.
 
 | Onderdeel    | Uitleg                                                                                                                |
-|--------------|-----------------------------------------------------------------------------------------------------------------------|
+| ------------ | --------------------------------------------------------------------------------------------------------------------- |
 | package.json | Bevat projectinformatie en een lijst van benodigde dependencies en scripts                                            |
 | run scripts  | Hiermee kun je npm-commando's definiëren in package.json voor het draaien van opdrachten zoals `npm start`            |
 | type=module  | Is een instelling van je project waardoor je de ES6 `import` syntax kunt gebruiken in plaats van het oudere `require` |
@@ -253,6 +253,7 @@ function List({items}) {
 
 * Installeer node (als je dat nog niet gedaan hebt)
 * Maak een eerste React project aan met Vite en Tailwind
+* Doorloop hiervoor de [installatie van les 1](../guides/installatie-week1.md)
 
 #### Opdracht 1.2
 
