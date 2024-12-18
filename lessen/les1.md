@@ -194,6 +194,8 @@ function App() {
 
     setCount(10); // dit zet de waarde van count direct op 10
 
+    const handleButtonAddOne = () => setCount((currentCount) => currentCount + 1);
+
     return (
         <>
             <header>
@@ -205,7 +207,7 @@ function App() {
             <main className="card">
                 <label htmlFor="name">Name</label>
                 <input id="name" name="name"/>
-                <button onClick={() => setCount((n) => n + 1) /* dit maakt de waarde van count 1 hoger */}>
+                <button onClick={handleButtonAddOne}>
                     count is {count}
                 </button>
             </main>
@@ -213,10 +215,6 @@ function App() {
     )
 }
 ```
-
-**// TODO: @Antwan, ik heb in de buttonfunctie de naam count expres niet gebruikt, maakt dit duidelijker of juist minder
-duidelijk
-wat er gebeurt?**
 
 ### Props
 
@@ -251,19 +249,19 @@ function List({items}) {
 )
 ```
 
-#### Opdracht
+#### Opdracht 1.1
 
 * Installeer node (als je dat nog niet gedaan hebt)
 * Maak een eerste React project aan met Vite en Tailwind
 
-#### Opdracht
+#### Opdracht 1.2
 
-* Maak een array aan in je project met JSON objecten (gebaseerd op notes of chesspuzzel of nog even niet?).
+* Maak een array aan in je project met objecten.
 * Gebruik map om de titels uit de array in App.jsx te tonen in een `<ul>` met `<li>`
 * Verplaats de `<li>` naar een apart component die een `prop`, `item` verwacht waarin je het object doorstuurt
 * Pas het component aan door het volledige object in een `<article>` te tonen, dat je stylt met Tailwind
 
-#### Opdracht
+#### Opdracht 1.3
 
 Voeg een component toe dat je plaatst onder de articles. In dit component staat alleen een button, die als je erop klikt
 een random article aan de lijst toevoegt.

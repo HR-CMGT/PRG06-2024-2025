@@ -35,7 +35,7 @@ Op onderstaande blogs kan je voorbeelden vinden:
 * https://medium.com/@pavitramodi.it/getting-started-with-createbrowserrouter-in-react-router-dom-e3131820fef4
 * https://codeparrot.ai/blogs/createbrowserrouter-a-step-up-from-switch
 
-#### Opdracht
+#### Opdracht 3.1
 
 Voeg routing aan je project toe om aparte pagina's te maken van:
 
@@ -51,15 +51,15 @@ naar de detail resource die overschreven wordt met deze nieuwe resource.
 
 Om een resource te verwijderen kan je de DELETE method gebruiken.
 
-#### Opdracht
+#### Opdracht 3.2
 
 Voeg aan je applicatie toe dat je resources kunt verwijderen
 
-#### Opdracht
+#### Opdracht 3.3
 
 Voeg aan je applicatie toe dat je resources kunt aanpassen
 
-#### Opdracht (extra)
+#### Opdracht 3.4 (extra)
 
 Voeg pagination toe aan je overzichtspagina.
 
@@ -67,6 +67,6 @@ Voeg pagination toe aan je overzichtspagina.
 * Je kunt dit ook door de webservice laten doen, door gebruik te maken van de parameters `page` en `limit`. Als je deze
   gebruikt kan je in het pagination object van de collectie links vinden om door de resultaten te bladeren.
 
-#### Opdracht (extra)
+#### Opdracht 3.5 (extra)
 
 Voeg een zoek en/of filter optie toe. 

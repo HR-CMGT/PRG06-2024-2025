@@ -44,7 +44,8 @@ getData();
 
 ### try ... catch
 
-Naast dat er functies zijn die een programma kunnen blokkeren, zijn er ook functies die kunnen crashen omdat er tijdens de
+Naast dat er functies zijn die een programma kunnen blokkeren, zijn er ook functies die kunnen crashen omdat er tijdens
+de
 uitvoering iets mis gaat. Het gaat hier niet om fouten in het programma zelf, maar problemen die op kunnen treden
 tijdens uitvoering, zoals het ontbreken van een internetverbinding of het uitlezen van een corrupt JSON bestand. We
 noemen dit soort fouten *runtime errors* of *exceptions*. Als je hier niks tegen doet crasht je programma, maar je kunt
@@ -124,11 +125,12 @@ aanpassen en het item verwijderen.
 
 ## Methods
 
-In HTML-formulieren kan je als method alleen GET en POST gebruiken, maar er bestaan er meer (zoals we bij Laravel al gezien hebben).
+In HTML-formulieren kan je als method alleen GET en POST gebruiken, maar er bestaan er meer (zoals we bij Laravel al
+gezien hebben).
 De Fetch API ondersteunt alle methoden en daar maken we gebruik van als we communiceren met een webservice.
 
 | Methode | Doel                                                          | CRUD   |
-| ------- | ------------------------------------------------------------- | ------ |
+|---------|---------------------------------------------------------------|--------|
 | GET     | Iets ophalen van de webservice (collectie of detail resource) | Read   |
 | PUT     | Een detail resource aanpassen                                 | Update |
 | DELETE  | Een detail resource verwijderen                               | Delete |
@@ -221,9 +223,10 @@ function ProductComponent() {
 export default ProductComponent;
 ```
 
-### Opdracht: Lijst tonen
+#### Opdracht 2.1: Lijst tonen
 
-Implementeer een React-component dat data ophaalt uit een webservice ([zie voorbeeld webservices](#voorbeeld-webservices)) en een lijst toont. Gebruik `fetch` om de gegevens
+Implementeer een React-component dat data ophaalt uit een
+webservice ([zie voorbeeld webservices](#voorbeeld-webservices)) en een lijst toont. Gebruik `fetch` om de gegevens
 op te halen en toon de lijst in een `<ul>`.
 
 - Haal een collectie van items op.
@@ -231,7 +234,7 @@ op te halen en toon de lijst in een `<ul>`.
 - Gebruik een `useState`-hook om de opgehaalde data op te slaan.
 - Toon een loading-indicator terwijl de data wordt opgehaald (optioneel).
 
-### Opdracht: Netter maken
+#### Opdracht 2.2: Netter maken
 
 Vervang de `<ul>` door een `<article>` in een apart component. Geef via de props alleen het id door aan het component.
 
@@ -297,7 +300,7 @@ export default FormComponent;
 
 ```
 
-### Opdracht: Nieuwe resource
+#### Opdracht 2.3: Nieuwe resource
 
 Implementeer het toevoegen van een nieuwe resource via een formulier. Het formulier is
 een apart component dat je onder de bestaande collectie plaatst. Zorg ervoor dat de collectie opnieuw wordt
