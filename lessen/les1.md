@@ -259,7 +259,7 @@ function List({items}) {
 
 * Maak een array aan in je project met objecten.
 * Gebruik map om de titels uit de array in App.jsx te tonen in een `<ul>` met `<li>`
-* Verplaats de `<li>` naar een apart component die een `prop`, `item` verwacht waarin je het object doorstuurt
+* Verplaats de `<li>` naar een apart component die een `prop` genaamd `item` verwacht waarin je het object doorstuurt
 * Pas het component aan door het volledige object in een `<article>` te tonen, dat je stylt met Tailwind
 
 #### Opdracht 1.3
