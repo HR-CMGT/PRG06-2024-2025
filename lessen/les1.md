@@ -175,6 +175,8 @@ te renderen.
 De setter kan je zowel met een vaste waarde aanroepen, als met een functie die de huidige waarde aanpast.
 
 https://react.dev/reference/react/useState
+<br>
+https://react.dev/learn/state-a-components-memory
 
 **Lifting state up**
 
