@@ -236,7 +236,7 @@ op te halen en toon de lijst in een `<ul>`.
 
 #### Opdracht 2.2: Netter maken
 
-Vervang de `<ul>` door een `<article>` in een apart component. Geef via de props alleen het id door aan het component.
+Vervang de `<ul>` door een `<article>` in een apart component. Geef via de props de data door.
 
 ## Forms
 
