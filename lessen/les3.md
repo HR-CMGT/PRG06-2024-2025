@@ -2,12 +2,12 @@
 
 ## Front-end routing
 
-Omdat je in React een *single page application* bouwt, draait de hele app op één url. Er zijn echter voordelen om
-meerdere url's te hebben voor verschillende onderdelen van een web applicatie door *front-end routing* toe te voegen.
+Omdat je in React een *single page application* bouwt, draait de hele app op één url. Dit is voor de gebruikerservaring
+echter niet handig omdat deze je dan niet kunt linken naar een onderdeel van je applicatie. Dit kunnen we oplossen door
+*front-end routing* toe te voegen.
 
 - **Usability**: Gebruikers kunnen tussen verschillende delen van de applicatie navigeren via de URL, of terugkeren naar
   een 'plek' in je webapplicatie (bookmarks).
-- **SEO**: Front-end routing helpt zoekmachines de verschillende pagina's van een app te indexeren.
 
 Bij front-end routing wordt de navigatie volledig beheerd door de client, toch is daarnaast ook back-end routing nodig
 om te zorgen dat alle url's naar je single page application gestuurd worden. De server routeert dus elk request naar
