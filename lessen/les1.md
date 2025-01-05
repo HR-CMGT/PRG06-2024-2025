@@ -47,7 +47,7 @@ Zelfstandig afronden eindopdracht
 ## Web development cursussen tot nu toe
 
 | Cursus       | Kenmerken                                              |
-|--------------|--------------------------------------------------------|
+| ------------ | ------------------------------------------------------ |
 | FED          | Geen logica op de backend en front-end                 |
 | PRG2 en PRG5 | Alle logica op de backend, geen logica op de front-end |
 | PRG3 en PRG6 | Data-logica op de backend, UI-logica op de front-end   |
@@ -66,7 +66,7 @@ Tijdens deze cursus ligt de focus op:
 </a>
 
 | Tools     | Doel                                                                     |
-|-----------|--------------------------------------------------------------------------|
+| --------- | ------------------------------------------------------------------------ |
 | PhpStorm  | Voor ontwikkeling van zowel de front- als de backend                     |
 | node      | JavaScript runtime op de backend.                                        |
 | npm       | Packetmanager voor zowel front- als backend, om modules te installeren.  |
@@ -101,7 +101,7 @@ manager* te gebruiken. Het draaien van volledige serverfunctionaliteit in JavaSc
 packages) installeren en verwijderen.
 
 | Onderdeel    | Uitleg                                                                                                                |
-|--------------|-----------------------------------------------------------------------------------------------------------------------|
+| ------------ | --------------------------------------------------------------------------------------------------------------------- |
 | package.json | Bevat projectinformatie en een lijst van benodigde dependencies en scripts                                            |
 | run scripts  | Hiermee kun je npm-commando's definiëren in package.json voor het draaien van opdrachten zoals `npm start`            |
 | type=module  | Is een instelling van je project waardoor je de ES6 `import` syntax kunt gebruiken in plaats van het oudere `require` |
@@ -175,6 +175,8 @@ te renderen.
 De setter kan je zowel met een vaste waarde aanroepen, als met een functie die de huidige waarde aanpast.
 
 https://react.dev/reference/react/useState
+<br>
+https://react.dev/learn/state-a-components-memory
 
 **Lifting state up**
 
@@ -255,12 +257,13 @@ function List({items}) {
 
 * Installeer node (als je dat nog niet gedaan hebt)
 * Maak een eerste React project aan met Vite en Tailwind
+* Doorloop hiervoor de [installatie van les 1](../guides/installatie-week1.md)
 
 #### Opdracht 1.2
 
 * Maak een array aan in je project met objecten.
 * Gebruik map om de titels uit de array in App.jsx te tonen in een `<ul>` met `<li>`
-* Verplaats de `<li>` naar een apart component die een `prop`, `item` verwacht waarin je het object doorstuurt
+* Verplaats de `<li>` naar een apart component die een `prop` genaamd `item` verwacht waarin je het object doorstuurt
 * Pas het component aan door het volledige object in een `<article>` te tonen, dat je stylt met Tailwind
 
 #### Opdracht 1.3

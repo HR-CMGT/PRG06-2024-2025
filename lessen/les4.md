@@ -6,8 +6,8 @@
 
 ## REST
 
-*REST* (REpresentational State Transfer) is een architectuur stijl voor het ontwerpen van webapplicaties, waarbij
-gemaakt wordt van reguliere webtechnieken.
+*REST* (REpresentational State Transfer) is een architectuur stijl voor het ontwerpen van webapplicaties, waarbij gebruik
+wordt gemaakt van reguliere webtechnieken.
 Het idee achter REST is dat systemen via stateless communicatie communiceren, waarbij de server geen informatie over de
 client bewaart tussen verzoeken. In een RESTful applicatie wordt het HTTP protocol volledig benut.
 
@@ -63,14 +63,14 @@ Content-Type: text/html
 In les 2 hebben we naar de meest gebruikte methods gekeken. Voor de implementatie van een webservice kijken we naar nog
 een paar andere headers:
 
-| Methode | Doel                                                                                   | CRUD   | 
-|---------|----------------------------------------------------------------------------------------|--------|
+| Methode | Doel                                                                                   | CRUD   |
+| ------- | -------------------------------------------------------------------------------------- | ------ |
 | GET     | Iets ophalen van de webservice (collectie of detail resource)                          | Read   |
 | PUT     | Een detail resource aanpassen (volledige resource moet gestuurd worden                 | Update |
 | PATCH   | Een detail resource aanpassen (alleen aanpassing hoeft gestuurd te worden)             | Update |
 | DELETE  | Een detail resource verwijderen                                                        | Delete |
 | OPTIONS | Opvragen welke methods toegestaan zijn voor een resource (response met `Allow`-header) |        |
-| POST    | Een nieuwe resource toevoegen aan een colletie                                         | Create |  
+| POST    | Een nieuwe resource toevoegen aan een colletie                                         | Create |
 
 <!--
 | HEAD    | Alleen de headers van iets ophalen van een resource                                    | Read   |
@@ -82,7 +82,7 @@ Bij de implementatie van deze methods, moet je rekening houden met twee eigensch
 * **idempotent**: een method is idempotent als het niet uitmaakt of je de method één of meerdere keren uitvoert
 
 | Method  | Safe | Idempotent |
-|---------|------|------------|
+| ------- | ---- | ---------- |
 | GET     | Ja   | Ja         |
 | HEAD    | Ja   | Ja         |
 | PUT     | Nee  | Ja         |
