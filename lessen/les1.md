@@ -251,6 +251,8 @@ function List({items}) {
 
 #### Opdracht 1.1
 
+[Installatiehandleiding les 1](../guides/installatie-week1.md)
+
 * Installeer node (als je dat nog niet gedaan hebt)
 * Maak een eerste React project aan met Vite en Tailwind
 
