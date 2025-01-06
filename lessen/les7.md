@@ -114,4 +114,5 @@ Alleen Last-Modified is de meest basic manier, maar vind ik ook de meest inituit
 <!--
 * versiebeheer in URI toevoegen?
 
+rechten in unix
 -->

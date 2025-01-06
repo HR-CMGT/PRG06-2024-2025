@@ -198,18 +198,6 @@ app.get('/products/:id', (req, res) => {
 
 ```
 
-## Express
-
-Express is de webserver die de requests afhandelt. Het routeert een request op basis van de URI naar de javascript
-functie van de webservice, zodat deze de gevraagde actie uit kan voeren en bijbehordende response kan sturen.
-
-{ 1 regel uitleg over maken van Express app en laten luisteren naar poort , en heel kort voorbeeld (nog zonder
-routering) om app te maken en te
-starten / laten luisteren }
-
-{
-idem, maar dan voor method + routering (ook met parameter)
-}
 <!-- index of app -->
 
 #### Opdracht 4.2

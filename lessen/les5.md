@@ -131,9 +131,19 @@ request. Het request is wel correct, de gebruiker kan hier zelf dus niets aan do
 
 ## Server
 
-Screen, rechten, mongo
+### MongoDB
 
-## Postman vervolg?
+De Mongoose-module die via npm wordt geïnstalleerd, is slechts een ORM (Object Relational Mapper). Om een
+database te hebben waarmee Mongoose kan communiceren, moet MongoDB zelf ook op de server worden geïnstalleerd.
+Het is het handigst om deze als service te installeren zodat hij altijd actief is.
+
+### Screen
+
+Om een Express-project te laten draaien, ook als je de SSH-verbinding verbreekt, kun je gebruik maken van het
+hulpprogramma screen. Hiermee kun je een proces starten in een virtuele sessie die blijft draaien op de server, zelfs
+als je de verbinding verbreekt. Start een screen sessie met `screen`. Je kunt nu je Express project starten, en de
+screen sessie verlaten (Ctrl+A en dan D), en uitloggen.
+Als je later opnieuw inlogt kan je terugkeren naar de screen sessie, met: `screen -r`.
 
 ## URI
 

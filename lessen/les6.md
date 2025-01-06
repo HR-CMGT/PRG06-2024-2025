@@ -46,11 +46,6 @@ door de server. Je voegt links daarom zelf toe aan de resource.
 
 ### Zelf toevoegen van de link aan de resource
 
-{
-Collection object maken met items en _links, in items kan je de array plaatsen
-Een Schema kan je niet aanpassen, om zelf ietsb toe te voegen eerst omzetten naar JSON om bewerkbaar te maken
-}
-
 Bij het maken van een collectieobject kun je links toevoegen door de items en `_links` handmatig samen te stellen. Omdat
 een Mongoose-schema niet direct kan worden aangepast om extra velden toe te voegen, moet je als je de detail resource
 op dezelfde manier zou willen maken eerst de resource omzetten naar JSON hem bewerkbaar te maken.
