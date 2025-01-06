@@ -23,8 +23,12 @@
   (het is het handigst om hem als service te starten na installatie:
   brew services start mongodb-community@8.0)
   **Windows**: https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/
-  (het is het handigst om als service te installeren).
-  **Ubuntu** https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
+
+Scroll omlaag voor 'Download Center'. Kies in voor een 'Complete' installatie, laat 'Install as service' aan staan, maar
+let op dat je bij het volgende scherm waar gevraagd wordt of je Compass wilt installeren dit uit zet (is een opt out!),
+want die hebben we niet nodig.
+**Ubuntu** https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
+
 *
 * npm install mongoose
 
