@@ -2,7 +2,7 @@
 
 ## HATEOAS
 
-*HATEOAS* staat voor **Hypermedia As The Engine Of Application State** en is niet alleen een hele lelijke term, maar ook
+*HATEOAS* staat voor *Hypermedia As The Engine Of Application State* en is niet alleen een hele lelijke term, maar ook
 een belangrijk concept binnen REST. Het
 houdt in dat een client niet alle endpoints hoeft te kennen maar door de server geholpen wordt door middel van
 hypermedia (links). De client kan hierdoor op basis van de huidige toestand van de applicatie, ontdekken welke acties
@@ -103,7 +103,7 @@ Voor deze cursus hebben we een script dat op een aantal punten checkt of een web
 
 ## CORS
 
-**Cross-Origin Resource Sharing** (CORS) is een mechanisme voor *access control* waarmee je kunt beheren welke domeinen
+*Cross-Origin Resource Sharing* (CORS) is een mechanisme voor *access control* waarmee je kunt beheren welke domeinen
 toegang hebben tot de resources van je webserver. En kunt documenteren wat er mogelijk is in een webapplicatie.
 
 Een *origin* bestaat uit het protocol (`http` of `https`), de domeinnaam (bijv.

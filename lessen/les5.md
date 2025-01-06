@@ -147,9 +147,9 @@ Als je later opnieuw inlogt kan je terugkeren naar de screen sessie, met: `scree
 
 ## URI
 
-*URI* staat voor **Uniform Resource Identifier** en verwijst naar een resource (identifier). In veel gevallen gebruiken
+*URI* staat voor *Uniform Resource Identifier* en verwijst naar een resource (identifier). In veel gevallen gebruiken
 we de term *URI* in de context van webservices, omdat het
-om het identificeren van een resource gaat. Omdat de identifier ook de locatie aangeeft is de URI ook een **URL** (
+om het identificeren van een resource gaat. Omdat de identifier ook de locatie aangeeft is de URI ook een *URL* (
 Uniform
 Resource Locator).
 

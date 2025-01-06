@@ -223,25 +223,25 @@ terugstuurt. Het nadeel van een aparte server voor elke website is dat dit veel 
 
 ### Shared hosting
 
-Bij **shared hosting** worden meerdere websites op één webserver gehost, waardoor je meerdere websites op dezelfde
+Bij *shared hosting* worden meerdere websites op één webserver gehost, waardoor je meerdere websites op dezelfde
 computer kunt zetten, zoals bijvoorbeeld op de student-spaces. Het nadeel hiervan is dat je geen volledige controle over
 de server hebt en afhankelijk bent van wat de host aanbiedt. Daarnaast kan de performance van een website op dezelfde
 server de prestaties van jouw website beïnvloeden.
 
 ### VPS
 
-Een **Virtual Private Server (VPS)** is een virtuele machine (programma) op een fysieke server. In tegenstelling tot
+Een *Virtual Private Server (VPS)* is een virtuele machine (programma) op een fysieke server. In tegenstelling tot
 shared
 hosting krijg je bij een VPS volledige controle over jouw eigen omgeving, inclusief het besturingssysteem en de software
 die je installeert. Ook kan het gebruik van resources (CPU en geheugen) per VPS ingesteld worden.
 
 ### Ubuntu
 
-De VPS die we gebruiken draait op **Ubuntu**, een veelgebruikte versie van Linux. Je kunt hierop inloggen met *SSH** en
-bestanden uploaden bestanden met **SFTP** (bijv. FileZilla).
+De VPS die we gebruiken draait op *Ubuntu*, een veelgebruikte versie van Linux. Je kunt hierop inloggen met *SSH* en
+bestanden uploaden bestanden met *SFTP* (bijv. FileZilla).
 
-Op de server installeer je de benodigde tools en libraries waarvoor **sudo** (superuser-rechten) nodig is. Omdat we met
-**npm** werken, hoef je de `node_modules` niet te uploaden, omdat de benodigde modules automatisch
+Op de server installeer je de benodigde tools en libraries waarvoor `sudo` (superuser-rechten) nodig is. Omdat we met
+`npm` werken, hoef je de `node_modules` niet te uploaden, omdat de benodigde modules automatisch
 worden geïnstalleerd op basis van het bestand `package.json`.
 
 #### Opdracht 4.4
