@@ -2,6 +2,8 @@
 
 ## Les 4
 
+<!-- Martijn: nog dingen tegen gekomen bij installatie op de server -->
+
 * node en npm (lokaal + server)
 * project aanmaken
 

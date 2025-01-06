@@ -3,36 +3,89 @@
 ## MongoDB
 
 *MongoDB* is een NoSQL-database die gegevens opslaat in documenten, in plaats van in tabellen zoals bij relationele
-databases. Gegevens worden opgeslagen als een soort JSON. De database zelf is ongestructureerd
+databases. Gegevens worden opgeslagen als JSON. De database zelf is ongestructureerd.
 
 ## Mongoose
 
-De module *Mongoose* is een object-document mapper (ODM) voor *MongoDB*. Hiermee kunnen we vanuit JavaScript
-communiceren met de database.
-Ook kunnen we in Mongoose modellen (schema's) maken voor objecten in de ongestructureerde database.
+De module *Mongoose* is een object-document mapper (ODM) voor *MongoDB*, net als *Eloquent* in Laravel. Hiermee kun je
+vanuit JavaScript communiceren met de database. Daarnaast kun je in Mongoose modellen (schema's) maken voor objecten in
+de ongestructureerde database.
 
-#### Opdracht
+### Schema
+
+Een schema in *Mongoose* definieert de structuur van documenten in een MongoDB-collectie, vergelijkbaar met een model in
+MVC.
+
+**Voorbeeld:**
+
+```javascript
+import mongoose from 'mongoose';
+
+const productSchema = new mongoose.Schema({
+    name: {type: String, required: true},
+    description: {type: String, required: true},
+    price: {type: Number, required: true},
+    inStock: {type: Boolean, default: true}
+});
+
+const Product = mongoose.model('Product', productSchema);
+
+export default Product;
+```
+
+#### Opdracht 5.1
 
 * Installeer Mongodb en Mongoose
 * Laat je app verbinden met de database
-* Maak een Schema voor een note of puzzel
+  https://mongoosejs.com/docs/connections.html
+* Maak een Schema voor een note of puzzel (kijk naar een detail voor de juiste indeling)
+  https://mongoosejs.com/docs/guide.html
 * Maak een endpoint /notes of /chesspuzzel
 * Return de lijst als JSON (nu uiteraard nog leeg)
 * Installeer fakerjs
 * Maak een endpoint `/seed`
 * Maak 10 fake items aan op dit endpoint en plaats ze in de database
-* Voeg /notes/:id toe
+* Voeg toe dat je ook een detail resource op kunt vragen
 
 ## POST en PUT
 
-json / www-urlencoded
+Met `POST` en `PUT` worden gegevens naar de webservice gestuurd. Deze gegevens kunnen worden verzonden in twee formaten:
 
-// TODO: extra uitleg over json (structuur en datatypes)
+- **JSON**: Een gestructureerd dataformaat dat veel wordt gebruikt.
+- **application/x-www-form-urlencoded**: Een oudere standaard, vaak gebruikt bij HTML-formulieren.
 
-#### Opdracht
+Om deze gegevens in een Express-applicatie te verwerken, zijn er middleware-functies zoals `express.json()` en
+`express.urlencoded()` nodig.
 
-* Body parsen
-* POST
+**Voorbeeld:**
+
+```javascript
+import express from 'express';
+
+const app = express();
+
+// Middleware voor JSON-gegevens
+app.use(express.json());
+
+// Middleware voor www-urlencoded-gegevens
+app.use(express.urlencoded({extended: true}));
+
+app.post('/submit', (req, res) => {
+    // Toegang tot de ontvangen gegevens
+    console.log(req.body);
+    res.send('Gegevens ontvangen');
+});
+
+app.listen(8000, () => {
+    console.log('Server luistert op poort 8000');
+});
+```
+
+<!-- extra uitleg over json (structuur en datatypes) ? -->
+
+#### Opdracht 5.2
+
+* Implementeer POST voor je webservice
 
 ## Status Codes
 
@@ -121,25 +174,47 @@ In dit geval:
 - Het **fragment** is `#section2`.
 -->
 
-## Meer over headers
+## Headers
 
-// TODO:
+Headers worden gebruikt in de webservice om extra informatie mee te geven over een request of response. Bijvoorbeeld, de
+`Accept`-header laat de service weten welk dataformaat de client verwacht in de response.
 
-* versiebeheer in URI toevoegen?
+**Voorbeeld**
+
+```javascript
+
+app.get('/example', (req, res) => {
+    // Check Accept header
+    const acceptHeader = req.headers['accept'];
+
+    console.log(`Client accepteert: ${acceptHeader}`);
+
+    if (acceptHeader.includes('application/json')) {
+        res.json({message: 'Dit is een JSON-response'});
+    } else {
+        res.status(400).send('Illegal format');
+    }
+});
+
+```
+
+<!--
 * verdeling van de lessen nalopen (lijkt wel erg veel in deze les, misschien kan mongo naar 4? Of anders PUT naar 6?)
 
 // TODO technieken:
 
-* mongoose schema
-* find
-* try/catch (zit ook al bij fetch)
-* headers
-* statuscodes
+
+Ook uitschrijven, of tijdens de les behandelen?
+* find met try/catch 
+* headers in express sturen
 * middleware (ook gebruiken om item aan request toe te voegen?)
 * save en ValidationError of beter gewoon checken van lege velden?
+-->
 
-## Opdrachten
+#### Opdracht 5.3
 
-PUT en DELETE
-Statuscodes en OPTIONS (als nog niet in 4)
-Naar de server
+* Implementeer PUT en DELETE
+* Voeg de juiste statuscodes toe
+* Implementeer OPTIONS
+* Installeer MongoDB op je server
+* Upload je project naar de server en test het net Postman

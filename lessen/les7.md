@@ -110,3 +110,8 @@ Alleen Last-Modified is de meest basic manier, maar vind ik ook de meest inituit
 ## Opdracht
 
 * Werken aan eindopdracht
+
+<!--
+* versiebeheer in URI toevoegen?
+
+-->

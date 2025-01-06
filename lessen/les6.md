@@ -46,20 +46,43 @@ door de server. Je voegt links daarom zelf toe aan de resource.
 
 ### Zelf toevoegen van de link aan de resource
 
-Collection object maken met items en _links
-Model omzetten naar JSON om bewerkbaar te maken
+{
+Collection object maken met items en _links, in items kan je de array plaatsen
+Een Schema kan je niet aanpassen, om zelf ietsb toe te voegen eerst omzetten naar JSON om bewerkbaar te maken
+}
+
+Bij het maken van een collectieobject kun je links toevoegen door de items en `_links` handmatig samen te stellen. Omdat
+een Mongoose-schema niet direct kan worden aangepast om extra velden toe te voegen, moet je als je de detail resource
+op dezelfde manier zou willen maken eerst de resource omzetten naar JSON hem bewerkbaar te maken.
 
 ### Virtuals
 
-Schema gebruiken om virtuals toe te voegen aan detail is nog netter
+Het gebruik van virtuals in Mongoose is een nettere manier om dynamische velden, zoals links, toe te voegen aan een
+detailresource. Virtuals worden niet in de database opgeslagen maar worden gegenereerd bij het ophalen van de data.
+
+**Voorbeeld:**
+
+```javascript
+const productSchema = new mongoose.Schema({
+    name: String,
+    description: String
+});
+
+// Voeg een virtual toe om een link naar "self" toe te voegen
+productSchema.virtual('_links').get(function () {
+    return {
+        self: {href: `http://localhost:8000/products/${this._id}`}
+    };
+});
+```
 
 ## Checker
 
 Voor deze cursus hebben we een script dat op een aantal punten checkt of een webservice aan (onze) standaarden voldoet.
 
-## Opdracht
+#### Opdracht 6.1
 
-* Collection structuur aanpassen, en links toevoegen
+* Pas de structuur van je collection aan en voeg links toe
 
 ```json
 {
@@ -79,9 +102,9 @@ Voor deze cursus hebben we een script dat op een aantal punten checkt of een web
 }
 ```
 
-* Link naar self en collection toevoegen aan de details m.b.v. virtuals
+* Gebruik virtuals om links naar self en de collection toe te voegen aan de details
 * Update je project op de server
-* Kijk wat de checker van je webservice vindt
+* Controleer je webservice met de checker
 
 ## CORS
 
@@ -140,9 +163,11 @@ Bij het opzetten van CORS in een RESTful webservice moet je met de volgende zake
   NB. Een preflight wordt altijd zonder headers gestuurd, dus let op dat je geen eisen aan het request stelt (zoals een
   Accept-header).
 
-#### Opdrachten
+#### Opdracht 6.2
 
-* CORS toevoegen
-* Checker afmaken
+* Voeg CORS toe
+* Ga verder met je project op basis van de feedback van de checker
 
-Huiswerk: nadenken over eigen full stack project (onderwerp)
+#### Opdracht 6.3
+
+Huiswerk: Denk na over een onderwerp voor je eigen full stack project

@@ -1,12 +1,27 @@
 # Les 4
 
-## Volledige plaatje
+<a href="images/fullpicture.svg" target="_blank">
+  <img src="images/fullpicture.svg" alt="De volledige stack" width="70%">
+</a>
 
-// TODO: idem les 1, maar nu back-end focus
+| Tools     | Doel                                                                     |
+|-----------|--------------------------------------------------------------------------|
+| PhpStorm  | Voor ontwikkeling van zowel de front- als de backend                     |
+| node      | JavaScript runtime op de backend.                                        |
+| npm       | Packetmanager voor zowel front- als backend, om modules te installeren.  |
+| vite      | Build-tool voor de front-end.                                            |
+| ssh       | Remote terminal verbinding met de Ubuntu server waar de back-end draait. |
+| FileZilla | FTP-client om bestanden over te zetten naar de back-end.                 |
+
+- Onderdelen: Front-end, Back-end, Client, Server, Webserver, db/MongoDB
+- Tools: PHPStorm, node, npm, vite, ssh, filezilla
+- Modules: Express, Mongoose, React, Fetch, Tailwind(?)
+- Communicatie: HTTP
 
 ## REST
 
-*REST* (REpresentational State Transfer) is een architectuur stijl voor het ontwerpen van webapplicaties, waarbij gebruik
+*REST* (REpresentational State Transfer) is een architectuur stijl voor het ontwerpen van webapplicaties, waarbij
+gebruik
 wordt gemaakt van reguliere webtechnieken.
 Het idee achter REST is dat systemen via stateless communicatie communiceren, waarbij de server geen informatie over de
 client bewaart tussen verzoeken. In een RESTful applicatie wordt het HTTP protocol volledig benut.
@@ -64,7 +79,7 @@ In les 2 hebben we naar de meest gebruikte methods gekeken. Voor de implementati
 een paar andere headers:
 
 | Methode | Doel                                                                                   | CRUD   |
-| ------- | -------------------------------------------------------------------------------------- | ------ |
+|---------|----------------------------------------------------------------------------------------|--------|
 | GET     | Iets ophalen van de webservice (collectie of detail resource)                          | Read   |
 | PUT     | Een detail resource aanpassen (volledige resource moet gestuurd worden                 | Update |
 | PATCH   | Een detail resource aanpassen (alleen aanpassing hoeft gestuurd te worden)             | Update |
@@ -82,7 +97,7 @@ Bij de implementatie van deze methods, moet je rekening houden met twee eigensch
 * **idempotent**: een method is idempotent als het niet uitmaakt of je de method één of meerdere keren uitvoert
 
 | Method  | Safe | Idempotent |
-| ------- | ---- | ---------- |
+|---------|------|------------|
 | GET     | Ja   | Ja         |
 | HEAD    | Ja   | Ja         |
 | PUT     | Nee  | Ja         |
@@ -105,15 +120,13 @@ zonder dat hier een webbrowser voor nodig is.
 
 Een REST client is de ideale tool voor het testen en debuggen van een webservice.
 
-Opdracht: Oefenen met Postman (op chess/notes, of 'hacken' van een site)
-
 ### Postman
 
 Tijdens deze cursus maken we gebruik van Postman, maar er zijn ook andere REST clients.
 
-## Opdrachten
+#### Opdracht 4.1
 
-// TODO: Kan ook met Chess
+<!-- Omdat de notes een eenvoudigere indeling hebben waarschijnlijk het beste om daarmee te doen -->
 
 * Installeer Postman
 * Tip: als je een account maakt bij Postman kan je je requests opslaan om later her te gebruiken. Dat is heel handig als
@@ -147,37 +160,108 @@ Gebruiken om server geschreven in javascript te draaien
 
 ## Express
 
-Webserver die de requests afhandelt. Het routeert een request op basis van de URI naar de javascript functie van de
-webservice, zodat deze de gevraagde actie uit kan voeren en bijbehordende response kan sturen.
+Express is de webserver die de requests afhandelt. Het routeert een request op basis van de URI naar de
+JavaScript-functie van de webservice, zodat deze de gevraagde actie kan uitvoeren en de bijbehorende response kan
+sturen.
 
-// TODO technieken:
+**Voorbeeld**
 
-* import en Express appserver maken
-* app laten luisteren
-* method + routering (met parameter)
-* index of app?
+```javascript
+import express from 'express';
 
-## Opdrachten
+const app = express();
 
-Installatie
-Hello world
+// Voeg routes toe
 
-Hier nog even in 1 bestand? En in les 5 netjes verdelen?
+app.listen(8000, () => {
+    console.log('Server luistert op poort 8000');
+});
+```
 
-// TODO: eventueel al OPTIONS
+Je kunt routes aan de app toevoegen voor een url, met en zonder parameters. Elke route is een functie met een `req`(
+uest)
+en een `res`(ponse) object. Het request kan je bijvoorbeeld gebruiken om parameters of headers van het request op te
+vragen. Het response object om informatie aan de response toe te voegen en deze te verzenden.
 
-## Opdrachten
+**Voorbeeld:**
 
-Opdracht: Collection en details zonder DB
+```javascript
+
+app.get('/products/', (req, res) => {
+    res.send('Alle producten');
+});
+
+app.get('/products/:id', (req, res) => {
+    const productId = req.params.id;
+    res.send(`Alleen product met id: ${productId}`);
+});
+
+```
+
+## Express
+
+Express is de webserver die de requests afhandelt. Het routeert een request op basis van de URI naar de javascript
+functie van de webservice, zodat deze de gevraagde actie uit kan voeren en bijbehordende response kan sturen.
+
+{ 1 regel uitleg over maken van Express app en laten luisteren naar poort , en heel kort voorbeeld (nog zonder
+routering) om app te maken en te
+starten / laten luisteren }
+
+{
+idem, maar dan voor method + routering (ook met parameter)
+}
+<!-- index of app -->
+
+#### Opdracht 4.2
+
+* Maak de 'Hello World' met Express
+* Pas hem daarna aan om JSON terug te sturen.
+
+<!-- Hier nog even in 1 bestand? En in les 5 netjes verdelen met een Router erbij, of hier al doen? -->
+
+#### Opdracht 4.3
+
+* Maak een array met JSON objecten aan
+* Maak een route voor het weergeven van de collectie
+* Maak een route voor een detail uit de collectie
+
+<!-- OPTIONS toevoegen? -->
 
 ## Server
 
-Uitleg VPS
-Inloggen, installeren node, sudo, ftp, npm / package.json
+Om een website of webservice te hosten, heb je een *server* (de computer) nodig die verbonden is met het internet. Op
+deze server draait een *webserver* (het programma) dat luistert naar inkomende requests en de juiste responses
+terugstuurt. Het nadeel van een aparte server voor elke website is dat dit veel resources kost.
 
-## Opdrachten
+### Shared hosting
 
-Op server draaien hello world collectie en details zonder db
+Bij **shared hosting** worden meerdere websites op één webserver gehost, waardoor je meerdere websites op dezelfde
+computer kunt zetten, zoals bijvoorbeeld op de student-spaces. Het nadeel hiervan is dat je geen volledige controle over
+de server hebt en afhankelijk bent van wat de host aanbiedt. Daarnaast kan de performance van een website op dezelfde
+server de prestaties van jouw website beïnvloeden.
+
+### VPS
+
+Een **Virtual Private Server (VPS)** is een virtuele machine (programma) op een fysieke server. In tegenstelling tot
+shared
+hosting krijg je bij een VPS volledige controle over jouw eigen omgeving, inclusief het besturingssysteem en de software
+die je installeert. Ook kan het gebruik van resources (CPU en geheugen) per VPS ingesteld worden.
+
+### Ubuntu
+
+De VPS die we gebruiken draait op **Ubuntu**, een veelgebruikte versie van Linux. Je kunt hierop inloggen met *SSH** en
+bestanden uploaden bestanden met **SFTP** (bijv. FileZilla).
+
+Op de server installeer je de benodigde tools en libraries waarvoor **sudo** (superuser-rechten) nodig is. Omdat we met
+**npm** werken, hoef je de `node_modules` niet te uploaden, omdat de benodigde modules automatisch
+worden geïnstalleerd op basis van het bestand `package.json`.
+
+#### Opdracht 4.4
+
+* Login op je server met sftp, en zet je 'hello world' over zonder node_modules
+* Login op je server met ssh en installeer de node modules
+* Start het project, en test of het werkt met een browser
+
 
 
 
