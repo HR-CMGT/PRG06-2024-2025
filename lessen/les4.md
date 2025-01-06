@@ -15,7 +15,7 @@
 
 - Onderdelen: Front-end, Back-end, Client, Server, Webserver, db/MongoDB
 - Tools: PHPStorm, node, npm, vite, ssh, filezilla
-- Modules: Express, Mongoose, React, Fetch, Tailwind(?)
+- Modules: Express, Mongoose, React, Fetch, Tailwind
 - Communicatie: HTTP
 
 ## REST
