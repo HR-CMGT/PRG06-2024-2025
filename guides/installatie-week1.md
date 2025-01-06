@@ -9,7 +9,7 @@ Check of node en npm de juiste versie hebben:
 `npm -v` versie 10
 
 * Installeer node/npm indien nodig:
-  https://nodejs.org/en/download/package-manager
+  https://nodejs.org/en/download
 
 <!--
 * vite project met react aanmaken
