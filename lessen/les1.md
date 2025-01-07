@@ -244,11 +244,13 @@ function List({items}) {
 ```
 
 ```javascript
-(
-    <>
-        <List items={products}/>
-    </>
-)
+function App({items}) {
+    return (
+        <>
+            <List items={products}/>
+        </>
+    )
+}
 ```
 
 #### Opdracht 1.1
