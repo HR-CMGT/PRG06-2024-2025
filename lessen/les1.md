@@ -245,9 +245,9 @@ function List({items}) {
 
 ```javascript
 (
-    <ul>
+    <>
         <List items={products}/>
-    </ul>
+    </>
 )
 ```
 
