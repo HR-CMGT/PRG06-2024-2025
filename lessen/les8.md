@@ -43,7 +43,9 @@ WWW-Authenticate: <type> realm=<realm>
 Authorization: <type> <credentials>
 ```
 
+<!--
 Uitzoeken: proxy-auth
+-->
 
 ### Basic
 

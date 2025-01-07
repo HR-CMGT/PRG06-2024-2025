@@ -73,6 +73,8 @@ async function fetchProduct() {
 fetchProduct();
 ```
 
+<!--
 Is denk ik leuk om toe te voegen, en zou misschien zelfs een alternatief extra onderdeel kunnen zijn.
+-->
 
 ### 404
