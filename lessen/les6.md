@@ -1,5 +1,73 @@
 # Les 6
 
+## URI
+
+*URI* staat voor *Uniform Resource Identifier* en verwijst naar een resource (identifier). In veel gevallen gebruiken
+we de term *URI* in de context van webservices, omdat het
+om het identificeren van een resource gaat. Omdat de identifier ook de locatie aangeeft is de URI ook een *URL* (
+Uniform
+Resource Locator).
+
+### Opbouw
+
+```
+scheme://host/path?query
+```
+
+- **scheme**: Het protocol waarmee de resource benaderd kan worden (bijvoorbeeld `http`, `https`).
+- **host**: Het domein of IP-adres van de server waar de resource zich bevindt (bijvoorbeeld `www.example.com`).
+- **port** (optioneel): De poortnummer op de server waarmee de client verbinding maakt (standaard is dit 80 voor HTTP en
+  443 voor HTTPS).
+- **path**: Het pad naar de specifieke resource op de server (bijvoorbeeld `/products/1`).
+- **query** (optioneel): Een reeks parameters voor de resource (
+  bijvoorbeeld `?category=books`).
+
+<!--
+- **fragment** (optioneel): Een verwijzing naar een specifiek deel van de resource (bijvoorbeeld `#section2`).
+-->
+**Voorbeeld**
+
+```
+https://www.example.com/products/1?category=books
+```
+
+<!--
+In dit geval:
+
+- Het **scheme** is `https`,
+- De **host** is `www.example.com`,
+- Het **path** is `/products/1`,
+- De **query** is `?category=books`,
+-->
+
+## Headers
+
+Headers worden gebruikt in de webservice om extra informatie mee te geven over een request of response. Bijvoorbeeld, de
+`Accept`-header laat de service weten welk dataformaat de client verwacht in de response.
+
+**Voorbeeld**
+
+```javascript
+
+app.get('/example', (req, res) => {
+    // Check Accept header
+    const acceptHeader = req.headers['accept'];
+
+    console.log(`Client accepteert: ${acceptHeader}`);
+
+    if (acceptHeader.includes('application/json')) {
+        res.json({message: 'Dit is een JSON-response'});
+    } else {
+        res.status(400).send('Illegal format');
+    }
+});
+
+```
+
+#### Opdracht 5.1
+
+* Implementeer OPTIONS
+
 ## HATEOAS
 
 *HATEOAS* staat voor *Hypermedia As The Engine Of Application State* en is niet alleen een hele lelijke term, maar ook
@@ -44,30 +112,29 @@ moet zijn is de link naar `self`. Andere links zijn context-afhankelijk.
 Links zijn geen 'echt' onderdeel van je model omdat ze dynamisch gegenereerd (en mogelijk later veranderd) kunnen worden
 door de server. Je voegt links daarom zelf toe aan de resource.
 
-### Zelf toevoegen van de link aan de resource
-
-Bij het maken van een collectieobject kun je links toevoegen door de items en `_links` handmatig samen te stellen. Omdat
-een Mongoose-schema niet direct kan worden aangepast om extra velden toe te voegen, moet je als je de detail resource
-op dezelfde manier zou willen maken eerst de resource omzetten naar JSON hem bewerkbaar te maken.
-
-### Virtuals
-
-Het gebruik van virtuals in Mongoose is een nettere manier om dynamische velden, zoals links, toe te voegen aan een
-detailresource. Virtuals worden niet in de database opgeslagen maar worden gegenereerd bij het ophalen van de data.
-
-**Voorbeeld:**
+Je kunt Mongoose dynamisch laten *transformeren* tijdens de output, om links aan je detail resources toe te voegen.
 
 ```javascript
-const productSchema = new mongoose.Schema({
-    name: String,
-    description: String
-});
+const MySchema = new Schema({
+    // hier je schema
+}, {
+    toJSON: {
+        virtuals: true,
+        transform: (doc, ret) => {
 
-// Voeg een virtual toe om een link naar "self" toe te voegen
-productSchema.virtual('_links').get(function () {
-    return {
-        self: {href: `http://localhost:8000/products/${this._id}`}
-    };
+            ret._links = {
+                self: {
+                    href: `https://link_naar_self`
+                },
+                collection: {
+                    href: `http://_link_naar_collectie`
+                }
+            }
+
+            delete ret._id
+            delete ret.__v
+        }
+    }
 });
 ```
 
@@ -77,7 +144,8 @@ Voor deze cursus hebben we een script dat op een aantal punten checkt of een web
 
 #### Opdracht 6.1
 
-* Pas de structuur van je collection aan en voeg links toe
+* Voeg links naar self en collection toe aan je detail resources
+* Maak een JSON object aan met de volgende structuur voor je collection
 
 ```json
 {
@@ -97,7 +165,6 @@ Voor deze cursus hebben we een script dat op een aantal punten checkt of een web
 }
 ```
 
-* Gebruik virtuals om links naar self en de collection toe te voegen aan de details
 * Update je project op de server
 * Controleer je webservice met de checker
 

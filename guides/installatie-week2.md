@@ -2,13 +2,23 @@
 
 ## Les 4
 
-<!-- Martijn: nog dingen tegen gekomen bij installatie op de server -->
+**Lokaal**
 
-* Installeer node op de server
-  **Ubuntu** https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04
 * Express project
   https://expressjs.com/en/starter/installing.html
   (Wij gebruiken `import` en geen `require`. Let daarom op dat je je project type op `module` zet)
+
+**Server**
+
+* Installeer node op de server
+  **Ubuntu** https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-22-04
+  option 3
+
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+source ~/.bashrc
+nvm install 22
+```
 
 <!--
 // TODO windows vs mac os installaties van mongo

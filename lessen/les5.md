@@ -7,9 +7,14 @@ databases. Gegevens worden opgeslagen als JSON. De database zelf is ongestructur
 
 ## Mongoose
 
-De module *Mongoose* is een object-document mapper (ODM) voor *MongoDB*, net als *Eloquent* in Laravel. Hiermee kun je
+De module *Mongoose* is een object-document mapper (ODM) voor *MongoDB*, vergelijkbaar met *Eloquent* in Laravel.
+Hiermee kun je
 vanuit JavaScript communiceren met de database. Daarnaast kun je in Mongoose modellen (schema's) maken voor objecten in
 de ongestructureerde database.
+
+```javascript
+mongoose.connect('mongodb://127.0.0.1:27017/myapp');
+```
 
 ### Schema
 
@@ -35,13 +40,14 @@ export default Product;
 
 #### Opdracht 5.1
 
-* Installeer Mongodb en Mongoose
+* Installeer MongoDB en Mongoose (op je laptop)
 * Laat je app verbinden met de database
-  https://mongoosejs.com/docs/connections.html
-* Maak een Schema voor een note of puzzel (kijk naar een detail voor de juiste indeling)
+* Maak een Schema voor een note of chess-spot (kijk naar een detail voor de juiste indeling)
   https://mongoosejs.com/docs/guide.html
-* Maak een endpoint /notes of /chesspuzzel
+* Maak een endpoint /notes of /chess-spot
 * Return de lijst als JSON (nu uiteraard nog leeg)
+* Verplaats voor het overzicht je routes naar een `Router` in een apart
+  bestand: https://expressjs.com/en/5x/api.html#router
 * Installeer fakerjs
 * Maak een endpoint `/seed`
 * Maak 10 fake items aan op dit endpoint en plaats ze in de database
@@ -70,7 +76,7 @@ app.use(express.json());
 // Middleware voor www-urlencoded-gegevens
 app.use(express.urlencoded({extended: true}));
 
-app.post('/submit', (req, res) => {
+app.post('/products', (req, res) => {
     // Toegang tot de ontvangen gegevens
     console.log(req.body);
     res.send('Gegevens ontvangen');
@@ -145,69 +151,6 @@ als je de verbinding verbreekt. Start een screen sessie met `screen`. Je kunt nu
 screen sessie verlaten (Ctrl+A en dan D), en uitloggen.
 Als je later opnieuw inlogt kan je terugkeren naar de screen sessie, met: `screen -r`.
 
-## URI
-
-*URI* staat voor *Uniform Resource Identifier* en verwijst naar een resource (identifier). In veel gevallen gebruiken
-we de term *URI* in de context van webservices, omdat het
-om het identificeren van een resource gaat. Omdat de identifier ook de locatie aangeeft is de URI ook een *URL* (
-Uniform
-Resource Locator).
-
-### Opbouw
-
-```
-scheme://host/path?query#fragment
-```
-
-- **scheme**: Het protocol waarmee de resource benaderd kan worden (bijvoorbeeld `http`, `https`).
-- **host**: Het domein of IP-adres van de server waar de resource zich bevindt (bijvoorbeeld `www.example.com`).
-- **port** (optioneel): De poortnummer op de server waarmee de client verbinding maakt (standaard is dit 80 voor HTTP en
-  443 voor HTTPS).
-- **path**: Het pad naar de specifieke resource op de server (bijvoorbeeld `/products/1`).
-- **query** (optioneel): Een reeks parameters voor de resource (
-  bijvoorbeeld `?category=books`).
-- **fragment** (optioneel): Een verwijzing naar een specifiek deel van de resource (bijvoorbeeld `#section2`).
-
-**Voorbeeld**
-
-```
-https://www.example.com/products/1?category=books#section2
-```
-
-<!--
-In dit geval:
-
-- Het **scheme** is `https`,
-- De **host** is `www.example.com`,
-- Het **path** is `/products/1`,
-- De **query** is `?category=books`,
-- Het **fragment** is `#section2`.
--->
-
-## Headers
-
-Headers worden gebruikt in de webservice om extra informatie mee te geven over een request of response. Bijvoorbeeld, de
-`Accept`-header laat de service weten welk dataformaat de client verwacht in de response.
-
-**Voorbeeld**
-
-```javascript
-
-app.get('/example', (req, res) => {
-    // Check Accept header
-    const acceptHeader = req.headers['accept'];
-
-    console.log(`Client accepteert: ${acceptHeader}`);
-
-    if (acceptHeader.includes('application/json')) {
-        res.json({message: 'Dit is een JSON-response'});
-    } else {
-        res.status(400).send('Illegal format');
-    }
-});
-
-```
-
 <!--
 * verdeling van de lessen nalopen (lijkt wel erg veel in deze les, misschien kan mongo naar 4? Of anders PUT naar 6?)
 
@@ -223,8 +166,8 @@ Ook uitschrijven, of tijdens de les behandelen?
 
 #### Opdracht 5.3
 
+* Installeer MongoDB op de server
+* Zet je app op de server en test met Postman
 * Implementeer PUT en DELETE
 * Voeg de juiste statuscodes toe
-* Implementeer OPTIONS
-* Installeer MongoDB op je server
-* Upload je project naar de server en test het net Postman
+

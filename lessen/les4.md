@@ -171,7 +171,9 @@ import express from 'express';
 
 const app = express();
 
-// Voeg routes toe
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+})
 
 app.listen(8000, () => {
     console.log('Server luistert op poort 8000');
@@ -202,6 +204,7 @@ app.get('/products/:id', (req, res) => {
 
 #### Opdracht 4.2
 
+* Volg de installatie
 * Maak de 'Hello World' met Express
 * Pas hem daarna aan om JSON terug te sturen.
 
@@ -246,6 +249,7 @@ worden geïnstalleerd op basis van het bestand `package.json`.
 
 #### Opdracht 4.4
 
+* Volg de installatie
 * Login op je server met sftp, en zet je 'hello world' over zonder node_modules
 * Login op je server met ssh en installeer de node modules
 * Start het project, en test of het werkt met een browser
