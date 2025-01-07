@@ -100,7 +100,7 @@ geslaagd is aan het request te voldoen. De laatste twee cijfers zijn voor meer g
 gebruikt als er geen details zijn, of er geen specifieke code bestaat voor de details.
 
 Een volledig overzich van alle statuscodes kan je vinden
-op [Wikipdia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
+op [Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
 
 ### 2xx – Succes
 
