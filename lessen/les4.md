@@ -207,6 +207,16 @@ app.get('/products/:id', (req, res) => {
 * Volg de installatie
 * Maak de 'Hello World' met Express
 * Pas hem daarna aan om JSON terug te sturen.
+* Voeg een `.env` file toe
+* Pas het run-script in `package.json` aan om te zorgen dat je `.env` wordt geladen
+
+```
+"scripts": {
+    "dev": "node --env-file=.env --watch index.js"
+  },
+```
+
+* Gebruik `.env` om het poort-nummer van je Express app te configureren
 
 <!-- Hier nog even in 1 bestand? En in les 5 netjes verdelen met een Router erbij, of hier al doen? -->
 
@@ -249,7 +259,7 @@ worden geïnstalleerd op basis van het bestand `package.json`.
 
 #### Opdracht 4.4
 
-* Volg de installatie
+* Volg de installatie voor de server
 * Login op je server met sftp, en zet je 'hello world' over zonder node_modules
 * Login op je server met ssh en installeer de node modules
 * Start het project, en test of het werkt met een browser

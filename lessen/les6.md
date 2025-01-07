@@ -64,8 +64,10 @@ app.get('/example', (req, res) => {
 
 ```
 
-#### Opdracht 5.1
+#### Opdracht 6.1
 
+* Zorg dat alleen requests met een Accept-header voor `application/json` worden geaccepteerd, gebruik hiervoor
+  middleware: https://expressjs.com/en/guide/using-middleware.html
 * Implementeer OPTIONS
 
 ## HATEOAS
@@ -127,7 +129,7 @@ const MySchema = new Schema({
                     href: `https://link_naar_self`
                 },
                 collection: {
-                    href: `http://_link_naar_collectie`
+                    href: `http://link_naar_collectie`
                 }
             }
 
@@ -142,7 +144,7 @@ const MySchema = new Schema({
 
 Voor deze cursus hebben we een script dat op een aantal punten checkt of een webservice aan (onze) standaarden voldoet.
 
-#### Opdracht 6.1
+#### Opdracht 6.2
 
 * Voeg links naar self en collection toe aan je detail resources
 * Maak een JSON object aan met de volgende structuur voor je collection
@@ -225,9 +227,10 @@ Bij het opzetten van CORS in een RESTful webservice moet je met de volgende zake
   NB. Een preflight wordt altijd zonder headers gestuurd, dus let op dat je geen eisen aan het request stelt (zoals een
   Accept-header).
 
-#### Opdracht 6.2
+#### Opdracht 6.3
 
 * Voeg CORS toe
+* Check of je OPTIONS ook zonder Accept-header werkt
 * Ga verder met je project op basis van de feedback van de checker
 
 #### Opdracht 6.3
