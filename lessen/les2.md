@@ -236,7 +236,8 @@ op te halen en toon de lijst in een `<ul>`.
 
 #### Opdracht 2.2: Netter maken
 
-Vervang de `<ul>` door een `<article>` in een apart component. Geef via de props de data door.
+Vervang de lijst en maak er een kaartenoverzicht van zoals aan het einde van opdracht 1.2.
+Maak voor het item een apart component en geef via de props de data door.
 
 ## Forms
 
