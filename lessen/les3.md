@@ -21,7 +21,8 @@ weergegeven.
 
 ### react-router
 
-Er zijn verschillende manieren om routing toe te passen binnen React. Wij gebruiken `createBrowserRouter` omdat we dit de beste
+Er zijn verschillende manieren om routing toe te passen binnen React. Wij gebruiken `createBrowserRouter` omdat we dit
+de beste
 manier vinden. Helaas is deze niet het best gedocumenteerd.
 
 * Gebruik `createBrowserRouter` in de App.jsx om een router aan te maken
@@ -29,8 +30,64 @@ manier vinden. Helaas is deze niet het best gedocumenteerd.
 * Definieer eventueel geneste routes (`children`)
 * Als je variabelen in een URL gebruikt kan je die in het component ophalen met `useParams`
 * Met een `<Outlet />` bepaal je waar het component gerenderd wordt
+* Als structuur is het handig om met een algemene layout te beginnen, met je andere components als children
 
-Op onderstaande blogs kan je voorbeelden vinden:
+```javascript
+import {createBrowserRouter, RouterProvider} from 'react-router';
+// import je components
+import Layout from './Layout.jsx';
+
+const router = createBrowserRouter([
+    {
+        element: <Layout/>,
+        children: [
+            {
+                path: '/',
+                element: <Home/>,
+            },
+            {
+                path: '/create',
+                element: <CreateProduct/>,
+            },
+
+            {
+                path: '/products/:id',
+                element: <ProductDetail/>,
+            },
+        ]
+    }
+]);
+
+function App() {
+    return <RouterProvider router={router}/>;
+}
+
+export default App;
+```
+
+```javascript
+import {Link, Outlet} from 'react-router';
+
+function Layout() {
+    return (
+        <div>
+            <header>
+                <nav>
+                    <Link to={`/`}>Home</Link>
+                    <Link to={`/create`}>Create New Product</Link>
+                </nav>
+            </header>
+            <main>
+                <Outlet/>
+            </main>
+        </div>
+    );
+}
+
+export default Layout;
+```
+
+Op onderstaande blogs kan je extra voorbeelden vinden:
 
 * https://medium.com/@pavitramodi.it/getting-started-with-createbrowserrouter-in-react-router-dom-e3131820fef4
 * https://codeparrot.ai/blogs/createbrowserrouter-a-step-up-from-switch
