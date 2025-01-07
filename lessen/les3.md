@@ -21,10 +21,10 @@ weergegeven.
 
 ### react-router
 
-Verschillende manieren om routing toe te passen binnen React. Wij gebruiken `createBrowserRouter` omdat we dit de beste
+Er zijn verschillende manieren om routing toe te passen binnen React. Wij gebruiken `createBrowserRouter` omdat we dit de beste
 manier vinden. Helaas is deze niet het best gedocumenteerd.
 
-* Gebruik `createBrowserRouter` buiten je project (in main.jsx) om een router aan te maken
+* Gebruik `createBrowserRouter` in de App.jsx om een router aan te maken
 * Definieer daarin de hoofd routes (`paths`) naar components (`element`)
 * Definieer eventueel geneste routes (`children`)
 * Als je variabelen in een URL gebruikt kan je die in het component ophalen met `useParams`
