@@ -233,6 +233,6 @@ Bij het opzetten van CORS in een RESTful webservice moet je met de volgende zake
 * Check of je OPTIONS ook zonder Accept-header werkt
 * Ga verder met je project op basis van de feedback van de checker
 
-#### Opdracht 6.3
+#### Opdracht 6.4
 
 Huiswerk: Denk na over een onderwerp voor je eigen full stack project
