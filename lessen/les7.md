@@ -1,7 +1,7 @@
 # Les 7
 
 Een webservice is bedoeld om gegevens te ontvangen en versturen. Het kan goed zijn om kritisch te kijken of je niet
-te veel gegevens verstuurd.
+te veel gegevens verstuurt.
 
 * Verhoogt de snelheid (voor de gebruiker)
 * Vergroot de performance (van je service)
