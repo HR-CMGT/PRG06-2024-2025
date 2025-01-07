@@ -228,11 +228,19 @@ component in de HTML en gebruik je in het component als parameters van de functi
 <!-- Destructuring of `props.value`? => destructuring, omdat React docs dit doen. Uitleg hierover doen we bij PRG7 -->
 
 ```javascript
-function List({items}) {
-    const list = items.map(product =>
-        <li key={product.id}>
+function Item({product}) {
+    return (
+        <li>
             {product.title}
         </li>
+    );
+}
+```
+
+```javascript
+function List({items}) {
+    const list = items.map(product =>
+        <Item key={product.id} product={product}/>
     );
 
     return (
@@ -244,7 +252,8 @@ function List({items}) {
 ```
 
 ```javascript
-function App({items}) {
+function App() {
+    // load products
     return (
         <>
             <List items={products}/>
