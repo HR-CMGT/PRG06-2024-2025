@@ -38,7 +38,7 @@ Een HTTP-verzoek bestaat uit drie onderdelen:
 - **Body** (na een lege regel): Optioneel, wordt gebruikt voor de data die de client naar de server stuurt.
 
 ```
-GET /products
+GET /products HTTP/1.1
 Accept: text/html
 ```
 
