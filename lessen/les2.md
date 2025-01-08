@@ -144,10 +144,12 @@ meestuurt.
 ### Chess Spots
 
 https://prg06-node-express.antwan.eu/spots/
+Alleen `title`, `description` en `review` zijn verplichte velden.
 
 ### Notes
 
 https://notes.basboot.nl/notes
+Alleen `title`, `body` en `author` zijn verplichte velden.
 
 ## React Lifecycle
 
