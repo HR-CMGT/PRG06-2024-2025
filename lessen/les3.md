@@ -3,7 +3,8 @@
 ## Front-end routing
 
 Omdat je in React een *single page application* bouwt, draait de hele app op één url. Dit is voor de gebruikerservaring
-echter niet handig omdat deze je dan niet kunt linken naar een onderdeel van je applicatie. Dit kunnen we oplossen door
+echter niet handig omdat je dan niet kunt linken naar een onderdeel van je applicatie, waardoor een gebruiker altijd
+door de hele applicatie heen moet. Dit kunnen we oplossen door
 *front-end routing* toe te voegen.
 
 - **Usability**: Gebruikers kunnen tussen verschillende delen van de applicatie navigeren via de URL, of terugkeren naar
