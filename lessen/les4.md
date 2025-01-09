@@ -173,10 +173,10 @@ const app = express();
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
-})
+});
 
-app.listen(8000, () => {
-    console.log('Server luistert op poort 8000');
+app.listen(process.env.EXPRESS_PORT, () => {
+    console.log(`Server luistert op poort ${process.env.EXPRESS_PORT}`);
 });
 ```
 
