@@ -73,6 +73,8 @@ Content-Type: text/html
 - **Cacheable**: Als gevolg van de stateless architectuur kunnen veel responses gecacht worden.
 - **Uniforme interface**: De communicatie tussen de client en de server gaat via HTTP, en is daardoor gestandariseerd.
 
+[Extra uitleg over REST](https://medium.com/@bvsahane89/mastering-rest-apis-uniform-interface-in-rest-50b23062156f)
+
 ## HTTP Methods
 
 In les 2 hebben we naar de meest gebruikte methods gekeken. Voor de implementatie van een webservice kijken we naar nog
