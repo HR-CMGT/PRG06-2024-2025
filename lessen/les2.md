@@ -69,10 +69,11 @@ try {
 ```javascript
 async function fetchProduct() {
     try {
-        const response = await fetch('https://api.example.com/products/1', {
+        const response = await fetch('http://url_naar_resource', {
             method: 'GET',
             headers: {
-                'Accept': 'application/json'
+                'Accept': 'application/json',
+                // en overige headers
             }
         });
 
@@ -91,11 +92,11 @@ fetchProduct();
 ```javascript
 async function createProduct() {
     try {
-        const response = await fetch('https://api.example.com/products', {
+        const response = await fetch('http://url_naar_resource', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
             },
             body: JSON.stringify({
                 name: 'Voorbeeldproduct',
@@ -197,7 +198,13 @@ function ProductComponent() {
     useEffect(() => {
         async function fetchProduct() {
             try {
-                const response = await fetch('https://api.example.com/products/1');
+                const response = await fetch('http://url_naar_resource', {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json',
+                        // en overige headers
+                    }
+                });
                 const data = await response.json();
                 setProduct(data);
             } catch (error) {
@@ -250,7 +257,7 @@ maken voor
 de invoer van alle formuliervelden, in plaats van een aparte handler voor elk veld.
 
 ```javascript
-import React, {useState} from 'react';
+import {useState} from 'react';
 
 function FormComponent() {
     const [formData, setFormData] = useState({
