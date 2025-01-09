@@ -5,7 +5,7 @@
 </a>
 
 | Tools     | Doel                                                                     |
-|-----------|--------------------------------------------------------------------------|
+| --------- | ------------------------------------------------------------------------ |
 | PhpStorm  | Voor ontwikkeling van zowel de front- als de backend                     |
 | node      | JavaScript runtime op de backend.                                        |
 | npm       | Packetmanager voor zowel front- als backend, om modules te installeren.  |
@@ -73,19 +73,21 @@ Content-Type: text/html
 - **Cacheable**: Als gevolg van de stateless architectuur kunnen veel responses gecacht worden.
 - **Uniforme interface**: De communicatie tussen de client en de server gaat via HTTP, en is daardoor gestandariseerd.
 
+[Extra uitleg over REST](https://medium.com/@bvsahane89/mastering-rest-apis-uniform-interface-in-rest-50b23062156f)
+
 ## HTTP Methods
 
 In les 2 hebben we naar de meest gebruikte methods gekeken. Voor de implementatie van een webservice kijken we naar nog
 een paar andere headers:
 
 | Methode | Doel                                                                                   | CRUD   |
-|---------|----------------------------------------------------------------------------------------|--------|
+| ------- | -------------------------------------------------------------------------------------- | ------ |
 | GET     | Iets ophalen van de webservice (collectie of detail resource)                          | Read   |
 | PUT     | Een detail resource aanpassen (volledige resource moet gestuurd worden                 | Update |
 | PATCH   | Een detail resource aanpassen (alleen aanpassing hoeft gestuurd te worden)             | Update |
 | DELETE  | Een detail resource verwijderen                                                        | Delete |
 | OPTIONS | Opvragen welke methods toegestaan zijn voor een resource (response met `Allow`-header) |        |
-| POST    | Een nieuwe resource toevoegen aan een colletie                                         | Create |
+| POST    | Een nieuwe resource toevoegen aan een collectie                                        | Create |
 
 <!--
 | HEAD    | Alleen de headers van iets ophalen van een resource                                    | Read   |
@@ -97,7 +99,7 @@ Bij de implementatie van deze methods, moet je rekening houden met twee eigensch
 * **idempotent**: een method is idempotent als het niet uitmaakt of je de method één of meerdere keren uitvoert
 
 | Method  | Safe | Idempotent |
-|---------|------|------------|
+| ------- | ---- | ---------- |
 | GET     | Ja   | Ja         |
 | HEAD    | Ja   | Ja         |
 | PUT     | Nee  | Ja         |
@@ -114,7 +116,7 @@ Een *REST client* is een tool die het mogelijk maakt om verzoeken naar een serve
 zonder dat hier een webbrowser voor nodig is.
 
 * Een REST client communiceert rechtstreeks met een webservice;
-* Je kunt zelf kunt instellen welke HTTP-methode je gebruikt, en kunt naast `GET` of `POST`, ook alle andere methoden
+* Je kunt zelf instellen welke HTTP-methode je gebruikt, en kunt naast `GET` of `POST`, ook alle andere methoden
   gebruiken;
 * Ook heb je volledige controle over de headers van het request, en kun je de response headers uitlezen.
 
@@ -128,7 +130,7 @@ Tijdens deze cursus maken we gebruik van Postman, maar er zijn ook andere REST c
 
 <!-- Omdat de notes een eenvoudigere indeling hebben waarschijnlijk het beste om daarmee te doen -->
 
-* Installeer Postman
+* Installeer [Postman](https://www.postman.com/)
 * Tip: als je een account maakt bij Postman kan je je requests opslaan om later her te gebruiken. Dat is heel handig als
   je straks je eigen service moet debuggen
 * Haal met GET de collectie https://docent.cmi.hro.nl/bootb/demo/notes/ op
@@ -204,7 +206,7 @@ app.get('/products/:id', (req, res) => {
 
 #### Opdracht 4.2
 
-* Volg de installatie
+* Volg [de installatie](https://github.com/HR-CMGT/PRG06-2024-2025/blob/main/guides/installatie-week2.md)
 * Maak de 'Hello World' met Express
 * Pas hem daarna aan om JSON terug te sturen.
 * Voeg een `.env` file toe
@@ -259,10 +261,10 @@ worden geïnstalleerd op basis van het bestand `package.json`.
 
 #### Opdracht 4.4
 
-* Volg de installatie voor de server
-* Login op je server met sftp, en zet je 'hello world' over zonder node_modules
-* Login op je server met ssh en installeer de node modules
-* Start het project, en test of het werkt met een browser
+* Volg de [installatie voor de server](https://github.com/HR-CMGT/PRG06-2024-2025/blob/main/guides/installatie-week2.md)
+* Login op je server met sftp (bijvoorbeeld met Filezilla), en zet jouw project over zonder de map `node_modules`
+* Zorg ervoor dat je ingelogd bent op je server met ssh en installeer de node modules
+* Start het project, en test of het werkt met Postman
 
 
 
