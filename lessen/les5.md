@@ -40,6 +40,8 @@ export default Product;
 
 #### Opdracht 5.1
 
+[Installatiehandleiding les 5](../guides/installatie-week2.md)
+
 * Installeer MongoDB en Mongoose (op je laptop)
 * Laat je app verbinden met de database
 * Maak een Schema voor een note of chess-spot (kijk naar een detail voor de juiste indeling)
@@ -165,6 +167,8 @@ Ook uitschrijven, of tijdens de les behandelen?
 -->
 
 #### Opdracht 5.3
+
+[Installatiehandleiding les 5](../guides/installatie-week2.md)
 
 * Installeer MongoDB op de server
 * Zet je app op de server en test met Postman

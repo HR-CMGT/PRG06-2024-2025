@@ -26,6 +26,9 @@ Er zijn verschillende manieren om routing toe te passen binnen React. Wij gebrui
 de beste
 manier vinden. Helaas is deze niet het best gedocumenteerd.
 
+[Installatiehandleiding les 3](../guides/installatie-week1.md)
+
+* Installeer `react-router`
 * Gebruik `createBrowserRouter` in de App.jsx om een router aan te maken
 * Definieer daarin de hoofd routes (`paths`) naar components (`element`)
 * Definieer eventueel geneste routes (`children`)

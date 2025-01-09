@@ -204,6 +204,8 @@ app.get('/products/:id', (req, res) => {
 
 #### Opdracht 4.2
 
+[Installatiehandleiding les 4](../guides/installatie-week2.md)
+
 * Volg de installatie
 * Maak de 'Hello World' met Express
 * Pas hem daarna aan om JSON terug te sturen.
@@ -258,6 +260,8 @@ Op de server installeer je de benodigde tools en libraries waarvoor `sudo` (supe
 worden geïnstalleerd op basis van het bestand `package.json`.
 
 #### Opdracht 4.4
+
+[Installatiehandleiding les 4](../guides/installatie-week2.md)
 
 * Volg de installatie voor de server
 * Login op je server met sftp, en zet je 'hello world' over zonder node_modules
