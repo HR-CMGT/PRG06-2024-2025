@@ -71,7 +71,7 @@ Content-Type: text/html
 - **Stateless**: Elke request staat op zichzelf; de server houdt geen informatie bij over het request (voor de
   client).
 - **Cacheable**: Als gevolg van de stateless architectuur kunnen veel responses gecacht worden.
-- **Uniforme interface**: De communicatie tussen de client en se server gaat via HTTP, en is daardoor gestandariseerd.
+- **Uniforme interface**: De communicatie tussen de client en de server gaat via HTTP, en is daardoor gestandariseerd.
 
 ## HTTP Methods
 
@@ -172,7 +172,7 @@ import express from 'express';
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    res.send('Hello World!');
 })
 
 app.listen(8000, () => {
