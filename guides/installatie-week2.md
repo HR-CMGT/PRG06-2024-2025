@@ -58,5 +58,4 @@ Mongoose
 
 ## Les 8
 
-laatste week
-npm install jsonwebtoken
+* JSON web tokens `npm install jsonwebtoken`
