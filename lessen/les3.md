@@ -93,6 +93,46 @@ Op onderstaande blogs kan je extra voorbeelden vinden:
 * https://medium.com/@pavitramodi.it/getting-started-with-createbrowserrouter-in-react-router-dom-e3131820fef4
 * https://codeparrot.ai/blogs/createbrowserrouter-a-step-up-from-switch
 
+## Links, params en navigate
+
+### Links
+
+In React gebruik je `<Link>` om naar een andere route te linken. Hierdoor kan React de pagina vanuit de pseudodom
+renderen, en hoeft de pagina niet echt opnieuw geladen worden, wat bij een `<a href>` wel zou gebeuren.
+
+https://api.reactrouter.com/v7/functions/react_router.Link.html
+
+### Params
+
+Params die zijn doorgeven via routing (bijv `id` in bovenstaand voorbeeld) kan je uitlezen met de hook-method
+`useParams`.
+
+**Voorbeeld**
+
+```javascript
+const params = useParams();
+
+const id = params.id;
+```
+
+### Navigate
+
+Een gebruiker navigeert door je app via `Link`s. Soms wil je echter je app zelf laten navigeren, bijvoorbeeld na het
+aanmaken of verwijderen van een item. Hiervoor gebruik je de hook-method `useNavigate`.
+
+**Voorbeeld**
+
+```javascript
+const navigate = useNavigate();
+
+// zonder parameter
+navigate('/products/');
+
+// met parameter
+navigate('/products/', {id: product.id});
+
+```
+
 #### Opdracht 3.1
 
 Voeg routing aan je project toe om aparte pagina's te maken van:
