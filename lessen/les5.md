@@ -44,7 +44,7 @@ export default Product;
 
 * Installeer MongoDB en Mongoose (op je laptop)
 * Laat je app verbinden met de database
-* Maak een Schema voor een note of chess-spot (kijk naar een detail voor de juiste indeling)
+* Maak een Schema voor een note of spot (kijk naar een detail voor de juiste indeling)
   https://mongoosejs.com/docs/guide.html
 * Maak een endpoint `/notes` of `/spots`, afhankelijk van de webservice die je vorige week in je React-applicatie hebt gebruikt
 * Return de lijst als JSON (nu uiteraard nog leeg)
