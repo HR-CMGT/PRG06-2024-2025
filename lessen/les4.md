@@ -5,7 +5,7 @@
 </a>
 
 | Tools     | Doel                                                                     |
-|-----------|--------------------------------------------------------------------------|
+| --------- | ------------------------------------------------------------------------ |
 | PhpStorm  | Voor ontwikkeling van zowel de front- als de backend                     |
 | node      | JavaScript runtime op de backend.                                        |
 | npm       | Packetmanager voor zowel front- als backend, om modules te installeren.  |
@@ -81,7 +81,7 @@ In les 2 hebben we naar de meest gebruikte methods gekeken. Voor de implementati
 een paar andere headers:
 
 | Methode | Doel                                                                                   | CRUD   |
-|---------|----------------------------------------------------------------------------------------|--------|
+| ------- | -------------------------------------------------------------------------------------- | ------ |
 | GET     | Iets ophalen van de webservice (collectie of detail resource)                          | Read   |
 | PUT     | Een detail resource aanpassen (volledige resource moet gestuurd worden                 | Update |
 | PATCH   | Een detail resource aanpassen (alleen aanpassing hoeft gestuurd te worden)             | Update |
@@ -99,7 +99,7 @@ Bij de implementatie van deze methods, moet je rekening houden met twee eigensch
 * **idempotent**: een method is idempotent als het niet uitmaakt of je de method één of meerdere keren uitvoert
 
 | Method  | Safe | Idempotent |
-|---------|------|------------|
+| ------- | ---- | ---------- |
 | GET     | Ja   | Ja         |
 | HEAD    | Ja   | Ja         |
 | PUT     | Nee  | Ja         |
@@ -206,12 +206,12 @@ app.get('/products/:id', (req, res) => {
 
 #### Opdracht 4.2
 
-[Installatiehandleiding les 4](../guides/installatie-week2.md)
+**Setup**
 
-* Volg de installatie
-* Maak de 'Hello World' met Express
-* Pas hem daarna aan om JSON terug te sturen.
-* Voeg een `.env` file toe
+* Volg [de installatie](../guides/installatie-week2.md)
+* Maak het bestand `index.js` aan
+
+* Maak het bestand `.env` aan
 * Pas het run-script in `package.json` aan om te zorgen dat je `.env` wordt geladen
 
 ```
@@ -220,9 +220,15 @@ app.get('/products/:id', (req, res) => {
   },
 ```
 
-* Gebruik `.env` om het poort-nummer van je Express app te configureren
+<br>
 
-<!-- Hier nog even in 1 bestand? En in les 5 netjes verdelen met een Router erbij, of hier al doen? -->
+**Hello world**
+
+* Maak de 'Hello World' met Express
+* Gebruik `.env` om het poort-nummer van je Express app te configureren
+* Pas hem daarna aan om JSON terug te sturen.
+
+
 
 #### Opdracht 4.3
 
