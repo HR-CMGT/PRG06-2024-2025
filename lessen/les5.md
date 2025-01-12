@@ -44,16 +44,16 @@ export default Product;
 
 * Installeer MongoDB en Mongoose (op je laptop)
 * Laat je app verbinden met de database
-* Maak een Schema voor een note of spot (kijk naar een detail voor de juiste indeling)
+* Maak een Schema voor een note of spot, afhankelijk van de webservice die je vorige week in je React-applicatie hebt gebruikt (kijk naar een detail voor de juiste indeling)
   https://mongoosejs.com/docs/guide.html
-* Maak een endpoint `/notes` of `/spots`, afhankelijk van de webservice die je vorige week in je React-applicatie hebt gebruikt
+* Maak een endpoint `/notes` of `/spots`
 * Return de lijst als JSON (nu uiteraard nog leeg)
-* Verplaats voor het overzicht je routes naar een `Router` in een apart
-  bestand: https://expressjs.com/en/5x/api.html#router
 * Installeer fakerjs
 * Maak een endpoint `/seed`
 * Maak 10 fake items aan op dit endpoint en plaats ze in de database
 * Voeg toe dat je ook een detail resource op kunt vragen
+* Verplaats voor het overzicht je routes naar een `Router` in een apart
+  bestand: https://expressjs.com/en/5x/api.html#router
 
 ## POST en PUT
 
@@ -116,11 +116,13 @@ Statuscodes in de 2xx-serie geven aan dat het request succesvol is verwerkt door
 
 ### 4xx – Clientfout
 
-Statuscodes in de 4xx-serie geven aan dat er iets mis is met het request van de client waardoor de server het request
-niet kan verwerken.
+Statuscodes in de 4xx-serie geven aan dat er iets mis is met het request van de client waardoor de server het request niet kan verwerken.
+
+- **400 Bad Request**  
+  Het request van de client is ongeldig, bijvoorbeeld door een syntaxfout of ontbrekende gegevens.
 
 - **401 Unauthorized**  
-  De server kan het request niet verwerken omdat je niet ingelogd bent wat je wel had moeten zijn..
+  De server kan het request niet verwerken omdat je niet ingelogd bent wat je wel had moeten zijn.
 
 - **404 Not Found**  
   De resource bestaat niet op de server.
@@ -141,7 +143,7 @@ request. Het request is wel correct, de gebruiker kan hier zelf dus niets aan do
 
 ### MongoDB
 
-De Mongoose-module die via npm wordt geïnstalleerd, is slechts een ORM (Object Relational Mapper). Om een
+De Mongoose-module, die via npm wordt geïnstalleerd, is slechts een ODM (Object Document Mapper). Om een
 database te hebben waarmee Mongoose kan communiceren, moet MongoDB zelf ook op de server worden geïnstalleerd.
 Het is het handigst om deze als service te installeren zodat hij altijd actief is.
 
