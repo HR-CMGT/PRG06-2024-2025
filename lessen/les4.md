@@ -22,6 +22,7 @@
     - [Ubuntu](#ubuntu)
       - [Opdracht 4.4](#opdracht-44)
 
+<br><br>
 
 ## Client/server model
 
