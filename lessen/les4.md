@@ -202,11 +202,9 @@ app.get('/products/:id', (req, res) => {
 
 ```
 
-<!-- index of app -->
 
 #### Opdracht 4.2
 
-**Setup**
 
 * Volg [de installatie](../guides/installatie-week2.md)
 * Maak het bestand `index.js` aan
@@ -219,10 +217,6 @@ app.get('/products/:id', (req, res) => {
     "dev": "node --env-file=.env --watch index.js"
   },
 ```
-
-<br>
-
-**Hello world**
 
 * Maak de 'Hello World' met Express
 * Gebruik `.env` om het poort-nummer van je Express app te configureren
