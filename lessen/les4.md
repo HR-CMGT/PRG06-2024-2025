@@ -1,5 +1,30 @@
 # Les 4
 
+- [Les 4](#les-4)
+  - [Client/server model](#clientserver-model)
+  - [REST](#rest)
+  - [HTTP](#http)
+    - [Request](#request)
+    - [Response](#response)
+  - [REST principes](#rest-principes)
+  - [HTTP Methods](#http-methods)
+  - [REST client](#rest-client)
+    - [Postman](#postman)
+      - [Opdracht 4.1](#opdracht-41)
+  - [Webserver](#webserver)
+  - [Node](#node)
+  - [Express](#express)
+      - [Opdracht 4.2](#opdracht-42)
+      - [Opdracht 4.3](#opdracht-43)
+  - [Server](#server)
+    - [Shared hosting](#shared-hosting)
+    - [VPS](#vps)
+    - [Ubuntu](#ubuntu)
+      - [Opdracht 4.4](#opdracht-44)
+
+
+## Client/server model
+
 <a href="images/fullpicture.svg" target="_blank">
   <img src="images/fullpicture.svg" alt="De volledige stack" width="70%">
 </a>
