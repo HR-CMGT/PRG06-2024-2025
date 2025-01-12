@@ -178,7 +178,7 @@ app.get('/', (req, res) => {
 });
 
 app.listen(process.env.EXPRESS_PORT, () => {
-    console.log(`Server luistert op poort ${process.env.EXPRESS_PORT}`);
+    console.log(`Server is listening on port ${process.env.EXPRESS_PORT}`);
 });
 ```
 
@@ -206,7 +206,7 @@ app.get('/products/:id', (req, res) => {
 #### Opdracht 4.2
 
 
-* Volg [de installatie](../guides/installatie-week2.md)
+* Volg [de installatie voor lokaal](../guides/installatie-week2.md)
 * Maak het bestand `index.js` aan
 
 * Maak het bestand `.env` aan
@@ -226,7 +226,7 @@ app.get('/products/:id', (req, res) => {
 
 #### Opdracht 4.3
 
-* Maak een array met JSON objecten aan
+* Maak een array met JSON objecten aan (tip: gebruik de array die je in les 1 hebt gemaakt)
 * Maak een route voor het weergeven van de collectie
 * Maak een route voor een detail uit de collectie
 
@@ -263,9 +263,8 @@ worden geïnstalleerd op basis van het bestand `package.json`.
 
 #### Opdracht 4.4
 
-[Installatiehandleiding les 4](../guides/installatie-week2.md)
 
-* Volg de installatie voor de server
+* Volg [de installatie voor de server](../guides/installatie-week2.md)
 * Login op je server met sftp, en zet je 'hello world' over zonder node_modules
 * Login op je server met ssh en installeer de node modules
 * Start het project, en test of het werkt met een browser
