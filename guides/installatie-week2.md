@@ -37,11 +37,7 @@ option 3)
 
 ## Les 5
 
-Screen
-
-* Installeer met `sudo apt screen`.
-
-MongoDB (lokaal + server)
+MongoDB (lokaal)
 
 * **Mac OS**: https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/
 
@@ -54,11 +50,21 @@ Scroll omlaag voor 'Download Center'. Kies in voor een 'Complete' installatie, l
 let op dat je bij het volgende scherm waar gevraagd wordt of je Compass wilt installeren dit uit zet (is een opt out!),
 want die hebben we niet nodig.
 
-* **Ubuntu** https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
-
 Mongoose
 
-* `npm install mongoose`, in je node project
+* `npm install mongoose`, in je node project.
+
+Fakerjs
+
+* Installeer module met `npm install @faker-js/faker`, in je node project.
+
+MongoDB (server)
+
+* **Ubuntu** https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
+
+Screen (server)
+
+* Installeer met `sudo apt screen`.
 
 ## Les 8
 
