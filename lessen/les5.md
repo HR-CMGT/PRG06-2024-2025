@@ -50,11 +50,13 @@ export default Product;
 * Maak een endpoint `/notes` of `/spots`
 * Return de lijst als JSON (nu uiteraard nog leeg)
 * Installeer fakerjs
-* Maak een endpoint `/seed`
+* Maak een endpoint `/seed` voor een `POST` request
 * Maak 10 fake items aan op dit endpoint en plaats ze in de database
 * Voeg toe dat je ook een detail resource op kunt vragen
 * Verplaats voor het overzicht je routes naar een `Router` in een apart
   bestand: https://expressjs.com/en/5x/api.html#router
+
+https://fakerjs.dev/api/
 
 ## POST en PUT
 
@@ -95,7 +97,8 @@ app.listen(8000, () => {
 #### Opdracht 5.2
 
 * Laat je seed de database eerst leeg maken voor er nieuwe items worden aangemaakt (als je dat nog niet gedaan had)
-* Voeg een parameter 'amount' toe aan je seed, waarmee je kunt kiezen met hoeveel items je webservice gevuld wordt
+* Voeg een parameter 'amount' toe aan je seed die als x-www-formurlencoded of JSON meegestuurd kan worden, waarmee je
+  kunt kiezen met hoeveel items je webservice gevuld wordt
 * Implementeer POST voor je webservice
 
 ## Status Codes
