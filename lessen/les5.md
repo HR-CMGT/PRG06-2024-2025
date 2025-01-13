@@ -100,7 +100,7 @@ app.listen(8000, () => {
 * Voeg een parameter 'amount' toe aan je seed die als x-www-formurlencoded of JSON meegestuurd kan worden, waarmee je
   kunt kiezen met hoeveel items je webservice gevuld wordt
 * Implementeer POST voor je webservice
-* (Optioneel) Voeg een parameter 'reset' toe aan je see waarmee je bepaald of je de database eerst leeg maakt of niet
+* (Optioneel) Voeg een parameter 'reset' toe aan je seed waarmee je bepaald of je de database eerst leeg maakt of niet
 
 ## Status Codes
 
