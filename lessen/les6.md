@@ -186,7 +186,8 @@ Een *origin* bestaat uit het protocol (`http` of `https`), de domeinnaam (bijv.
 
 Hier zijn enkele van de meest gebruikte CORS-gerelateerde headers:
 
-- `Access-Control-Allow-Origin`: Bepaalt welke sites (origins) toegang hebben tot de resource.
+- `Access-Control-Allow-Origin`: Bepaalt welke sites (origins) toegang hebben tot de resource. Gebruik `*` om alle
+  origins toe te staan.
 - `Access-Control-Allow-Methods`: Geeft de HTTP-methoden aan die toegestaan zijn voor een resource (zoals `GET`, `POST`,
   `PUT`, enz.).
 - `Access-Control-Allow-Headers`: Specificeert welke headers de client mag gebruiken in het request.
