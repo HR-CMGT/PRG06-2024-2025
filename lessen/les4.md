@@ -1,11 +1,37 @@
 # Les 4
 
+- [Les 4](#les-4)
+  - [Client/server model](#clientserver-model)
+  - [REST](#rest)
+  - [HTTP](#http)
+    - [Request](#request)
+    - [Response](#response)
+  - [REST principes](#rest-principes)
+  - [HTTP Methods](#http-methods)
+  - [REST client](#rest-client)
+    - [Postman](#postman)
+      - [Opdracht 4.1](#opdracht-41)
+  - [Webserver](#webserver)
+  - [Node](#node)
+  - [Express](#express)
+      - [Opdracht 4.2](#opdracht-42)
+      - [Opdracht 4.3](#opdracht-43)
+  - [Server](#server)
+    - [Shared hosting](#shared-hosting)
+    - [VPS](#vps)
+    - [Ubuntu](#ubuntu)
+      - [Opdracht 4.4](#opdracht-44)
+
+<br><br>
+
+## Client/server model
+
 <a href="images/fullpicture.svg" target="_blank">
   <img src="images/fullpicture.svg" alt="De volledige stack" width="70%">
 </a>
 
 | Tools     | Doel                                                                     |
-|-----------|--------------------------------------------------------------------------|
+| --------- | ------------------------------------------------------------------------ |
 | PhpStorm  | Voor ontwikkeling van zowel de front- als de backend                     |
 | node      | JavaScript runtime op de backend.                                        |
 | npm       | Packetmanager voor zowel front- als backend, om modules te installeren.  |
@@ -81,7 +107,7 @@ In les 2 hebben we naar de meest gebruikte methods gekeken. Voor de implementati
 een paar andere headers:
 
 | Methode | Doel                                                                                   | CRUD   |
-|---------|----------------------------------------------------------------------------------------|--------|
+| ------- | -------------------------------------------------------------------------------------- | ------ |
 | GET     | Iets ophalen van de webservice (collectie of detail resource)                          | Read   |
 | PUT     | Een detail resource aanpassen (volledige resource moet gestuurd worden                 | Update |
 | PATCH   | Een detail resource aanpassen (alleen aanpassing hoeft gestuurd te worden)             | Update |
@@ -99,7 +125,7 @@ Bij de implementatie van deze methods, moet je rekening houden met twee eigensch
 * **idempotent**: een method is idempotent als het niet uitmaakt of je de method één of meerdere keren uitvoert
 
 | Method  | Safe | Idempotent |
-|---------|------|------------|
+| ------- | ---- | ---------- |
 | GET     | Ja   | Ja         |
 | HEAD    | Ja   | Ja         |
 | PUT     | Nee  | Ja         |
@@ -178,7 +204,7 @@ app.get('/', (req, res) => {
 });
 
 app.listen(process.env.EXPRESS_PORT, () => {
-    console.log(`Server luistert op poort ${process.env.EXPRESS_PORT}`);
+    console.log(`Server is listening on port ${process.env.EXPRESS_PORT}`);
 });
 ```
 
@@ -202,16 +228,14 @@ app.get('/products/:id', (req, res) => {
 
 ```
 
-<!-- index of app -->
 
 #### Opdracht 4.2
 
-[Installatiehandleiding les 4](../guides/installatie-week2.md)
 
-* Volg de installatie
-* Maak de 'Hello World' met Express
-* Pas hem daarna aan om JSON terug te sturen.
-* Voeg een `.env` file toe
+* Volg [de installatie voor lokaal](../guides/installatie-week2.md)
+* Maak het bestand `index.js` aan
+
+* Maak het bestand `.env` aan
 * Pas het run-script in `package.json` aan om te zorgen dat je `.env` wordt geladen
 
 ```
@@ -220,13 +244,15 @@ app.get('/products/:id', (req, res) => {
   },
 ```
 
+* Maak de 'Hello World' met Express
 * Gebruik `.env` om het poort-nummer van je Express app te configureren
+* Pas hem daarna aan om JSON terug te sturen.
 
-<!-- Hier nog even in 1 bestand? En in les 5 netjes verdelen met een Router erbij, of hier al doen? -->
+
 
 #### Opdracht 4.3
 
-* Maak een array met JSON objecten aan
+* Maak een array met JSON objecten aan (tip: gebruik de array die je in les 1 hebt gemaakt)
 * Maak een route voor het weergeven van de collectie
 * Maak een route voor een detail uit de collectie
 
@@ -263,9 +289,8 @@ worden geïnstalleerd op basis van het bestand `package.json`.
 
 #### Opdracht 4.4
 
-[Installatiehandleiding les 4](../guides/installatie-week2.md)
 
-* Volg de installatie voor de server
+* Volg [de installatie voor de server](../guides/installatie-week2.md)
 * Login op je server met sftp, en zet je 'hello world' over zonder node_modules
 * Login op je server met ssh en installeer de node modules
 * Start het project, en test of het werkt met een browser
