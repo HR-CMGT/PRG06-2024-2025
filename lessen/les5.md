@@ -44,7 +44,8 @@ export default Product;
 
 * Installeer MongoDB en Mongoose (op je laptop)
 * Laat je app verbinden met de database
-* Maak een Schema voor een note of spot, afhankelijk van de webservice die je vorige week in je React-applicatie hebt gebruikt (kijk naar een detail voor de juiste indeling)
+* Maak een Schema voor een note of spot, afhankelijk van de webservice die je vorige week in je React-applicatie hebt
+  gebruikt (kijk naar een detail voor de juiste indeling)
   https://mongoosejs.com/docs/guide.html
 * Maak een endpoint `/notes` of `/spots`
 * Return de lijst als JSON (nu uiteraard nog leeg)
@@ -93,6 +94,8 @@ app.listen(8000, () => {
 
 #### Opdracht 5.2
 
+* Laat je seed de database eerst leeg maken voor er nieuwe items worden aangemaakt (als je dat nog niet gedaan had)
+* Voeg een parameter 'amount' toe aan je seed, waarmee je kunt kiezen met hoeveel items je webservice gevuld wordt
 * Implementeer POST voor je webservice
 
 ## Status Codes
@@ -116,7 +119,8 @@ Statuscodes in de 2xx-serie geven aan dat het request succesvol is verwerkt door
 
 ### 4xx – Clientfout
 
-Statuscodes in de 4xx-serie geven aan dat er iets mis is met het request van de client waardoor de server het request niet kan verwerken.
+Statuscodes in de 4xx-serie geven aan dat er iets mis is met het request van de client waardoor de server het request
+niet kan verwerken.
 
 - **400 Bad Request**  
   Het request van de client is ongeldig, bijvoorbeeld door een syntaxfout of ontbrekende gegevens.
