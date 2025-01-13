@@ -2,22 +2,37 @@
 
 ## Context API
 
-Alternatief voor props
+De Context API in React is een alternatief voor het doorgeven van props, vooral wanneer je dezelfde data wilt delen met
+meerdere componenten of met componenten die diep genest zijn.
 
-Handig als je dezelfde data met veel componenten wilt delen, of wilt delen met componenten diep in de 'tree'.
+* `createContext` Hiermee maak je een context aan, die fungeert als een container voor de gedeelde data. Je kunt een
+  standaardwaarde meegeven.
+* `<ContextComponent.Provider>` maakt de context beschikbaar in de JSX-structuur, om de waarde door te geven aan de
+  onderliggende componenten.
 
-* createContext maakt ContextComponent met default waarde
-* maak beschikbaar via JSX ContextComponent.Provider, je kunt hier de defaultwaarde overschrijven
-* waarde kan samengesteld zijn (object) waardoor je veel variabelen in 1x kunt doorsturen, of bijv een state + setter
-  door wilt geven
+Door een object te gebruiken in de context kan je eenvoudig meerdere gegevens delen binnen je app, waaronder state
+variabelen en setters.
+
+https://react.dev/reference/react/createContext
+
+<!--
 * eigenlijk alleen interessant als je reactive variabelen in de context stopt
+-->
+
+<!--
 
 ### Use cases
 
 - server state centraal?
 - loginstatus / jwt
 
+-->
+
 ## Foutafhandeling
+
+We hebben `try` en `catch` gebruikt om fouten af te handelen bij een `fetch`. Een statuscode 400 of 500 wordt door
+`fetch` echter niet gezien als een `Error` omdat het versturen van het request en ontvangen van een response gelukt is.
+Door zelf een foutmelding te `throw`en, kan je je app alsnog laten weten dat er iets mis is met het request.
 
 ```javascript
 async function fetchProduct() {
@@ -44,6 +59,8 @@ async function fetchProduct() {
 fetchProduct();
 
 ```
+
+Je kunt ook na de fetch, de status-code meteen afghandelen.
 
 ```javascript
 async function fetchProduct() {
@@ -74,7 +91,14 @@ fetchProduct();
 ```
 
 <!--
-Is denk ik leuk om toe te voegen, en zou misschien zelfs een alternatief extra onderdeel kunnen zijn.
+zou misschien een alternatief extra onderdeel kunnen zijn.
 -->
 
 ### 404
+
+De meest voorkomende use case hiervoor is waarschijnlijk de 404, als iemand een verkeerde URL voor een detail-pagina
+gebruikt.
+
+#### Opdracht 9.1
+
+Ga verder met je eindopdracht

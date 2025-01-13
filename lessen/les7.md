@@ -14,10 +14,6 @@ gedaan hebben, toon je ook veel niet-relevante gegevens. Door alleen de gegevens
 kunnen kiezen of een gebruiker geïnteresseerd is in de resource, kan de index een stuk kleiner worden. De gebruiker kan
 vervolgens zelf de details voor de voor hem relevante resources opvragen.
 
-<!--
-// TODO: Voorbeeld toevoegen? Is dat zinvol?
--->
-
 ## Pagination
 
 Een andere manier om de collectie te verkleinen is *pagination*.
@@ -105,20 +101,43 @@ Etag, Age en Expires worden ook gebruikt, maar zijn niet verplicht https://devel
 Alleen Last-Modified is de meest basic manier, maar vind ik ook de meest inituitieve manier en het beste bij REST passen, omdat hier de client zelf niet hoeft te rekenen of hashes te bewaren, enkel de datum wanneer het request gedaan is
 -->
 
-<!--
+## Unix bestandssysteem
 
-Voorschrijven of discussie van maken?
+Als je je service op een andere plek op de server wilt zetten, is het noodzakelijk om te zorgen dat je daar ook toegang
+toe hebt.
 
-### Mappenstructuur
+Unix-bestanden en mappen hebben rechten die bepalen wie ze kan lezen, schrijven of uitvoeren. Deze rechten zijn verdeeld
+over *owner*, *group*, en *other*:
 
-### Controller
+```
+# eerste - kan ook een d zijn om aan te geven dat het een directory is
+# daarna kan drie keer rwx staan, - betekent dat dat recht niet gezet is
+-rwxr-xr--
+```
 
-ENV toevoegen
--->
+* **r** (read): lezen
+* **w** (write): schrijven
+* **x** (execute): uitvoeren
 
-## Opdracht
+### Rechten aanpassen
 
-* Werken aan eindopdracht
+Met `chmod` pas je rechten aan:
+
+```
+chmod u+r file.txt # Owner krijgt leesrechten
+```
+
+### Eigenaar wijzigen
+
+Met `chown` wijzig je owner:
+
+```
+sudo chown user file.txt # Wijzigt eigenaar
+```
+
+## Opdracht 7.1
+
+* Start met je eindopdracht
 
 <!--
 * versiebeheer in URI toevoegen?
