@@ -37,7 +37,9 @@ option 3)
 
 ## Les 5
 
-MongoDB (lokaal)
+**Lokaal**
+
+MongoDB
 
 * **Mac OS**: https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/
 
@@ -58,13 +60,15 @@ Fakerjs
 
 * Installeer module met `npm install @faker-js/faker`, in je node project.
 
-MongoDB (server)
+**Server**
+
+MongoDB
 
 * **Ubuntu** https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
 
 Screen (server)
 
-* Installeer met `sudo apt screen`.
+* Installeer met `sudo apt install screen`.
 
 ## Les 8
 
