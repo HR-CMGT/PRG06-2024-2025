@@ -84,12 +84,12 @@ Bij authenticatie kunnen verschillende statuscodes worden teruggestuurd om aan t
 In een productieomgeving is het noodzakelijk om HTTPS te gebruiken in combinatie met authenticatie om ervoor te zorgen
 dat paswoorden en tokens versleuteld verstuurd worden.
 
-#### Opdracht
+#### Opdracht 8.1
 
 * Ga naar: https://www.base64decode.org/
 * Decodeer ‘SGVsbG8sIHdvcmxk’
 
-#### Opdracht 8.1
+#### Opdracht 8.2
 
 Ga verder met je eindopdracht
 

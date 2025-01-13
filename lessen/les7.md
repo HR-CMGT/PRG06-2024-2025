@@ -107,7 +107,7 @@ Als je je service op een andere plek op de server wilt zetten, is het noodzakeli
 toe hebt.
 
 Unix-bestanden en mappen hebben rechten die bepalen wie ze kan lezen, schrijven of uitvoeren. Deze rechten zijn verdeeld
-over *owner*, *group*, en *other*:
+over *user/owner*, *group*, en *other*:
 
 ```
 # eerste - kan ook een d zijn om aan te geven dat het een directory is

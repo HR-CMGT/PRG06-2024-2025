@@ -1,26 +1,26 @@
 # Les 4
 
 - [Les 4](#les-4)
-  - [Client/server model](#clientserver-model)
-  - [REST](#rest)
-  - [HTTP](#http)
-    - [Request](#request)
-    - [Response](#response)
-  - [REST principes](#rest-principes)
-  - [HTTP Methods](#http-methods)
-  - [REST client](#rest-client)
-    - [Postman](#postman)
-      - [Opdracht 4.1](#opdracht-41)
-  - [Webserver](#webserver)
-  - [Node](#node)
-  - [Express](#express)
-      - [Opdracht 4.2](#opdracht-42)
-      - [Opdracht 4.3](#opdracht-43)
-  - [Server](#server)
-    - [Shared hosting](#shared-hosting)
-    - [VPS](#vps)
-    - [Ubuntu](#ubuntu)
-      - [Opdracht 4.4](#opdracht-44)
+    - [Client/server model](#clientserver-model)
+    - [REST](#rest)
+    - [HTTP](#http)
+        - [Request](#request)
+        - [Response](#response)
+    - [REST principes](#rest-principes)
+    - [HTTP Methods](#http-methods)
+    - [REST client](#rest-client)
+        - [Postman](#postman)
+            - [Opdracht 4.1](#opdracht-41)
+    - [Webserver](#webserver)
+    - [Node](#node)
+    - [Express](#express)
+        - [Opdracht 4.2](#opdracht-42)
+        - [Opdracht 4.3](#opdracht-43)
+    - [Server](#server)
+        - [Shared hosting](#shared-hosting)
+        - [VPS](#vps)
+        - [Ubuntu](#ubuntu)
+            - [Opdracht 4.4](#opdracht-44)
 
 <br><br>
 
@@ -31,7 +31,7 @@
 </a>
 
 | Tools     | Doel                                                                     |
-| --------- | ------------------------------------------------------------------------ |
+|-----------|--------------------------------------------------------------------------|
 | PhpStorm  | Voor ontwikkeling van zowel de front- als de backend                     |
 | node      | JavaScript runtime op de backend.                                        |
 | npm       | Packetmanager voor zowel front- als backend, om modules te installeren.  |
@@ -107,7 +107,7 @@ In les 2 hebben we naar de meest gebruikte methods gekeken. Voor de implementati
 een paar andere headers:
 
 | Methode | Doel                                                                                   | CRUD   |
-| ------- | -------------------------------------------------------------------------------------- | ------ |
+|---------|----------------------------------------------------------------------------------------|--------|
 | GET     | Iets ophalen van de webservice (collectie of detail resource)                          | Read   |
 | PUT     | Een detail resource aanpassen (volledige resource moet gestuurd worden                 | Update |
 | PATCH   | Een detail resource aanpassen (alleen aanpassing hoeft gestuurd te worden)             | Update |
@@ -125,7 +125,7 @@ Bij de implementatie van deze methods, moet je rekening houden met twee eigensch
 * **idempotent**: een method is idempotent als het niet uitmaakt of je de method één of meerdere keren uitvoert
 
 | Method  | Safe | Idempotent |
-| ------- | ---- | ---------- |
+|---------|------|------------|
 | GET     | Ja   | Ja         |
 | HEAD    | Ja   | Ja         |
 | PUT     | Nee  | Ja         |
@@ -228,9 +228,7 @@ app.get('/products/:id', (req, res) => {
 
 ```
 
-
 #### Opdracht 4.2
-
 
 * Volg [de installatie voor lokaal](../guides/installatie-week2.md)
 * Maak het bestand `index.js` aan
@@ -247,8 +245,6 @@ app.get('/products/:id', (req, res) => {
 * Maak de 'Hello World' met Express
 * Gebruik `.env` om het poort-nummer van je Express app te configureren
 * Pas hem daarna aan om JSON terug te sturen.
-
-
 
 #### Opdracht 4.3
 
@@ -283,16 +279,23 @@ die je installeert. Ook kan het gebruik van resources (CPU en geheugen) per VPS 
 De VPS die we gebruiken draait op *Ubuntu*, een veelgebruikte versie van Linux. Je kunt hierop inloggen met *SSH* en
 bestanden uploaden bestanden met *SFTP* (bijv. FileZilla).
 
+In terminal/powershell:
+
+```
+ssh username@ip-address
+```
+
+Daarna log je in met je wachtwoord (cursus beweegt niet). Als je klaar bent log je uit met `exit` of CTRL-D.
+
 Op de server installeer je de benodigde tools en libraries waarvoor `sudo` (superuser-rechten) nodig is. Omdat we met
 `npm` werken, hoef je de `node_modules` niet te uploaden, omdat de benodigde modules automatisch
 worden geïnstalleerd op basis van het bestand `package.json`.
 
 #### Opdracht 4.4
 
-
 * Volg [de installatie voor de server](../guides/installatie-week2.md)
 * Login op je server met sftp, en zet je 'hello world' over zonder node_modules
-* Login op je server met ssh en installeer de node modules
+* Login op je server met ssh en installeer de node modules (`npm install`)
 * Start het project, en test of het werkt met een browser
 
 
