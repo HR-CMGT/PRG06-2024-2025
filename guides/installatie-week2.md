@@ -37,6 +37,10 @@ option 3)
 
 ## Les 5
 
+Screen
+
+* Installeer met `sudo apt screen`.
+
 MongoDB (lokaal + server)
 
 * **Mac OS**: https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/
