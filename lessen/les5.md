@@ -100,6 +100,7 @@ app.listen(8000, () => {
 * Voeg een parameter 'amount' toe aan je seed die als x-www-formurlencoded of JSON meegestuurd kan worden, waarmee je
   kunt kiezen met hoeveel items je webservice gevuld wordt
 * Implementeer POST voor je webservice
+* (Optioneel) Voeg een parameter 'reset' toe aan je see waarmee je bepaald of je de database eerst leeg maakt of niet
 
 ## Status Codes
 
@@ -107,7 +108,7 @@ HTTP-statuscodes bestaan uit drie cijfers. Het eerste cijfer is de serie, en gee
 geslaagd is aan het request te voldoen. De laatste twee cijfers zijn voor meer gedetailleerde informatie. 00 wordt
 gebruikt als er geen details zijn, of er geen specifieke code bestaat voor de details.
 
-Een volledig overzich van alle statuscodes kan je vinden
+Een volledig overzicht van alle statuscodes kan je vinden
 op [Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
 
 ### 2xx – Succes
