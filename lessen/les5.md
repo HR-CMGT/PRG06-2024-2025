@@ -179,5 +179,4 @@ Ook uitschrijven, of tijdens de les behandelen?
 * Installeer MongoDB op de server
 * Zet je app op de server en test met Postman
 * Implementeer PUT en DELETE
-* Voeg de juiste statuscodes toe
-
+* Voeg de juiste statuscodes toe (denk hierbij ook na over de scenarios als er iets misgaat!)
