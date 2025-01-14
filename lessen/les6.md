@@ -122,6 +122,7 @@ const MySchema = new Schema({
 }, {
     toJSON: {
         virtuals: true,
+        versionKey: false,
         transform: (doc, ret) => {
 
             ret._links = {
@@ -134,7 +135,6 @@ const MySchema = new Schema({
             }
 
             delete ret._id
-            delete ret.__v
         }
     }
 });
