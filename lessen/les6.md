@@ -144,6 +144,8 @@ const MySchema = new Schema({
 
 Voor deze cursus hebben we een script dat op een aantal punten checkt of een webservice aan (onze) standaarden voldoet.
 
+[Checker](https://checker.basboot.nl)
+
 #### Opdracht 6.2
 
 * Voeg links naar self en collection toe aan je detail resources
