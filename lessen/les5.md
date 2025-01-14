@@ -48,9 +48,9 @@ export default Product;
   gebruikt (kijk naar een detail voor de juiste indeling)
   https://mongoosejs.com/docs/guide.html
 * Maak een endpoint `/notes` of `/spots`
-* Return de lijst als JSON (nu uiteraard nog leeg)
+* Haal de notes of spots uit de database en return als JSON (nu uiteraard nog leeg)
 * Installeer fakerjs
-* Maak een endpoint `/seed` voor een `POST` request
+* Maak een endpoint `/notes/seed` of `/spots/seed` voor een `POST` request
 * Maak 10 fake items aan op dit endpoint en plaats ze in de database
 * Voeg toe dat je ook een detail resource op kunt vragen
 * Verplaats voor het overzicht je routes naar een `Router` in een apart

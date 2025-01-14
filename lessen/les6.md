@@ -144,6 +144,8 @@ const MySchema = new Schema({
 
 Voor deze cursus hebben we een script dat op een aantal punten checkt of een webservice aan (onze) standaarden voldoet.
 
+[Checker](https://checker.basboot.nl)
+
 #### Opdracht 6.2
 
 * Voeg links naar self en collection toe aan je detail resources
@@ -179,7 +181,7 @@ Een *origin* bestaat uit het protocol (`http` of `https`), de domeinnaam (bijv.
 `example.com`) en het poort-nummer (bijv. `:3000` of `:8000`). Het pad op de server is er geen onderdeel van.
 
 | `http(s)://subdomain.example.com:port` | `/path/to/resource` |
-|----------------------------------------|---------------------|
+| -------------------------------------- | ------------------- |
 | **origin**                             | **geen origin**     |
 
 ### Headers
@@ -231,7 +233,7 @@ Bij het opzetten van CORS in een RESTful webservice moet je met de volgende zake
 #### Opdracht 6.3
 
 * Voeg CORS toe
-* Check of je OPTIONS ook zonder Accept-header werkt
+* Check of je OPTIONS ook werkt als de client geen Accept-header meestuurt
 * Ga verder met je project op basis van de feedback van de checker
 
 #### Opdracht 6.4
