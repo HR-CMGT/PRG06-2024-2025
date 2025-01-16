@@ -125,7 +125,7 @@ const MySchema = new Schema({
 
             ret._links = {
                 self: {
-                    href: `https://link_naar_self`
+                    href: `http://link_naar_self`
                 },
                 collection: {
                     href: `http://link_naar_collectie`
