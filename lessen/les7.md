@@ -135,9 +135,20 @@ Met `chown` wijzig je owner:
 sudo chown user file.txt # Wijzigt eigenaar
 ```
 
+## Projectstructuur
+
+Binnen je beide projecten ben je vrij om een eigen structuur te kiezen. Er is dus geen oordeel of negatieve impact
+op hoe je het hebt georganiseerd. Echter adviseren wij wel om na te denken over een structuur die jou helpt om je
+project beter te kunnen beheren.
+
+- **React**: Zet je alle componenten naast elkaar in dezelfde map of juist submappen per categorie?
+  En waar zet je andere bestanden neer die geen component zijn?
+- **Express**: We hebben al mapjes gemaakt voor models en routes. Zou je hier nog meer structuur kwijt willen?
+  Zet je de acties uit je routes in hetzelfde bestand of werk je liever met controllers zoals in Laravel?
+
 ## Opdracht 7.1
 
-* Start met je eindopdracht
+* Start met je eindopdracht (en maak per project een Git repository zoals je gewend bent)
 
 <!--
 * versiebeheer in URI toevoegen?
