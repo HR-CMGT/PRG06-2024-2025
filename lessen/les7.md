@@ -70,6 +70,13 @@ Bijvoorbeeld: Een uur ```Cache-Control: max-age=3600```, of nooit ```Cache-Contr
 Een andere manier om de gebruiker te helpen is door een *conditional request* te implementeren in je service.
 Hiervoor kijk je naar de request header `If-Modified-Since`.
 
+### Timestamps
+
+Mongoose kan automatisch timestamps voor je bijhouden (vergelijkbaar met timestamps in Laravel), waarmee je kunt zien
+wanneer een resource voor het laatst gewijzigd is.
+
+[Timestamps in Mongoose](https://mongoosejs.com/docs/timestamps.html)
+
 ### Voorbeeld
 
 **Request**
