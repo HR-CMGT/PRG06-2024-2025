@@ -21,10 +21,10 @@ netter doen, door de seeder gewoon op de collectie te zetten met `method=SEED`.
 
 Met JWTs (JSON Web Tokens) kan je geauthenticeerd blijven zonder telkens opnieuw hoeven in te loggen.
 
-* Gebruiker logt in op autheticatieserver
+* Gebruiker logt in op authenticatieserver
 * Authenticatieserver creëert een JWT op basid van een *shared secret*
 * Client stuurt token mee met elk request (`fetch`) naar applicatieserver
-* Applicatieserver (zonder autheticatieserver) kan zelf dit token valideren dankzij shared secret
+* Applicatieserver (zonder authenticatieserver) kan zelf dit token valideren dankzij shared secret
 
 https://jwt.io
 
