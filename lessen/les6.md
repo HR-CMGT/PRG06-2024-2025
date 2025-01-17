@@ -90,20 +90,18 @@ moet zijn is de link naar `self`. Andere links zijn context-afhankelijk.
 
 ```json
 {
-  "product": {
-    "id": 1,
-    "name": "Product A",
-    "price": 100,
-    "_links": {
-      "self": {
-        "href": "/products/1"
-      },
-      "next": {
-        "href": "/products/2"
-      },
-      "related": {
-        "href": "/categories/1"
-      }
+  "id": 1,
+  "name": "Product A",
+  "price": 100,
+  "_links": {
+    "self": {
+      "href": "/products/1"
+    },
+    "next": {
+      "href": "/products/2"
+    },
+    "related": {
+      "href": "/categories/1"
     }
   }
 }
@@ -127,7 +125,7 @@ const MySchema = new Schema({
 
             ret._links = {
                 self: {
-                    href: `https://link_naar_self`
+                    href: `http://link_naar_self`
                 },
                 collection: {
                     href: `http://link_naar_collectie`
@@ -181,7 +179,7 @@ Een *origin* bestaat uit het protocol (`http` of `https`), de domeinnaam (bijv.
 `example.com`) en het poort-nummer (bijv. `:3000` of `:8000`). Het pad op de server is er geen onderdeel van.
 
 | `http(s)://subdomain.example.com:port` | `/path/to/resource` |
-| -------------------------------------- | ------------------- |
+|----------------------------------------|---------------------|
 | **origin**                             | **geen origin**     |
 
 ### Headers
