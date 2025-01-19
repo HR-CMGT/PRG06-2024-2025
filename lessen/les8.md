@@ -2,7 +2,7 @@
 
 ## POST Overloading
 
-Het HTTP protocol heeft slechts een beperkte set aan methods (`GET`, `POST`, `PUT`, etc.). Soms wil je met resource
+Het HTTP protocol heeft slechts een beperkte set aan methods (`GET`, `POST`, `PUT`, etc.). Soms wil je met een resource
 dingen doen die hier niet in voorkomen. We gebruiken in dat geval altijd de method `POST`. Omdat dit de enige method is
 die niet safe, en niet indempotent hoeft te zijn weten we zeker dat een client hier altijd 'voorzichtig' mee zal zijn.
 Omdat het geen normale `POST` is sturen we in het request een variable `method` mee waarin we de echte method zetten,

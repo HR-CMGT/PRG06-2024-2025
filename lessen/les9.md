@@ -60,7 +60,7 @@ fetchProduct();
 
 ```
 
-Je kunt ook na de fetch, de status-code meteen afghandelen.
+Je kunt ook na de fetch, de status-code meteen afhandelen.
 
 ```javascript
 async function fetchProduct() {
