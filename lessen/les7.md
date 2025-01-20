@@ -21,7 +21,7 @@ Pagination is het verdelen van een collection in kleinere stukken (pagina's). Di
 webservice omdat je minder data hoeft te verwerken en te versturen. Ook
 verbetert het het gebruiksgemak van je service omdat iemand kan kiezen om alleen het deel op te halen dat hij nodig
 heeft. Bij pagination hoort ook navigatie, vergelijkbaar met de navigatie onderaan een blog, om de gebruiker te helpen
-door de collectie te bladeren..
+door de collectie te bladeren.
 
 Voorbeeld van een gepagineerde response:
 
@@ -56,6 +56,15 @@ Voorbeeld van een gepagineerde response:
   }
 }
 ```
+
+### Parameters
+
+De gebruiker kan zelf bepalen welke pagina hij wil zien met `page` en hoe groot een pagina is `limit`. Om pagina 5 op te
+vragen met 10 producten erop, gebruik je dus:
+
+`/products?page=5&limit=10`
+
+**Let op:** De eerste pagina is pagina `1` en niet `0` zoals bij arrays.
 
 ## Caching
 
