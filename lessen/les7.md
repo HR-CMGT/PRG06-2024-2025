@@ -59,7 +59,8 @@ Voorbeeld van een gepagineerde response:
 
 ### Parameters
 
-De gebruiker kan zelf bepalen welke pagina hij wil zien met `page` en hoe groot een pagina is `limit`. Om pagina 5 op te
+De gebruiker kan zelf bepalen welke pagina hij wil zien met `page` en hoe groot een pagina is met `limit`. Om pagina 5
+op te
 vragen met 10 producten erop, gebruik je dus:
 
 `/products?page=5&limit=10`
