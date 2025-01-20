@@ -16,6 +16,17 @@ Wij gebruiken `import` en geen `require`. Zet daarom in 'package.json' het `type
 }
 ```
 
+* Maak het bestand `index.js` aan
+
+* Maak het bestand `.env` aan
+* Pas het run-script in `package.json` aan om te zorgen dat je `.env` wordt geladen
+
+```
+"scripts": {
+    "dev": "node --env-file=.env --watch index.js"
+  },
+```
+
 **Server**
 
 * Installeer node op de server
