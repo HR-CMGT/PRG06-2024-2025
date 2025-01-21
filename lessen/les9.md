@@ -30,11 +30,24 @@ https://react.dev/reference/react/createContext
 
 -->
 
-## Foutafhandeling
+## Foutafhandeling in React
 
-We hebben `try` en `catch` gebruikt om fouten af te handelen bij een `fetch`. Een statuscode 400 of 500 wordt door
-`fetch` echter niet gezien als een `Error` omdat het versturen van het request en ontvangen van een response gelukt is.
-Door zelf een foutmelding te `throw`en, kan je je app alsnog laten weten dat er iets mis is met het request.
+Foutafhandeling is een belangrijk onderdeel voor de gebruikersvriendelijkheid van een applicatie. Bij front-end routing
+in React en het gebruik van een webservice via fetch kunnen fouten op verschillende manieren optreden, en zullen we die
+ook op verschillende manieren moeten oplossen.
+
+### Verkeerde URLs
+
+Met `createBrowserRouter` kun je een standaardcomponent (`errorElement`) instellen voor ongeldige routes (een
+404-pagina). Dit handelt dan automatisch alle niet bestaande URLs af.
+
+### Fouten bij communiceren met de webservice
+
+Bij het laden van data via fetch kan er een probleem ontstaan als de server een foutstatus teruggeeft (bijvoorbeeld 404
+als het id in de URL niet bestaat). Dit zijn geen technische fouten, omdat request en response succesvol
+waren. Daarom beschouwt fetch deze niet als fouten, en wordt de `catch` niet uitgevoerd.
+Je kunt er in dit geval voor kiezen om zelf een `Error` the `throw`en, die je dan in je app kunt afhandelen om de
+gebruiker te laten weten wat er mis gegaan is.
 
 ```javascript
 async function fetchProduct() {
@@ -62,7 +75,7 @@ fetchProduct();
 
 ```
 
-Je kunt ook na de fetch, de status-code meteen afhandelen.
+Of je kunt na de fetch, de status-code meteen af laten handelen.
 
 ```javascript
 async function fetchProduct() {
@@ -91,15 +104,6 @@ async function fetchProduct() {
 
 fetchProduct();
 ```
-
-<!--
-zou misschien een alternatief extra onderdeel kunnen zijn.
--->
-
-### 404
-
-De meest voorkomende use case hiervoor is waarschijnlijk de 404, als iemand een verkeerde URL voor een detail-pagina
-gebruikt.
 
 #### Opdracht 9.1
 
