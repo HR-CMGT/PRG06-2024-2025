@@ -8,8 +8,8 @@ meerdere componenten of met componenten die diep genest zijn.
 * `createContext` Hiermee maak je een context Component aan, die fungeert als een container voor de gedeelde data. Je
   kunt een
   standaardwaarde meegeven.
-* `<ContextComponent.Provider>` maakt de context beschikbaar in de JSX-structuur, als value kan meegeven wat er in de
-  contect moet zitten.
+* `<NaamVanJouwContextComponent.Provider>` maakt de context beschikbaar in de JSX-structuur, als value kan je meegeven
+  wat er in de context moet zitten.
 * `useContext` vist de value uit de context op in het component als deze beschikbaar is.
 
 Door een object te gebruiken in de context kan je eenvoudig meerdere gegevens delen binnen je app, waaronder state
