@@ -46,63 +46,37 @@ Met `createBrowserRouter` kun je een standaardcomponent (`errorElement`) instell
 Bij het laden van data via fetch kan er een probleem ontstaan als de server een foutstatus teruggeeft (bijvoorbeeld 404
 als het id in de URL niet bestaat). Dit zijn geen technische fouten, omdat request en response succesvol
 waren. Daarom beschouwt fetch deze niet als fouten, en wordt de `catch` niet uitgevoerd.
-Je kunt er in dit geval voor kiezen om zelf een `Error` the `throw`en, die je dan in je app kunt afhandelen om de
-gebruiker te laten weten wat er mis gegaan is.
+Om ervoor te zorgen dat je applicatie dit toch als een fout ziet, kan je zelf een `Error` 'throwen' waardoor de
+catch uitgevoerd wordt, zodat je app verbindingsfouten en request-fouten op dezelfde manier kan afhandelen, en de
+gebruiker kan laten zien wat er mis gegaan is.
 
 ```javascript
-async function fetchProduct() {
+async function fetchProduct(id) {
     try {
-        const response = await fetch('https://api.example.com/products/1', {
+        const response = await fetch(`https://api.example.com/products/${id}`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json'
             }
         });
 
-        // create exception
+        // throw exception
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
         const data = await response.json();
         console.log(data);
+
+        // data can now be used for the app (eg. return product / setProduct)
     } catch (error) {
         console.error('Er is een fout opgetreden:', error);
+        // error can now be used in the app (eg. return error message instead of product / navigate to error page)
     }
 }
 
 fetchProduct();
 
-```
-
-Of je kunt na de fetch, de status-code meteen af laten handelen.
-
-```javascript
-async function fetchProduct() {
-    let response;
-    try {
-        response = await fetch('https://api.example.com/products/1', {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-
-        const data = await response.json();
-        console.log(data);
-    } catch (error) {
-        console.error('Er is een fout opgetreden:', error);
-    }
-
-    // check response code (eg 403)
-    if (response?.ok) {
-        console.log('Use the response here!');
-    } else {
-        console.log(`HTTP Response Code: ${response?.status}`)
-    }
-}
-
-fetchProduct();
 ```
 
 ## Publiceren React App
