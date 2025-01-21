@@ -105,6 +105,29 @@ async function fetchProduct() {
 fetchProduct();
 ```
 
+## Publiceren React App
+
+Een React applicatie bestaat uit HTML, CSS en Javascript (en eventuele assets zoals plaatjes). Om deze live te zetten
+heb je een webserver nodig, zoals Apache, Nginx of Express met static routes, waarmee je statische bestanden kunt
+serveren.
+
+### Live zetten
+
+Als je het build script (`npm run build`) draait, genereert vite de statische bestanden waaruit de applicatie bestaat,
+en plaatst deze in de map `dist`. Als je de inhoud hiervan op je webserver zet staat je app 'live'.
+
+### Front-end routing
+
+Om front-end routing te laten werken, moet de back-end routing zorgen dat de requests altijd naar `index.html` gaan,
+tenzij het bestand echt bestaat:
+
+De logica in de back-end routing is:
+
+* Bestaat het bestand echt, routeer dan niet (anders werken je plaatjes en CSS niet meer)
+* In alle andere gevallen, routeer naar `index.html`
+
+De configuratie van routering verschilt per webserver.
+
 #### Opdracht 9.1
 
 Ga verder met je eindopdracht
