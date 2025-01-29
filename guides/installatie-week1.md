@@ -22,7 +22,7 @@ Check of node en npm de juiste versie hebben:
 Maak een nieuw React project aan:
 
 * React met Vite en Tailwind
-  https://tailwindcss.com/docs/guides/vite
+  https://v3.tailwindcss.com/docs/guides/vite
   Na stap 1 kan je verder gaan in PHPStorm. Als je klaar bent, iss App.css niet meer nodig en kun je deze verwijderen (
   evenals
   de import ervan).
