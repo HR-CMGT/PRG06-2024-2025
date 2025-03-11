@@ -5,12 +5,11 @@
 De Context API in React is een alternatief voor het doorgeven van props, vooral wanneer je dezelfde data wilt delen met
 meerdere componenten of met componenten die diep genest zijn.
 
-* `createContext` Hiermee maak je een context Component aan, die fungeert als een container voor de gedeelde data. Je
-  kunt een
-  standaardwaarde meegeven.
-* `<NaamVanJouwContextComponent.Provider>` maakt de context beschikbaar in de JSX-structuur, als value kan je meegeven
+- `createContext` Hiermee maak je een context Component aan, die fungeert als een container voor de gedeelde data. Je
+  kunt een standaardwaarde meegeven.
+- `<NaamVanJouwContextComponent.Provider>` maakt de context beschikbaar in de JSX-structuur, als value kan je meegeven
   wat er in de context moet zitten.
-* `useContext` vist de value uit de context op in het component als deze beschikbaar is.
+- `useContext` vist de value uit de context op in het component als deze beschikbaar is.
 
 Door een object te gebruiken in de context kan je eenvoudig meerdere gegevens delen binnen je app, waaronder state
 variabelen en setters.
@@ -44,39 +43,38 @@ Met `createBrowserRouter` kun je een standaardcomponent (`errorElement`) instell
 ### Fouten bij communiceren met de webservice
 
 Bij het laden van data via fetch kan er een probleem ontstaan als de server een foutstatus teruggeeft (bijvoorbeeld 404
-als het id in de URL niet bestaat). Dit zijn geen technische fouten, omdat request en response succesvol
-waren. Daarom beschouwt fetch deze niet als fouten, en wordt de `catch` niet uitgevoerd.
-Om ervoor te zorgen dat je applicatie dit toch als een fout ziet, kan je zelf een `Error` 'throwen' waardoor de
-catch uitgevoerd wordt, zodat je app verbindingsfouten en request-fouten op dezelfde manier kan afhandelen, en de
-gebruiker kan laten zien wat er mis gegaan is.
+als het id in de URL niet bestaat). Dit zijn geen technische fouten, omdat request en response succesvol waren. Daarom
+beschouwt fetch deze niet als fouten, en wordt de `catch` niet uitgevoerd. Om ervoor te zorgen dat je applicatie dit
+toch als een fout ziet, kan je zelf een `Error` 'throwen' waardoor de catch uitgevoerd wordt, zodat je app
+verbindingsfouten en request-fouten op dezelfde manier kan afhandelen, en de gebruiker kan laten zien wat er mis gegaan
+is.
 
 ```javascript
 async function fetchProduct(id) {
-    try {
-        const response = await fetch(`https://api.example.com/products/${id}`, {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
+  try {
+    const response = await fetch(`https://api.example.com/products/${id}`, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+      },
+    });
 
-        // throw exception
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-
-        const data = await response.json();
-        console.log(data);
-
-        // data can now be used for the app (eg. return product / setProduct)
-    } catch (error) {
-        console.error('Er is een fout opgetreden:', error);
-        // error can now be used in the app (eg. return error message instead of product / navigate to error page)
+    // throw exception
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
+
+    const data = await response.json();
+    console.log(data);
+
+    // data can now be used for the app (eg. return product / setProduct)
+  } catch (error) {
+    console.error("Er is een fout opgetreden:", error);
+    // error can now be used in the app (eg. return error message instead of product / navigate to error page)
+  }
 }
 
 fetchProduct();
-
 ```
 
 ## Publiceren React App
@@ -97,10 +95,12 @@ tenzij het bestand echt bestaat:
 
 De logica in de back-end routing is:
 
-* Bestaat het bestand echt, routeer dan niet (anders werken je plaatjes en CSS niet meer)
-* In alle andere gevallen, routeer naar `index.html`
+- Bestaat het bestand echt, routeer dan niet (anders werken je plaatjes en CSS niet meer)
+- In alle andere gevallen, routeer naar `index.html`
 
 De configuratie van routering verschilt per webserver.
+
+Klik [hier](../guides/deployment-react-vite/) voor de complete installatiehandleiding.
 
 #### Opdracht 9.1
 

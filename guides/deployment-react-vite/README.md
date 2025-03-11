@@ -103,7 +103,6 @@ om wordt gevraagd). Je krijgt 3 vragen waarvan de uitleg onder het commando staa
 
 - Vraag 1: Vul hier je SSH (!!) GitHub link in (ziet eruit als `git@GitHub.com:<username>/<repo>.git`)
 - Vraag 2: De naam van je project ZONDER spaties of hoofdletters (bv: my-react-project)
-- Vraag 3: De naam die in de titel van je website komt te staan (bv: My React Project)
 
 > Na het draaien van dit script kun je opnieuw naar http://\<jouwip> gaan in de browser. Je zou hier nu je React
 > applicatie werkend moeten zien draaien! 🚀
