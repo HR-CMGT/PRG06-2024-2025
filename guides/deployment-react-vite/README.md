@@ -29,10 +29,10 @@ werkende webserver hebt waar je Laravel project kan draaien.
 
 ## Installatie
 
-Download de zip en pak deze uit in een voor jou logische map op jouw laptop. Open je Terminal (mac) of Powershell
-(Windows) en navigeer naar de map waar je de bestanden hebt gedownload. Als je in de goede map staat kun je de bestanden
-verkregen via docent uploaden naar jullie server. Draai het volgende commando en vervang `<user>` en `<ip>` met je eigen
-gegevens (`<>` tekens moeten hier niet meer staan na het aanpassen naar je eigen gegevens):
+Download de zip op jouw laptop en pak deze uit. Open je Terminal (mac) of Powershell (Windows) en navigeer naar de map
+die net is uitgepakt. Zorg ervoor dat je in die map zit. Als je in de goede map staat kun je de bestanden uploaden naar
+jullie server. Draai het volgende commando en vervang `<user>` en `<ip>` met je eigen gegevens (`<>` tekens moeten hier
+niet meer staan na het aanpassen naar je eigen gegevens):
 
 ```bash
 scp nginx.conf install_tools.sh configure_webserver.sh deploy.sh <user>@<ip>:~/
@@ -46,7 +46,7 @@ ssh <user>@<ip>
 
 > Vanaf nu ben je ingelogd op de server en voer je de commando's dus uit op de server en niet meer op je eigen laptop.
 
-Valideer dat het uploaden van de bestanden goed is gegaan door het volgende commando te draaien:
+Controleer of het uploaden van de bestanden goed is gegaan door het volgende commando te draaien:
 
 ```bash
 ls -al
@@ -59,7 +59,7 @@ scripts te kunnen draaien moet je ze qua rechten aanpassen zodat ze 'executable'
 chmod u+x install_tools.sh configure_webserver.sh deploy.sh
 ```
 
-Run nu het eerste script als volgt:
+Run nu onderstaand script en lees tijdens de installatie de uitleg die eronder staat:
 
 ```bash
 ./install_tools.sh
@@ -76,8 +76,8 @@ geïnstalleerd:
 - NVM (met Node LTS & NPM)
 - SSH key
 
-> Test of je installatie goed is gegaan door naar http://\<jouwip> te gaan in de browser. Als je nu een nginx
-> startpagina ziet, is het goed gegaan en kun je door naar de volgende stap.
+⚠️ Test of de installatie goed is gegaan door naar http://\<jouw-ip> te gaan in de browser. Als je nu een nginx
+startpagina ziet, is het goed gegaan en kun je door naar de volgende stap.
 
 ## Configuratie webserver
 
@@ -85,6 +85,8 @@ In plaats van de default nginx startpagina wil je uiteraard je eigen GitHub proj
 
 Hiervoor moet je de SSH key van de server (die in de vorige stap is aangemaakt) toevoegen aan jouw GitHub project
 deployment keys, zodat de server namens jou op GitHub kan inloggen
+
+> ⚠️ Standaard heeft alleen de aanmaker van een repository toegang tot de settings
 
 - Draai `cat ~/.ssh/id_rsa.pub` op de server om jouw key te kunnen zien
 - Kopieer deze key (dus de hele output van het commando)
@@ -101,26 +103,28 @@ om wordt gevraagd). Je krijgt 3 vragen waarvan de uitleg onder het commando staa
 ./configure_webserver.sh
 ```
 
-- Vraag 1: Vul hier je SSH (!!) GitHub link in (ziet eruit als `git@GitHub.com:<username>/<repo>.git`)
+- Vraag 1: Vul hier je SSH GitHub link in (ziet eruit als `git@GitHub.com:<username>/<repo>.git`). Klik hiervoor op de
+  groene knop **Code** op de startpagina van de repository en vervolgens op de tab **SSH**
 - Vraag 2: De naam van je project ZONDER spaties of hoofdletters (bv: my-react-project)
 
-> Na het draaien van dit script kun je opnieuw naar http://\<jouwip> gaan in de browser. Je zou hier nu je React
+> Na het draaien van dit script kun je opnieuw naar http://\<jouw-ip> gaan in de browser. Je zou hier nu je React
 > applicatie werkend moeten zien draaien! 🚀
 
 ## Deployen nieuwe versie
 
-Wanneer je een nieuwe release wilt doen op de server (lees: de nieuwe versie uit de main branch online zetten), kun je
-dit doen door in te loggen via SSH en in je home folder (de map die wordt geopend na inloggen met ssh) `./deploy.sh` te
-draaien. De nieuwe versie van je project zou nu zichtbaar moeten zijn op http://\<jouwip>
-<br>
-Zit je niet meer in de home folder? Voer dan `cd ~` uit om naar de home folder te gaan.
+Staat er een nieuw versie in de _main_ branche? Dan kun je dit met de volgende stappen deployen:
 
-> Heb je meer nodig in je deployment flow dan kun je het deploy script natuurlijk aanpassen. Denk hierbij aan extra
-> artisan commando's omdat je bijvoorbeeld een db:seed wilt doen.
+- Zorg ervoor dat je in de home folder zit. Dit is de map die standaard geopend wordt wanneer je inlogt met SSH. Mocht
+  je toch niet in die map zitten, voer dan het volgende commando uit: `cd ~` (de ~ staat voor de home folder).
+- Voer het commando `./deploy.sh` uit. Dit commando pulled de wijzigingen van _main_ en build het project met Vite
+  (`npm run build`). De bestanden die daaruit komen worden verplaatst naar de juiste plek op de server, waarna de nieuwe
+  versie online te zien is op `http://\<jouw-ip>`.
+
+> Heb je meer nodig in je deployment flow, dan kun je het deploy script natuurlijk aanpassen.
 
 ## NIET DOEN: Domein met SSL Certificaat
 
-De website draait nu op `http://\<jouwip>` en is door iedereen (binnen Nederland i.v.m. beveiliging in de Hogeschool
+De website draait nu op `http://\<jouw-ip>` en is door iedereen (binnen Nederland i.v.m. beveiliging in de Hogeschool
 firewall) te bezoeken. De stap om ook echt een domeinnaam (hr.nl, mijn-website.nl, etc.) toe te voegen slaan we voor nu
 over.
 
