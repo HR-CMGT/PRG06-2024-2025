@@ -16,4 +16,4 @@
 | Les 6 | URI<br>Headers<br>HATEOAS<br>CORS<br>Checker                                                           | [Link](./lessen/les6.md) |
 | Les 7 | Collection verkleinen<br>Pagination<br>Caching<br>Unix rechten<br>Projectstructuur                     | [Link](./lessen/les7.md) |
 | Les 8 | POST Overloading<br>JWT<br>HTTPS                                                                       | [Link](./lessen/les8.md) |
-| Les 9 | Context API<br>Front-end error handling                                                                | [Link](./lessen/les9.md) |
+| Les 9 | Context API<br>Front-end error handling<br>Publiceren React App                                        | [Link](./lessen/les9.md) |
